@@ -1,6 +1,6 @@
 <?php
 
-//include get_theme_file_path( '/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php' );
+//include( '/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php' );
 
 //carica correttamente i file css in wordpress
 function load_stylesheets() 
@@ -23,6 +23,7 @@ function load_js()
     //wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/scriptsProva.js', array(), '1.0', true);
     wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0', true);
     wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/jquery-3.6.0.slim.min.js', array(), '3.6.0', true);
+    wp_enqueue_script('staff', get_template_directory_uri() . '/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php', array(), '1.0', true);
     enqueue_my_file('bootstrap', 'js', '', '5.1.3', true);
     enqueue_my_file('data_tables', 'js', 'DataTables-1.12.1', '1.12.1', true);
     
@@ -51,8 +52,16 @@ function enqueue_my_file($folder, $type, $extensions, $ver, $inFooter){
         $filename = substr($file, strrpos($file, '/') + 1);
         if($type == 'js')
             wp_enqueue_script( $filename, get_template_directory_uri(). '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. $filename, array(), $ver, $inFooter);
-        else
+        else if($type == 'css')
             wp_enqueue_style( $filename, get_template_directory_uri() . '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. $filename, array(), $ver, 'all');
+    }
+}
+//carica i php di ogni estensione/cartella
+function enqueue_my_php($folder, $subfolder, $extensions, $ver, $inFooter){
+    //echo get_template_directory(). '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. '*.'. $type;
+    foreach( glob( get_template_directory(). '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. '*.'. $type ) as $file ) {
+        $filename = substr($file, strrpos($file, '/') + 1);
+        wp_enqueue_script( $filename, get_template_directory_uri(). '/assets/' .$folder. '/'. $extensions. '/'. $subfolder. '/'. $filename, array(), $ver, $inFooter);
     }
 }
 

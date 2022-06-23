@@ -45,7 +45,7 @@
                     {
                         echo '
                         <tr>
-                            <td>'.$row["id_cliente"].'</td>
+                            <td>'.$row["id"].'</td>
                             <td>'.$row["nome"].'</td>
                             <td>'.$row["cognome"].'</td>
                             <td>'.$row["data_nascita"].'</td>

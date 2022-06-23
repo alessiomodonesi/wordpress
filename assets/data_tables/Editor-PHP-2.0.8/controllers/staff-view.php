@@ -15,7 +15,7 @@ use
 	DataTables\Editor\ValidateOptions;
 
 // Build our Editor instance and process the data coming from _POST
-Editor::inst( $db, 'users' )
+/*Editor::inst( $db, 'users' )
 	->readTable('staff_newyork') // The VIEW to read data from
 	->field( 
 		Field::inst( 'first_name' ),
@@ -25,6 +25,25 @@ Editor::inst( $db, 'users' )
 		Field::inst( 'site' )
 			->get(false)
 			->setValue(4) // New York, for the VIEW condition
+	)
+	->tryCatch(false)
+	->debug(true)
+	->process($_POST)
+	->json();
+*/
+Editor::inst( $db, '' )
+	->readTable('wp_cliente')
+	->fields(
+		Field::inst( 'id' ),
+		Field::inst( 'nome' ),
+		Field::inst( 'cognome' ),
+		Field::inst( 'data_nascita' ),
+		Field::inst( 'indirizzo' ),
+		Field::inst( 'numero_telefono' ),
+		Field::inst( 'mail' ),
+		Field::inst( 'ufficio_usa' ),
+		Field::inst( 'caso' ),
+		Field::inst( 'id_applicant' ),
 	)
 	->tryCatch(false)
 	->debug(true)

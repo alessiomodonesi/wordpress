@@ -2,15 +2,17 @@ var $ = jQuery;
 var editor; // use a global for the submit and return data rendering in the examples
 
 $(document).ready(function () {
+
     var path = document.location.pathname;
     var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));
-    console.log(directory);
+    console.log();
+
     editor = new $.fn.dataTable.Editor({
-        ajax: "../php/staff.php",
-        //ajax: '../wp-content/themes/my-theme/assets/Editor-PHP-2.0.8/controllers/staff.php',
+        //ajax: "../data_tables/controllers/staff.php",
+        ajax: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php",
         table: "#table",
         fields: [
-            { label: 'ID', name: 'id_cliente' },
+            { label: 'ID', name: 'id' },
             { label: 'Nome', name: 'nome' },
             { label: 'Cognome', name: 'cognome' },
             { label: 'Data di nascita', name: 'data_nascita' },
@@ -24,9 +26,13 @@ $(document).ready(function () {
     });
 
     var table = $('#table').DataTable({
+        //ajax: "../data_tables/controllers/staff.php",
+        ajax: {
+            url: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php",
+            type: "POST"
+        },
         lengthChange: false,
         dom: 'lBfrtip',
-        //ajax: "../php/staff.php",
         columns: [
             { data: 'ID' },
             { data: 'Nome' },
@@ -40,6 +46,11 @@ $(document).ready(function () {
             { data: 'Applicant' }
         ],
         select: true,
+        "processing": true,
+        columnDefs: [{
+            "defaultContent": "-",
+            "targets": "_all"
+        }]
     });
 
     // Display the buttons
@@ -51,5 +62,7 @@ $(document).ready(function () {
 
     table.buttons().container()
         .prependTo($('div.fg-toolbar:eq(0)', table.table().container()));
-    console.clear();
+
+
+    //console.clear();
 });
