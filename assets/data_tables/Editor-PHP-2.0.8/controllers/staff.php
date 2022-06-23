@@ -19,7 +19,7 @@ use
 	DataTables\Editor\ValidateOptions;
 
 // Build our Editor instance and process the data coming from _POST
-/*Editor::inst( $db, 'datatables_demo' )
+Editor::inst( $db, 'datatables_demo' )
 	->fields(
 		Field::inst( 'first_name' )
 			->validator( Validate::notEmpty( ValidateOptions::inst()
@@ -50,9 +50,7 @@ use
 	->debug(true)
 	->process( $_POST )
 	->json();
-*/
-Editor::inst( $db, '' )
-	->readTable('wp_cliente')
+/*Editor::inst( $db, 'wp_cliente', 'id' )
 	->fields(
 		Field::inst( 'id' ),
 		Field::inst( 'nome' ),
@@ -67,4 +65,4 @@ Editor::inst( $db, '' )
 	)
 	->debug(true)
 	->process( $_POST )
-	->json();
+	->json();*/

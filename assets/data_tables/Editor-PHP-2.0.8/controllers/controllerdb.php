@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Example PHP implementation used for the index.html example
+ */
+
 // DataTables PHP library
 include( "../lib/DataTables.php" );
 
@@ -15,18 +19,19 @@ use
 	DataTables\Editor\ValidateOptions;
 
 // Build our Editor instance and process the data coming from _POST
-Editor::inst( $db, 'users' )
-	->readTable('staff_newyork') // The VIEW to read data from
-	->field( 
-		Field::inst( 'first_name' ),
-		Field::inst( 'last_name' ),
-		Field::inst( 'phone' ),
-		Field::inst( 'city' ),
-		Field::inst( 'site' )
-			->get(false)
-			->setValue(4) // New York, for the VIEW condition
+Editor::inst( $db, 'wp_cliente' )
+	->fields(
+		Field::inst( 'id' ),
+		Field::inst( 'nome' ),
+		Field::inst( 'cognome' ),
+		Field::inst( 'data_nascita' ),
+		Field::inst( 'indirizzo' ),
+		Field::inst( 'numero_telefono' ),
+		Field::inst( 'mail' ),
+		Field::inst( 'ufficio_usa' ),
+		Field::inst( 'caso' ),
+		Field::inst( 'id_applicant' ),
 	)
-	->tryCatch(false)
 	->debug(true)
-	->process($_POST)
+	->process( $_POST )
 	->json();

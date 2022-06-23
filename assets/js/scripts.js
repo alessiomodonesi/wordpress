@@ -8,8 +8,7 @@ $(document).ready(function () {
     console.log();
 
     editor = new $.fn.dataTable.Editor({
-        //ajax: "../data_tables/controllers/staff.php",
-        //ajax: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php",
+        ajax: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/controllerdb.php",
         table: "#table",
         idSrc: 'id',
         fields: [
@@ -27,14 +26,12 @@ $(document).ready(function () {
     });
 
     var table = $('#table').DataTable({
-        //ajax: "../data_tables/controllers/staff.php",
-        /*ajax: {
-            url: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php",
+        ajax: {
+            url: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/controllerdb.php",
             type: "POST"
-        },*/
+        },
         lengthChange: false,
         dom: 'Bfrtip',
-        idSrc: 'id',
         columns: [
             { data: 'ID' },
             { data: 'Nome' },
@@ -62,5 +59,5 @@ $(document).ready(function () {
     });
     table.buttons().container()
         .appendTo($('.col-sm-6:eq(0)', table.table().container()));
-    console.clear();
+    //console.clear();
 });
