@@ -51,7 +51,7 @@ use
 	->process( $_POST )
 	->json();
 */
-$editor = Editor::inst( $db, '' )
+Editor::inst( $db, '' )
 	->readTable('wp_cliente')
 	->fields(
 		Field::inst( 'id' ),

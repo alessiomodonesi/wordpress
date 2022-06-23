@@ -21,7 +21,7 @@ use
 	DataTables\Editor\ValidateOptions;
 
 // Build our Editor instance and process the data coming from _POST
-$editor = Editor::inst( $db, 'datatables_demo' )
+/*$editor = Editor::inst( $db, 'datatables_demo' )
 	->fields(
 		Field::inst( 'first_name' )
 		->validator( Validate::notEmpty( ValidateOptions::inst()
@@ -47,4 +47,18 @@ $editor = Editor::inst( $db, 'datatables_demo' )
 	Field::inst( 'start_date' )
 		->validator( Validate::dateFormat( 'Y-m-d' ) )
 		->getFormatter( Format::dateSqlToFormat( 'Y-m-d' ) )
-		->setFormatter( Format::dateFormatToSql('Y-m-d' ) )	);
+		->setFormatter( Format::dateFormatToSql('Y-m-d' ) )	);*/
+$editor = Editor::inst( $db, '' )
+->readTable('wp_cliente')
+->fields(
+	Field::inst( 'id' ),
+	Field::inst( 'nome' ),
+	Field::inst( 'cognome' ),
+	Field::inst( 'data_nascita' ),
+	Field::inst( 'indirizzo' ),
+	Field::inst( 'numero_telefono' ),
+	Field::inst( 'mail' ),
+	Field::inst( 'ufficio_usa' ),
+	Field::inst( 'caso' ),
+	Field::inst( 'id_applicant' ),
+);

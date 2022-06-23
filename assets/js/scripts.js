@@ -9,8 +9,9 @@ $(document).ready(function () {
 
     editor = new $.fn.dataTable.Editor({
         //ajax: "../data_tables/controllers/staff.php",
-        ajax: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php",
+        //ajax: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php",
         table: "#table",
+        idSrc: 'id',
         fields: [
             { label: 'ID', name: 'id' },
             { label: 'Nome', name: 'nome' },
@@ -27,12 +28,13 @@ $(document).ready(function () {
 
     var table = $('#table').DataTable({
         //ajax: "../data_tables/controllers/staff.php",
-        ajax: {
+        /*ajax: {
             url: "../wp-content/themes/my-theme/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php",
             type: "POST"
-        },
+        },*/
         lengthChange: false,
-        dom: 'lBfrtip',
+        dom: 'Bfrtip',
+        idSrc: 'id',
         columns: [
             { data: 'ID' },
             { data: 'Nome' },
@@ -45,6 +47,12 @@ $(document).ready(function () {
             { data: 'Caso' },
             { data: 'Applicant' }
         ],
+        buttons: [
+            { extend: "create", editor: editor },
+            { extend: "edit", editor: editor },
+            { extend: "remove", editor: editor },
+            'print'
+        ],
         select: true,
         "processing": true,
         columnDefs: [{
@@ -52,17 +60,7 @@ $(document).ready(function () {
             "targets": "_all"
         }]
     });
-
-    // Display the buttons
-    new $.fn.dataTable.Buttons(table, [
-        { extend: "create", editor: editor },
-        { extend: "edit", editor: editor },
-        { extend: "remove", editor: editor },
-    ]);
-
     table.buttons().container()
-        .prependTo($('div.fg-toolbar:eq(0)', table.table().container()));
-
-
-    //console.clear();
+        .appendTo($('.col-sm-6:eq(0)', table.table().container()));
+    console.clear();
 });

@@ -23,7 +23,7 @@ function load_js()
     //wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/scriptsProva.js', array(), '1.0', true);
     wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0', true);
     wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/jquery-3.6.0.slim.min.js', array(), '3.6.0', true);
-    wp_enqueue_script('staff', get_template_directory_uri() . '/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php', array(), '1.0', true);
+    //wp_enqueue_script('staff', get_template_directory_uri() . '/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php', array(), '1.0', true);
     enqueue_my_file('bootstrap', 'js', '', '5.1.3', true);
     enqueue_my_file('data_tables', 'js', 'DataTables-1.12.1', '1.12.1', true);
     
