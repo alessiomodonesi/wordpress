@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "wordpress";
+$db = "nuovo_database";
 $port = "3306";
 
 //connect

@@ -21,29 +21,6 @@ for($i = 0; $i < count($arr_value); $i++){
         $sql .= " '$arr_value[$i]')";
 }
 
-/*$sql = "INSERT INTO `wp_cliente` (
-    `nome`,
-    `cognome`,
-    `data_nascita`,
-    `indirizzo`, 
-    `numero_telefono`, 
-    `mail`,
-    `ufficio_usa`, 
-    `caso`, 
-    `id_applicant`
-    ) values (
-    '$nome', 
-    '$cognome', 
-    '$data_nascita', 
-    '$indirizzo',
-    '$numero_telefono',
-    '$mail',
-    '$ufficio_usa',
-    '$caso',
-    '$id_applicant'
-    )";
-*/
-
 $query = mysqli_query($connect, $sql);
 $lastId = mysqli_insert_id($connect);
 if($query == true)

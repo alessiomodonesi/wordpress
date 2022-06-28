@@ -3,9 +3,11 @@ include('connection.php');
 $output = array();
 $tab = $_POST['tabella'];
 $tab_id = $_POST['id_tabella'];
+
 $total_all_rows = get_records_filtered($connect, $tab);
 $query = get_records_by_order($connect, $tab, $tab_id);
 $count_rows = mysqli_num_rows($query);
+
 $data = array();
 while ($row = mysqli_fetch_assoc($query)) {
     $data[] = create_sub_array($row, $tab, $tab_id);
