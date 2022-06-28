@@ -59,7 +59,8 @@ function Create_Table_Index() {
     const tHead = {
         "caso": [
             "ID",
-            "Nome"
+            "Nome",
+            "Opzioni"
         ],
         "cliente": [
             "ID",
