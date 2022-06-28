@@ -15,24 +15,35 @@
                 <div class="collapse navbar-collapse d-flex justify-content-center">
                     <a class="navbar-brand" href="http://localhost/wordpress/home-page" id="home">Home</a>
                     <div class="row">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-title">
 
-                            <li class="nav-item dropdown" id="clienti-specialisti">
-                                <a class="nav-link dropdown-toggle" href="#" id="nav-title" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Clienti & Specialisti</a>
+                            <li class="nav-item dropdown" id="menu-1">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Clienti&Specialisti</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/cliente">Cliente</a></li>
                                     <li><a class="dropdown-item"
                                             href="http://localhost/wordpress/specialista">Specialista</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="http://localhost/wordpress/cliente-specialista">Cliente/Specialista</a>
-                                    </li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item dropdown" id="pagamenti">
-                                <a class="nav-link dropdown-toggle" href="#" id="nav-title" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Pagamenti</a>
+                            <li class="nav-item dropdown" id="menu-2">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Fascicoli</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item"
+                                            href="http://localhost/wordpress/fascicolo">Fascicolo</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="http://localhost/wordpress/fascicolo-cliente">Fascicolo cliente</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="http://localhost/wordpress/fascicolo-specialista">Fascicolo specialista</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown" id="menu-3">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Pagamenti</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item"
                                             href="http://localhost/wordpress/pagamento">Pagamento</a>
@@ -41,19 +52,17 @@
                                             href="http://localhost/wordpress/metodo-pagamento">Metodo di pagamento</a>
                                     </li>
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/rata">Rata</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/wordpress/spese">Spese</a></li>
                                 </ul>
                             </li>
-
-                            <li class="nav-item dropdown" id="casi">
-                                <a class="nav-link dropdown-toggle" href="#" id="nav-title" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Casi</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item"
-                                            href="http://localhost/wordpress/documenti-caso">Documenti</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="http://localhost/wordpress/tipo-caso">Tipo di caso</a>
-                                    </li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="http://localhost/wordpress/caso" id="menu-4">Caso</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="http://localhost/wordpress/stato" id="menu-5">Stato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="http://localhost/wordpress/ufficio" id="menu-6">Ufficio</a>
                             </li>
                         </ul>
                     </div>

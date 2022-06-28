@@ -9,20 +9,28 @@ $(document).ready(function () {
     btn.appendChild(btnText);
     titolo.appendChild(titleText);
 });
-function Get_Title_Btn(page){
+function Get_Title_Btn(page) {
     let title, btn;
     switch (page) {
+        case "caso":
+            title = "Casi";
+            btn = "Aggiungi caso";
+            break;
         case "cliente":
             title = "Clienti";
             btn = "Aggiungi cliente";
             break;
-        case "cliente-specialista":
-            title = "Clienti/Specialisti";
-            btn = "Aggiungi cliente/specialista";
+        case "fascicolo":
+            title = "Fascicoli";
+            btn = "Aggiungi fascicolo";
             break;
-        case "documenti-caso":
-            title = "Documenti";
-            btn = "Aggiungi documento";
+        case "fascicolo-cliente":
+            title = "Fascicoli clienti";
+            btn = "Aggiungi fascicolo";
+            break;
+        case "fascicolo-specialista":
+            title = "Fascicoli specialisti";
+            btn = "Aggiungi fascicolo";
             break;
         case "metodo-pagamento":
             title = "Metodi di pagamento";
@@ -40,9 +48,17 @@ function Get_Title_Btn(page){
             title = "Specialisti";
             btn = "Aggiungi specialista";
             break;
-        case "tipo-caso":
-            title = "Tipi di caso";
-            btn = "Aggiungi tipo di caso";
+        case "spese":
+            title = "Spese";
+            btn = "Aggiungi spesa";
+            break;
+        case "stato":
+            title = "Stato";
+            btn = "Aggiungi stato";
+            break;
+        case "ufficio":
+            title = "Uffici";
+            btn = "Aggiungi ufficio";
             break;
     } return { title: title, btn: btn };
 }
