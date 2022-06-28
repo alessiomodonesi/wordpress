@@ -1,11 +1,11 @@
 <?php
 include('connection.php');
 $output = array();
-$tab = $_POST['tabella'];
-$tab_id = $_POST['id_tabella'];
-$arr_nomi = $_POST['arr_name'];
+$tab = $_POST['tabella'];//prende nome della tabella
+$tab_id = $_POST['id_tabella'];//prende l'id della tabella 
+$arr_nomi = $_POST['arr_name'];//prende i nomi dei campi della tabella 
 
-$total_all_rows = get_records_filtered($connect, $tab);
+$total_all_rows = get_records_filtered($connect, $tab);//Tutte le righe
 $query = get_records_by_order($connect, $tab, $tab_id, $arr_nomi);
 $count_rows = mysqli_num_rows($query);
 
@@ -20,12 +20,14 @@ $output = array(
     'data' => $data
 );
 echo json_encode($output);
+//Ritorna le righe della tabella
 function get_records_filtered($connect, $table)
 {
     $sql = "SELECT * FROM $table";
     $result = mysqli_query($connect, $sql);
     return mysqli_num_rows($result);
 }
+
 function get_records_by_order($connect, $table, $id, $arr)
 {
     $sql = "SELECT * FROM $table";
@@ -48,7 +50,8 @@ function get_records_by_order($connect, $table, $id, $arr)
     }
     return mysqli_query($connect, $sql);
 }
-//si occupa di create il sub_array a seconda della tabella a cui si fa la query
+/*si occupa di creare il sub_array a seconda della tabella a cui si fa la query
+ riempendolo con tutti i dati di ogni riga*/
 function create_sub_array($row, $table, $id, $arr)
 {
     $sub_array = array();
@@ -60,12 +63,16 @@ function create_sub_array($row, $table, $id, $arr)
     $sub_array[] = '<a href="#!" data-id="' . $row[$id] . '" class="btn btn-outline-primary btn-sm editbtn">Modifica</a> <a href="#!" data-id="' . $row[$id] . '" class="btn btn-outline-danger btn-sm deleteBtn">Elimina</a>';
     return $sub_array;
 }
+
+//Funzione che va a prendere le colonne della tabella
 function get_columns($arr, $id)
 {
     $columns = $arr;
     array_unshift($columns, $id);
     return $columns;
 }
+
+//Funzione che ricerca nomi e dati all'interno delle tabelle
 function get_search_comands($id, $search_value, $arr)
 {
     $cmd = " WHERE $id like '%" . $search_value . "%'";

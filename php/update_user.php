@@ -1,14 +1,13 @@
 <?php 
 include('connection.php');
 
-$arr_value = $_POST['arr_value'];
-$arr_nomi = $_POST['arr_name'];
-$tabella = $_POST['tabella'];
-$id_value = $_POST['id_value'];
-$id_name = $_POST['id_name'];
+$arr_value = $_POST['arr_value'];//valori cambiati dall'utente tramite input
+$arr_nomi = $_POST['arr_name'];//nomi dei campi del database
+$tabella = $_POST['tabella'];//nome tabella
+$id_value = $_POST['id_value'];//id contenuto nel bottone modifica
+$id_name = $_POST['id_name'];//id della tabella
 
-//$sql = "UPDATE `wp_cliente` SET `nome`='$arr_value[1]', `cognome`='$arr_value[2]', `data_nascita`='$arr_value[3]', `indirizzo`='$arr_value[4]', `mail`='$arr_value[5]', `ufficio_usa`='$arr_value[6]', `caso`='$arr_value[7]', `id_applicant`='$arr_value[8]' WHERE id_cliente='$arr_value[0]'";
-//$sql = "UPDATE `wp_cliente` SET `nome`='$arr_value[1]' WHERE id_cliente='$arr_value[0]'";
+//aggiorna i valori aggiornati nel database
 $sql = "UPDATE `$tabella` SET";
 for($i = 0; $i < count($arr_value); $i++){
     if($i < count($arr_value) - 1)

@@ -1,10 +1,12 @@
 <?php
 include('connection.php');
 
-$arr_value = $_POST['arr_value'];
-$arr_nomi = $_POST['arr_name'];
-$tabella = $_POST['tabella'];
+$arr_value = $_POST['arr_value'];//prende i valori inseriti dall'utente
+$arr_nomi = $_POST['arr_name'];//prende i nomi dei cambi della tabella
+$tabella = $_POST['tabella'];//prende le informazioni base sulla tabella
 
+
+//Inserisce tutt i dati nella tabella neglia ppositi campi
 $sql = "INSERT INTO `$tabella` (";
 
 for($i = 0; $i < count($arr_nomi); $i++){
