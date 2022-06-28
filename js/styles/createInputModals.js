@@ -5,88 +5,63 @@ $(document).ready(function () {
     switch (page) {
         //caso
         case "caso":
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
             break;
         //cliente
-        case "cliente":
-            break;
-        //fascicolo
-        case "fascicolo":
-            break;
-        //fascicolo-cliente
-        case "fascicolo-cliente":
-            break; 
-        //fascicolo-specialista
-        case "fascicolo-specialista":
-            break;
-        //metodo_pagamento
-        case "metodo-pagamento":
-            break;
-        //pagamento
-        case "pagamento":
-            break;
-        //rata
-        case "rata":
-            break;
-        //specialista
-        case "specialista":
-            break;
-        //spese
-        case "spese":
-            break;
-        //stato
-        case "stato":
-            break;
-        //ufficio
-        case "ufficio":
-            break;
-    }
-    switch (page) {
-        //wp_cliente
         case "cliente":
             createModal(fields.cliente, "updateUser");
             createModal(fields.cliente, "addUser");
             break;
-
-        //wp_cliente_specialista
-        case "cliente-specialista":
-            createModal(fields.cliente_s, "updateUser");
-            createModal(fields.cliente_s, "addUser");
+        //fascicolo
+        case "fascicolo":
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
             break;
-
-        //wp_documenti_caso
-        case "documenti-caso":
-            createModal(fields.documenti_c, "updateUser");
-            createModal(fields.documenti_c, "addUser");
+        //fascicolo-cliente
+        case "fascicolo-cliente":
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
+            break; 
+        //fascicolo-specialista
+        case "fascicolo-specialista":
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
             break;
-
-        //wp_metodo_pagamento
+        //metodo_pagamento
         case "metodo-pagamento":
-            createModal(fields.metodo_p, "updateUser");
-            createModal(fields.metodo_p, "addUser");
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
             break;
-
-        //wp_pagamento
+        //pagamento
         case "pagamento":
-            createModal(fields.pagamento, "updateUser");
-            createModal(fields.pagamento, "addUser");
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
             break;
-
-        //wp_rata
+        //rata
         case "rata":
-            createModal(fields.rata, "updateUser");
-            createModal(fields.rata, "addUser");
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
             break;
-
-        //wp_specialista
+        //specialista
         case "specialista":
-            createModal(fields.specialista, "updateUser");
-            createModal(fields.specialista, "addUser");
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
             break;
-
-        //wp_tipo_caso
-        case "tipo-caso":
-            createModal(fields.tipo_c, "updateUser");
-            createModal(fields.tipo_c, "addUser");
+        //spese
+        case "spese":
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
+            break;
+        //stato
+        case "stato":
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
+            break;
+        //ufficio
+        case "ufficio":
+            createModal(fields.cliente, "updateUser");
+            createModal(fields.cliente, "addUser");
             break;
     }
 });
@@ -214,70 +189,22 @@ const fields = {
             "idEdit": "MailField",
             "idUpdate": "addMailField",
             "label": "Email"
-        },
-        {
-            "type": "text",
-            "varName": "ufficio_usa",
-            "idEdit": "UfficioField",
-            "idUpdate": "addUfficioField",
-            "label": "Ufficio"
-        },
-        {
-            "type": "number",
-            "varName": "caso",
-            "idEdit": "CasoField",
-            "idUpdate": "addCasoField",
-            "label": "Caso"
-        },
-        {
-            "type": "number",
-            "varName": "id_applicant",
-            "idEdit": "ApplicantField",
-            "idUpdate": "addApplicantField",
-            "label": "Applicant"
-        },
-    ],
-    "cliente_s": [
-        {
-            "type": "text",
-            "varName": "id_specialista",
-            "idEdit": "SpecialistaField",
-            "idUpdate": "addSpecialistaField",
-            "label": "Specialista"
-        },
-        {
-            "type": "number",
-            "varName": "numero_specialista",
-            "idEdit": "NumeroField",
-            "idUpdate": "addNumeroField",
-            "label": "Numero Specialista"
-        },
-    ],
-    "documenti_c": [
-        {
-            "type": "text",
-            "varName": "documento",
-            "idEdit": "DocumentoField",
-            "idUpdate": "addDocumentoField",
-            "label": "Documento"
-        },
-    ],
-    "metodo_p": [
-        {
-            "type": "text",
-            "varName": "nome",
-            "idEdit": "NomeField",
-            "idUpdate": "addNomeField",
-            "label": "Nome"
-        },
+        }
     ],
     "pagamento": [
         {
             "type": "number",
-            "varName": "id_cliente",
-            "idEdit": "ClienteField",
-            "idUpdate": "addClienteField",
-            "label": "ID Cliente"
+            "varName": "id_fascicolo",
+            "idEdit": "FascicoloField",
+            "idUpdate": "addFascicoloField",
+            "label": "ID Fascicolo"
+        },
+        {
+            "type": "date",
+            "varName": "creazione",
+            "idEdit": "CreazioneField",
+            "idUpdate": "addCreazioneField",
+            "label": "Data Creazione"
         },
         {
             "type": "number",
@@ -292,6 +219,13 @@ const fields = {
             "idEdit": "TotaleVeroField",
             "idUpdate": "addTotaleVeroField",
             "label": "Totale Vero"
+        },
+        {
+            "type": "number",
+            "varName": "accettato",
+            "idEdit": "AccettatoField",
+            "idUpdate": "addAccettatoField",
+            "label": "Accettato"
         },
     ],
     "rata": [
@@ -347,27 +281,130 @@ const fields = {
             "label": "Data Nascita"
         },
         {
-            "type": "email",
-            "varName": "mail",
-            "idEdit": "MailField",
-            "idUpdate": "addMailField",
-            "label": "Email"
-        },
-        {
             "type": "text",
             "varName": "numero_telefono",
             "idEdit": "TelefonoField",
             "idUpdate": "addTelefonoField",
             "label": "Telefono"
         },
+        {
+            "type": "email",
+            "varName": "mail",
+            "idEdit": "MailField",
+            "idUpdate": "addMailField",
+            "label": "Email"
+        },
     ],
-    "tipo_c": [
+    "metodo_p": [
         {
             "type": "text",
-            "varName": "nome_caso",
+            "varName": "nome",
             "idEdit": "NomeField",
             "idUpdate": "addNomeField",
             "label": "Nome"
+        },
+    ],
+    "caso": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idEdit": "NomeField",
+            "idUpdate": "addNomeField",
+            "label": "Nome"
+        },
+    ],
+    "stato": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idEdit": "NomeField",
+            "idUpdate": "addNomeField",
+            "label": "Nome"
+        },
+    ],
+    "ufficio": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idEdit": "NomeField",
+            "idUpdate": "addNomeField",
+            "label": "Nome"
+        },
+    ],
+    "fascicolo_c": [
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idEdit": "FascicoloField",
+            "idUpdate": "addFascicoloField",
+            "label": "ID Fascicolo"
+        },
+        {
+            "type": "number",
+            "varName": "id_cliente",
+            "idEdit": "ClienteField",
+            "idUpdate": "addClienteField",
+            "label": "ID Cliente"
+        },
+    ],
+    "spese": [
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idEdit": "FascicoloField",
+            "idUpdate": "addFascicoloField",
+            "label": "ID Fascicolo"
+        },
+        {
+            "type": "number",
+            "varName": "somma",
+            "idEdit": "SommaField",
+            "idUpdate": "addSommaField",
+            "label": "Somma"
+        },
+        {
+            "type": "number",
+            "varName": "rimborso",
+            "idEdit": "RimborsoField",
+            "idUpdate": "addRimborsoField",
+            "label": "Rimborso"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idEdit": "NoteField",
+            "idUpdate": "addNoteField",
+            "label": "Note"
+        },
+    ],
+    "fascicolo_s": [
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idEdit": "FascicoloField",
+            "idUpdate": "addFascicoloField",
+            "label": "ID Fascicolo"
+        },
+        {
+            "type": "number",
+            "varName": "id_specialista",
+            "idEdit": "SpecialistaField",
+            "idUpdate": "addSpecialistaField",
+            "label": "ID Specialista"
+        },
+        {
+            "type": "number",
+            "varName": "numero_specialista",
+            "idEdit": "NumeroSpecialistaField",
+            "idUpdate": "addNumeroSpecialistaField",
+            "label": "Numero Specialista"
+        },
+        {
+            "type": "number",
+            "varName": "accettato",
+            "idEdit": "AccettatoField",
+            "idUpdate": "addAccettatoField",
+            "label": "Accettato"
         },
     ],
 };
