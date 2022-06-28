@@ -6,7 +6,7 @@ $(document).on('submit', '#updateUser', function (e) {
     //console.log("Questo è l'id: " + id_valore);
 
     var dataValue = Setup_Array(page, true);
-    let url = Get_URL(page, 'wp-content/themes/my-theme-2.0/php/update_user.php');
+    let url = Get_URL(page, 'wp-content/themes/my-theme/php/update_user.php');
     let pageData = Get_Table(page);
     let dataNames = Setup_Array(page, false);
 

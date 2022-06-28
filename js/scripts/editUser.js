@@ -2,7 +2,7 @@ var $ = jQuery;
 $(document).on('click', '.editbtn ', function (event) {
     let page = $('#title').val();
     console.log("Questa è la pagina, scemoo: " + page);
-    let url = Get_URL(page, 'wp-content/themes/my-theme-2.0/php/get_single_data.php');
+    let url = Get_URL(page, 'wp-content/themes/my-theme/php/get_single_data.php');
 
     var table = $('#table').DataTable();
     var trid = $(this).closest('tr').attr('id');

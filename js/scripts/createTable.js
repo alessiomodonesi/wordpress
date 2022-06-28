@@ -4,7 +4,7 @@ $(document).ready(function () {
     let page = $('#title').val();
     console.log("Questa è la pagina: " + page);
     let page_data = Get_Table(page);
-    let url = Get_URL(page, 'wp-content/themes/my-theme-2.0/php/fetch_data_new.php');
+    let url = Get_URL(page, 'wp-content/themes/my-theme/php/fetch_data_new.php');
 
     $('#table').DataTable({
         "fnCreatedRow": function (nRow, aData, iDataIndex) {

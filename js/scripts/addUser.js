@@ -2,7 +2,7 @@ var $ = jQuery;
 $(document).on('submit', '#addUser', function (e) {
     e.preventDefault();
     let page = $('#title').val();
-    let url = Get_URL(page, 'wp-content/themes/my-theme-2.0/php/add_user.php');
+    let url = Get_URL(page, 'wp-content/themes/my-theme/php/add_user.php');
 
     var dataValue = Ottieni_Array(page, true);
     let pageData = Get_Table(page);

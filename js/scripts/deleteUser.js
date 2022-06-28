@@ -3,7 +3,7 @@ $(document).on('click', '.deleteBtn', function (event) {
     var table = $('#table').DataTable();
     event.preventDefault();
     let page = $('#title').val();
-    let url = Get_URL(page, 'wp-content/themes/my-theme-2.0/php/delete_user.php');
+    let url = Get_URL(page, 'wp-content/themes/my-theme/php/delete_user.php');
     var id = $(this).data('id');
     let deleteData = Get_Page(page);
 
