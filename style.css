@@ -1,19 +1,32 @@
 /*
-    Theme Name: Evolve theme
+    Theme Name: Evolve theme 2.0
     Author: Evolve
 */
-
 body {
-    background: whitesmoke !important;
+  background: white !important;
 }
-
-header {
-    background: rgb(238,174,202) !important;
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%) !important;
-    width: 100%;
-    height: 100px;
+.btnAdd {
+  text-align: right;
+  width: 83%;
+  margin-bottom: 20px;
+  padding-right: 9vw !important;
 }
-
-.nav {
-    color: white;
+#nav-title {
+  color: white;
+  font-size: 23.5px;
+}
+#home {
+  color: white;
+  font-size: 23.5px;
+}
+#clienti-specialisti {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+#pagamenti {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#casi {
+  margin-left: 15px;
 }

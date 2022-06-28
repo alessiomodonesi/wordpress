@@ -1,71 +1,68 @@
-<?php
-    get_header();
-    //server
-    $servername = "localhost";
-    $username = "evolve";
-    $password = "e_volvetest!8!";
-    $db = "wp_evolve";
-    $port = "3306";
-    //local
-    $usernamel = "root";
-    $passwordl = "";
-    $dbl = "wordpress";
-    //tabelle
-    $tabella = "evo_cliente";
-    $tabellal = "wp_cliente";
-    //connect
-    $connect = mysqli_connect($servername, $usernamel, $passwordl, $dbl, $port);
-    $query = "SELECT * FROM $tabellal";
-    //result
-    $result = mysqli_query($connect, $query) or die( mysqli_error($connect));
+<?php include('php/connection.php'); get_header(); get_footer(); ?>
 
-?>
-
-<div class="container">
+<div class="container-fluid"><br />
+    <h1 class="title text-center" id="titolo"></h1>
+    <input type="hidden" id="title" value="<?php echo get_the_title(); ?>"><hr />
     <div class="row">
-        <div class="col-12">
-            <h2 class="title"><?php the_title(); ?></h2>
-            <table id="table" class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Cognome</th>
-                        <th>Data di nascita</th>
-                        <th>Indirizzo</th>
-                        <th>Telefono</th>
-                        <th>Email</th>
-                        <th>Ufficio</th>
-                        <th>Caso</th>
-                        <th>Applicant</th>
-                    </tr>
-                </thead>
-                <?php
-                    while ($row = mysqli_fetch_array($result))
-                    {
-                        echo '
-                        <tr>
-                            <td>'.$row["id"].'</td>
-                            <td>'.$row["nome"].'</td>
-                            <td>'.$row["cognome"].'</td>
-                            <td>'.$row["data_nascita"].'</td>
-                            <td>'.$row["indirizzo"].'</td>
-                            <td>'.$row["numero_telefono"].'</td>
-                            <td>'.$row["mail"].'</td>
-                            <td>'.$row["ufficio_usa"].'</td>
-                            <td>'.$row["caso"].'</td>
-                            <td>'.$row["id_applicant"].'</td>
-                        </tr>
-                        ';
-                    }
-                ?>
-            </table>
-            <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-                <?php the_content(); ?>
-            <?php endwhile; endif; ?>
+        <div class="btnAdd">
+            <a href="#!" data-id="" data-bs-toggle="modal" data-bs-target="#addUserModal" class="btn btn-outline-success btn-sm" id="addBtn"></a>
         </div>
-
-    </div> 
+    </div>
+    <div class="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <table id="table" class="table">
+                        <thead>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<?php get_footer(); ?>
+<!-- Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modifica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateUser">
+                    <input type="hidden" name="id" id="id" value="">
+                    <input type="hidden" name="trid" id="trid" value="">
+                    <!-- guarda createInputModals.js -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Chiudi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add user Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Aggiungi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="addUser" action="">
+                    <!-- guarda createInputModals.js -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Chiudi</button>
+            </div>
+        </div>
+    </div>
+</div>

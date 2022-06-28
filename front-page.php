@@ -1,17 +1,6 @@
-<?php get_header(); ?>
+<?php include('php/connection.php'); get_header(); get_footer(); ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="title"><?php the_title(); ?></h2>
-
-            <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-                <?php the_content(); ?>
-            <?php endwhile; endif; ?>
-            
-        </div> 
-
-    </div> 
+<div class="container-fluid"><br />
+    <h1 class="title text-center">Home Page</h1>
+    <input type="hidden" id="title" value="<?php echo get_the_title(); ?>"><hr />
 </div>
-
-<?php get_footer(); ?>

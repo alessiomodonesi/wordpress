@@ -1,68 +1,32 @@
 <?php
-
-//include( '/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php' );
-
-//carica correttamente i file css in wordpress
-function load_stylesheets() 
-{
-    wp_enqueue_style('customstyle', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
-    enqueue_my_file('bootstrap', 'css', '', '5.1.3', true);
-    enqueue_my_file('data_tables', 'css', 'DataTables-1.12.1', '1.12.1', true);
-
-    //EXSTENSION
-    enqueue_my_file('data_tables', 'css', 'Editor-PHP-2.0.8', '2.0.8', true);
-    enqueue_my_file('data_tables', 'css', 'Buttons-2.2.3', '2.2.3', true);
-    enqueue_my_file('data_tables', 'css', 'Select-1.4.0', '1.4.0', true);
-    enqueue_my_file('data_tables', 'css', 'Responsive-2.3.0', '2.3.0', true);
-}
-add_action('wp_enqueue_scripts', 'load_stylesheets');
-
-//carica correttamente i file js in wordpress
-function load_js()
-{
-    //wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/scriptsProva.js', array(), '1.0', true);
-    wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0', true);
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/jquery-3.6.0.slim.min.js', array(), '3.6.0', true);
-    //wp_enqueue_script('staff', get_template_directory_uri() . '/assets/data_tables/Editor-PHP-2.0.8/controllers/staff.php', array(), '1.0', true);
-    enqueue_my_file('bootstrap', 'js', '', '5.1.3', true);
-    enqueue_my_file('data_tables', 'js', 'DataTables-1.12.1', '1.12.1', true);
+include('get_browser.php');
+if ($browser == "Google Chrome") {
+    //carica i file .css 
+    function load_stylesheets()
+    {
+        wp_enqueue_style('customstyle', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
+        wp_enqueue_style('bootstrap', get_template_directory_uri() . "/css/bootstrap/bootstrap.min.css'", array(), '5.1.3', 'all');
+        wp_enqueue_style('data_tables', get_template_directory_uri() . "/datatables/Data-1.12.1/css/jquery.dataTables.min.css", array(), '1.12.1', 'all');
+    }
+    add_action('wp_enqueue_scripts', 'load_stylesheets');
     
-    //EXSTENSION
-    enqueue_my_file('data_tables', 'js', 'Editor-PHP-2.0.8', '2.0.8', true);
-    enqueue_my_file('data_tables', 'js', 'Buttons-2.2.3', '2.2.3', true);
-    enqueue_my_file('data_tables', 'js', 'Select-1.4.0', '1.4.0', true);
-    enqueue_my_file('data_tables', 'js', 'Responsive-2.3.0', '2.3.0', true);
-}
-add_action('wp_enqueue_scripts', 'load_js');
-//carica la sezione "menu" all'interno di "aspetto" in wp-admin
-add_theme_support('menus');
-
-//carica il menu
-register_nav_menus (
-    array (
-        'top-menu' => __('Top Menù', 'theme'),
-        'footer-menu' => __('Footer Menù', 'theme'),
-    )
-);
-
-//carica i file di ogni estensione/cartella
-function enqueue_my_file($folder, $type, $extensions, $ver, $inFooter){
-    //echo get_template_directory(). '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. '*.'. $type;
-    foreach( glob( get_template_directory(). '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. '*.'. $type ) as $file ) {
-        $filename = substr($file, strrpos($file, '/') + 1);
-        if($type == 'js')
-            wp_enqueue_script( $filename, get_template_directory_uri(). '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. $filename, array(), $ver, $inFooter);
-        else if($type == 'css')
-            wp_enqueue_style( $filename, get_template_directory_uri() . '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. $filename, array(), $ver, 'all');
+    //carica correttamente i file .js
+    function load_js()
+    {
+        wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.6.0.slim.min.js', array(), '3.6.0', true);
+        wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap/bootstrap.bundle.min.js', array(), '5.1.3', true);
+        wp_enqueue_script('data_tables', get_template_directory_uri() . '/datatables/Data-1.12.1/js/jquery.dataTables.min.js', array(), '1.12.1', true);
+        //Custom JS
+        wp_enqueue_script('createInputDiv', get_template_directory_uri() . '/js/scripts/createInputModals.js', array(), '1.0', true);
+        wp_enqueue_script('createTh', get_template_directory_uri() . '/js/scripts/createTh.js', array(), '1.0', true);
+        wp_enqueue_script('createTable', get_template_directory_uri() . '/js/scripts/createTable.js', array(), '1.0', true);
+        wp_enqueue_script('addUser', get_template_directory_uri() . '/js/scripts/addUser.js', array(), '1.0', true);
+        wp_enqueue_script('deleteUser', get_template_directory_uri() . '/js/scripts/deleteUser.js', array(), '1.0', true);
+        wp_enqueue_script('editUser', get_template_directory_uri() . '/js/scripts/editUser.js', array(), '1.0', true);
+        wp_enqueue_script('updateUser', get_template_directory_uri() . '/js/scripts/updateUser.js', array(), '1.0', true);
+        wp_enqueue_script('getTitle', get_template_directory_uri() . '/js/scripts/getTitle.js', array(), '1.0', true);
     }
+    add_action('wp_enqueue_scripts', 'load_js');
+    add_theme_support('menus');
 }
-//carica i php di ogni estensione/cartella
-function enqueue_my_php($folder, $subfolder, $extensions, $ver, $inFooter){
-    //echo get_template_directory(). '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. '*.'. $type;
-    foreach( glob( get_template_directory(). '/assets/' .$folder. '/'. $extensions. '/'. $type. '/'. '*.'. $type ) as $file ) {
-        $filename = substr($file, strrpos($file, '/') + 1);
-        wp_enqueue_script( $filename, get_template_directory_uri(). '/assets/' .$folder. '/'. $extensions. '/'. $subfolder. '/'. $filename, array(), $ver, $inFooter);
-    }
-}
-
 ?>
