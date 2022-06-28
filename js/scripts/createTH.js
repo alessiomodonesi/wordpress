@@ -7,115 +7,152 @@ function Create_Table_Index() {
     console.log("inizio creazione th");
     let page = $('#title').val();
     switch (page) {
-        //wp_cliente
+        //caso
+        case "caso":
+            createThElements(tHead.caso);
+            break;
+        //cliente
         case "cliente":
             createThElements(tHead.cliente);
             break;
-        //wp_cliente_specialista
-        case "cliente-specialista":
-            createThElements(tHead.cliente_specialista);
+        //fascicolo
+        case "fascicolo":
+            createThElements(tHead.fascicolo);
             break;
-
-        //wp_documenti_caso
-        case "documenti-caso":
-            createThElements(tHead.documenti_caso);
+        //fascicolo-cliente
+        case "fascicolo-cliente":
+            createThElements(tHead.fascicolo_cliente);
+            break; //fascicolo-specialista
+        case "fascicolo-specialista":
+            createThElements(tHead.fascicolo_specialista);
             break;
-
-        //wp_metodo_pagamento
+        //metodo_pagamento
         case "metodo-pagamento":
             createThElements(tHead.metodo_pagamento);
             break;
-
-        //wp_pagamento
+        //pagamento
         case "pagamento":
             createThElements(tHead.pagamento);
             break;
-
-        //wp_rata
+        //rata
         case "rata":
             createThElements(tHead.rata);
             break;
-
-        //wp_specialista
+        //specialista
         case "specialista":
             createThElements(tHead.specialista);
             break;
-
-        //wp_tipo_caso
-        case "tipo-caso":
-            createThElements(tHead.tipo_caso);
+        //spese
+        case "spese":
+            createThElements(tHead.spese);
             break;
-    }
-};
-const tHead = {
-    "cliente": [
-        "ID",
-        "Nome",
-        "Cognome",
-        "Data di nascita",
-        "Indirizzo",
-        "Telefono",
-        "Email",
-        "Ufficio",
-        "Caso",
-        "Applicant",
-        "Opzioni"
-    ],
-    "cliente_specialista": [
-        "ID",
-        "Specialista",
-        "Numero specialista",
-        "Opzioni"
-    ],
-    "documenti_caso": [
-        "ID",
-        "Documento",
-        "Opzioni"
-    ],
-    "metodo_pagamento": [
-        "ID",
-        "Nome",
-        "Opzioni"
-    ],
-    "pagamento": [
-        "ID",
-        "Cliente",
-        "Totale",
-        "Totale vero",
-        "Opzioni"
-    ],
-    "rata": [
-        "ID",
-        "Pagamento",
-        "Somma",
-        "Data",
-        "Tipo",
-        "Opzioni"
-    ],
-    "specialista": [
-        "ID",
-        "Nome",
-        "Cognome",
-        "Data di nascita",
-        "Email",
-        "Telefono",
-        "Opzioni"
-    ],
-    "tipo_caso": [
-        "ID",
-        "Nome",
-        "Opzioni"
-    ],
+        //stato
+        case "stato":
+            createThElements(tHead.stato);
+            break;
+        //ufficio
+        case "ufficio":
+            createThElements(tHead.ufficio);
+            break;
+    };
 }
-function createThElements(tHead) {
-    let tableTh = document.getElementsByClassName("sorting");
-    console.log("Number of th: " + tableTh.length)
-    for (let i = 0; i < tableTh.length; i++) {
-        const text = document.createTextNode(tHead[i]);
-        tableTh[i].appendChild(text);
+    const tHead = {
+        "caso": [
+            "ID",
+            "Nome"
+        ],
+        "cliente": [
+            "ID",
+            "Nome",
+            "Cognome",
+            "Data di nascita",
+            "Indirizzo",
+            "Telefono",
+            "Email",
+            "Opzioni"
+        ],
+        "fascicolo": [
+            "ID",
+            "Data apertura",
+            "Data chiusura",
+            "Stato",
+            "Ufficio",
+            "Referente",
+            "Caso",
+            "Note",
+            "Link",
+            "Opzioni"
+        ],
+        "fascicolo_cliente": [
+            "ID",
+            "Cliente",
+            "Opzioni"
+        ],
+        "fascicolo_specialista": [
+            "ID",
+            "Specialista",
+            "Numero specialista",
+            "Accettato",
+            "Opzioni"
+        ],
+        "metodo_pagamento": [
+            "ID",
+            "Nome",
+            "Opzioni"
+        ],
+        "pagamento": [
+            "ID",
+            "Fascicolo",
+            "Creazione",
+            "Totale",
+            "Totale vero",
+            "Accettato",
+            "Opzioni"
+        ],
+        "rata": [
+            "ID",
+            "Pagamento",
+            "Somma",
+            "Data",
+            "Tipo",
+            "Opzioni"
+        ],
+        "specialista": [
+            "ID",
+            "Nome",
+            "Cognome",
+            "Data di nascita",
+            "Telefono",
+            "Email",
+            "Opzioni"
+        ],
+        "spese": [
+            "ID",
+            "Somma",
+            "Rimborso",
+            "Note",
+            "Opzioni"
+        ],
+        "stato": [
+            "ID",
+            "Nome",
+            "Opzioni"
+        ],
+        "ufficio": [
+            "ID",
+            "Nome",
+            "Opzioni"
+        ],
     }
-    let lastTh = document.getElementsByClassName("sorting_disabled");
-    const text = document.createTextNode(tHead[tHead.length - 1]);
-    lastTh[0].appendChild(text);
-    console.log("fine creazione th");
-}
+    function createThElements(tHead) {
+        let tableTh = document.getElementsByClassName("sorting");
+        console.log("Number of th: " + tableTh.length)
+        for (let i = 0; i < tableTh.length; i++) {
+            const text = document.createTextNode(tHead[i]);
+            tableTh[i].appendChild(text);
+        }
+        let lastTh = document.getElementsByClassName("sorting_disabled");
+        const text = document.createTextNode(tHead[tHead.length - 1]);
+        lastTh[0].appendChild(text);
+        console.log("fine creazione th");
+    }
