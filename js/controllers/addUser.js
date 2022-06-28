@@ -8,6 +8,7 @@ $(document).on('submit', '#addUser', function (e) {
     let pageData = Get_Table(page);
     let dataNames = Ottieni_Array(page, false);
 
+    //da aggiungere un controllo
     if (true) {
         $.ajax({
             url: url, 
@@ -35,6 +36,44 @@ $(document).on('submit', '#addUser', function (e) {
 });
 
 function Ottieni_Array(page, getValue) {
+    switch (page) {
+        //caso
+        case "caso":
+            break;
+        //cliente
+        case "cliente":
+            break;
+        //fascicolo
+        case "fascicolo":
+            break;
+        //fascicolo-cliente
+        case "fascicolo-cliente":
+            break; 
+        //fascicolo-specialista
+        case "fascicolo-specialista":
+            break;
+        //metodo_pagamento
+        case "metodo-pagamento":
+            break;
+        //pagamento
+        case "pagamento":
+            break;
+        //rata
+        case "rata":
+            break;
+        //specialista
+        case "specialista":
+            break;
+        //spese
+        case "spese":
+            break;
+        //stato
+        case "stato":
+            break;
+        //ufficio
+        case "ufficio":
+            break;
+    }
     switch (page) {
         //wp_cliente
         case "cliente":

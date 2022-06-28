@@ -3,6 +3,44 @@ $(document).ready(function () {
     console.log("inizio creazione input div");
     let page = $('#title').val();
     switch (page) {
+        //caso
+        case "caso":
+            break;
+        //cliente
+        case "cliente":
+            break;
+        //fascicolo
+        case "fascicolo":
+            break;
+        //fascicolo-cliente
+        case "fascicolo-cliente":
+            break; 
+        //fascicolo-specialista
+        case "fascicolo-specialista":
+            break;
+        //metodo_pagamento
+        case "metodo-pagamento":
+            break;
+        //pagamento
+        case "pagamento":
+            break;
+        //rata
+        case "rata":
+            break;
+        //specialista
+        case "specialista":
+            break;
+        //spese
+        case "spese":
+            break;
+        //stato
+        case "stato":
+            break;
+        //ufficio
+        case "ufficio":
+            break;
+    }
+    switch (page) {
         //wp_cliente
         case "cliente":
             createModal(fields.cliente, "updateUser");

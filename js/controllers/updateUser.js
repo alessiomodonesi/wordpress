@@ -13,6 +13,7 @@ $(document).on('submit', '#updateUser', function (e) {
     var trid = $('#trid').val();
     //console.log("Questo è il trid: " + trid);
 
+    //da aggiungere un controllo decente
     if (trid != '') {
         $.ajax({
             url: url,
@@ -47,6 +48,44 @@ $(document).on('submit', '#updateUser', function (e) {
 });
 
 function Setup_Array(page, getValue) {
+    switch (page) {
+        //caso
+        case "caso":
+            break;
+        //cliente
+        case "cliente":
+            break;
+        //fascicolo
+        case "fascicolo":
+            break;
+        //fascicolo-cliente
+        case "fascicolo-cliente":
+            break; 
+        //fascicolo-specialista
+        case "fascicolo-specialista":
+            break;
+        //metodo_pagamento
+        case "metodo-pagamento":
+            break;
+        //pagamento
+        case "pagamento":
+            break;
+        //rata
+        case "rata":
+            break;
+        //specialista
+        case "specialista":
+            break;
+        //spese
+        case "spese":
+            break;
+        //stato
+        case "stato":
+            break;
+        //ufficio
+        case "ufficio":
+            break;
+    }
     switch (page) {
         //wp_cliente
         case "cliente":
