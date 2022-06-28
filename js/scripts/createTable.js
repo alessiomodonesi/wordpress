@@ -4,7 +4,8 @@ $(document).ready(function () {
     let page = $('#title').val();
     console.log("Questa è la pagina: " + page);
     let page_data = Get_Table(page);
-    let url = Get_URL(page, 'wp-content/themes/my-theme/php/fetch_data_new.php');
+    let url = Get_URL(page, 'wp-content/themes/my-theme/php/fetch_data.php');
+    let dataNames = Setup_Array(page, false);
 
     $('#table').DataTable({
         "fnCreatedRow": function (nRow, aData, iDataIndex) {
@@ -21,6 +22,7 @@ $(document).ready(function () {
             'data': {
                 'tabella': page_data.tab,
                 'id_tabella': page_data.tab_id,
+                'arr_name': dataNames,
             },
         },
         "aoColumnDefs": [{
