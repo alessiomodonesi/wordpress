@@ -1,5 +1,6 @@
 var $ = jQuery;
 $(document).ready(function () {
+    BrowserDetect();
     let page = $('#title').val();
     console.log("Questa è la pagina: " + page);
     let page_data = Get_Table(page);
@@ -30,62 +31,103 @@ $(document).ready(function () {
         }]
     });
 });
+
+function BrowserDetect() {
+    let userAgent = navigator.userAgent;
+    let browserName;
+    if (userAgent.match(/chrome|chromium|crios/i)) {
+        browserName = "chrome";
+    } else if (userAgent.match(/firefox|fxios/i)) {
+        browserName = "firefox";
+    } else if (userAgent.match(/safari/i)) {
+        browserName = "safari";
+    } else if (userAgent.match(/opr\//i)) {
+        browserName = "opera";
+    } else if (userAgent.match(/edg/i)) {
+        browserName = "edge";
+    } else {
+        browserName = "No browser detection";
+    }
+    //console.log("Stai usando " + browserName);
+    if (browserName != "chrome") {
+        $('#pagina_chrome').hide();
+        $('#header_chrome').hide();
+    }
+}
+
 function Get_Table(page) {
     let table, id, number;
     switch (page) {
-        //wp_cliente
-        case "cliente":
-            table = "wp_cliente";
-            id = "id_cliente";
-            number = 10;
-            break;
-
-        //wp_cliente_specialista
-        case "cliente-specialista":
-            table = "wp_cliente_specialista";
-            id = "id_cliente";
-            number = 3;
-            break;
-
-        //wp_documenti_caso
-        case "documenti-caso":
-            table = "wp_documenti_caso";
-            id = "id_caso";
-            number = 2;
-            break;
-
-        //wp_metodo_pagamento
-        case "metodo-pagamento":
-            table = "wp_metodo_pagamento";
+        //caso
+        case "caso":
+            table = "caso";
             id = "id";
             number = 2;
             break;
-
-        //wp_pagamento
-        case "pagamento":
-            table = "wp_pagamento";
-            id = "id_pagamento";
+        //cliente
+        case "cliente":
+            table = "cliente";
+            id = "id";
+            number = 7;
+            break;
+        //fascicolo
+        case "fascicolo":
+            table = "fascicolo";
+            id = "id";
+            number = 9;
+            break;
+        //fascicolo-cliente
+        case "fascicolo-cliente":
+            table = "fascicolo_cliente";
+            id = "id_fascicolo";
+            number = 2;
+            break; 
+        //fascicolo-specialista
+        case "fascicolo-specialista":
+            table = "fascicolo_specialista";
+            id = "id_fascicolo";
             number = 4;
             break;
-
-        //wp_rata
+        //metodo_pagamento
+        case "metodo-pagamento":
+            table = "metodo_pagamento";
+            id = "id";
+            number = 2;
+            break;
+        //pagamento
+        case "pagamento":
+            table = "pagamento";
+            id = "id_pagamento";
+            number = 6;
+            break;
+        //rata
         case "rata":
-            table = "wp_rata";
+            table = "rata";
             id = "id_rata";
             number = 5;
             break;
-
-        //wp_specialista
+        //specialista
         case "specialista":
-            table = "wp_specialista";
-            id = "id_specialista";
+            table = "specialista";
+            id = "id";
             number = 6;
             break;
-
-        //wp_tipo_caso
-        case "tipo-caso":
-            table = "wp_tipo_caso";
-            id = "id_caso";
+        //spese
+        case "spese":
+            table = "spese";
+            id = "id_fascicolo";
+            number = 4;
+            break;
+        //stato
+        case "stato":
+            table = "stato";
+            id = "id";
+            number = 2;
+            break;
+        //ufficio
+        case "ufficio":
+            table = "ufficio";
+            id = "id";
             number = 2;
             break;
     }
