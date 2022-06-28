@@ -55,14 +55,19 @@
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/spese">Spese</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="http://localhost/wordpress/caso" id="menu-4">Caso</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="http://localhost/wordpress/stato" id="menu-5">Stato</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="http://localhost/wordpress/ufficio" id="menu-6">Ufficio</a>
+
+                            <li class="nav-item dropdown" id="menu-4">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Altro</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item"
+                                            href="http://localhost/wordpress/caso">Caso</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="http://localhost/wordpress/stato">Stato</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="http://localhost/wordpress/ufficio">Ufficio</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
