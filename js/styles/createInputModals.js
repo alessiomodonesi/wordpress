@@ -71,9 +71,9 @@ function createModal(_form, _formId) {
     for (let i = 0; i < _form.length; i++) {
         let id;
         if (_formId == "updateUser")
-            id = _form[i].idEdit;
-        else if (_formId == "addUser")
             id = _form[i].idUpdate;
+        else if (_formId == "addUser")
+            id = _form[i].idAdd;
         addInputDiv(_form[i].label, _form[i].type, _form[i].varName, id, _formId);
     }
     addSubmitButton(submitButtonInfo.type, submitButtonInfo.divClass, submitButtonInfo.buttonClass, submitButtonInfo.buttonText, _formId);
@@ -151,43 +151,43 @@ const fields = {
         {
             "type": "text",
             "varName": "nome",
-            "idEdit": "NomeField",
-            "idUpdate": "addNomeField",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
             "label": "Nome"
         },
         {
             "type": "text",
             "varName": "cognome",
-            "idEdit": "CognomeField",
-            "idUpdate": "addCognomeField",
+            "idUpdate": "CognomeField",
+            "idAdd": "addCognomeField",
             "label": "Cognome"
         },
         {
             "type": "date",
             "varName": "data_nascita",
-            "idEdit": "DataField",
-            "idUpdate": "addDataField",
+            "idUpdate": "DataField",
+            "idAdd": "addDataField",
             "label": "Data"
         },
         {
             "type": "text",
             "varName": "indirizzo",
-            "idEdit": "IndirizzoField",
-            "idUpdate": "addIndirizzoField",
+            "idUpdate": "IndirizzoField",
+            "idAdd": "addIndirizzoField",
             "label": "Indirizzo"
         },
         {
             "type": "text",
             "varName": "numero_telefono",
-            "idEdit": "TelefonoField",
-            "idUpdate": "addTelefonoField",
+            "idUpdate": "TelefonoField",
+            "idAdd": "addTelefonoField",
             "label": "Telefono"
         },
         {
             "type": "email",
             "varName": "mail",
-            "idEdit": "MailField",
-            "idUpdate": "addMailField",
+            "idUpdate": "MailField",
+            "idAdd": "addMailField",
             "label": "Email"
         }
     ],
@@ -195,36 +195,36 @@ const fields = {
         {
             "type": "number",
             "varName": "id_fascicolo",
-            "idEdit": "FascicoloField",
-            "idUpdate": "addFascicoloField",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
             "label": "ID Fascicolo"
         },
         {
             "type": "date",
             "varName": "creazione",
-            "idEdit": "CreazioneField",
-            "idUpdate": "addCreazioneField",
+            "idUpdate": "CreazioneField",
+            "idAdd": "addCreazioneField",
             "label": "Data Creazione"
         },
         {
             "type": "number",
             "varName": "totale",
-            "idEdit": "TotaleField",
-            "idUpdate": "addTotaleField",
+            "idUpdate": "TotaleField",
+            "idAdd": "addTotaleField",
             "label": "Totale"
         },
         {
             "type": "number",
             "varName": "totale_vero",
-            "idEdit": "TotaleVeroField",
-            "idUpdate": "addTotaleVeroField",
+            "idUpdate": "TotaleVeroField",
+            "idAdd": "addTotaleVeroField",
             "label": "Totale Vero"
         },
         {
             "type": "number",
             "varName": "accettato",
-            "idEdit": "AccettatoField",
-            "idUpdate": "addAccettatoField",
+            "idUpdate": "AccettatoField",
+            "idAdd": "addAccettatoField",
             "label": "Accettato"
         },
     ],
@@ -232,29 +232,29 @@ const fields = {
         {
             "type": "number",
             "varName": "id_pagamento",
-            "idEdit": "PagamentoField",
-            "idUpdate": "addPagamentoField",
+            "idUpdate": "PagamentoField",
+            "idAdd": "addPagamentoField",
             "label": "ID Pagamento"
         },
         {
             "type": "number",
             "varName": "somma",
-            "idEdit": "SommaField",
-            "idUpdate": "addSommaField",
+            "idUpdate": "SommaField",
+            "idAdd": "addSommaField",
             "label": "Somma"
         },
         {
             "type": "date",
             "varName": "data_pagamento",
-            "idEdit": "DataPagamentoField",
-            "idUpdate": "addDataPagamentoField",
+            "idUpdate": "DataPagamentoField",
+            "idAdd": "addDataPagamentoField",
             "label": "Data Pagamento"
         },
         {
             "type": "number",
             "varName": "tipo_pagamento",
-            "idEdit": "TipoPagamentoField",
-            "idUpdate": "addTipoPagamentoField",
+            "idUpdate": "TipoPagamentoField",
+            "idAdd": "addTipoPagamentoField",
             "label": "Tipo Pagamento"
         },
     ],
@@ -262,36 +262,36 @@ const fields = {
         {
             "type": "text",
             "varName": "nome",
-            "idEdit": "NomeField",
-            "idUpdate": "addNomeField",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
             "label": "Nome"
         },
         {
             "type": "text",
             "varName": "cognome",
-            "idEdit": "CognomeField",
-            "idUpdate": "addCognomeField",
+            "idUpdate": "CognomeField",
+            "idAdd": "addCognomeField",
             "label": "Cognome"
         },
         {
             "type": "date",
             "varName": "data_nascita",
-            "idEdit": "DataNascitaField",
-            "idUpdate": "addDataNascitaField",
+            "idUpdate": "DataNascitaField",
+            "idAdd": "addDataNascitaField",
             "label": "Data Nascita"
         },
         {
             "type": "text",
             "varName": "numero_telefono",
-            "idEdit": "TelefonoField",
-            "idUpdate": "addTelefonoField",
+            "idUpdate": "TelefonoField",
+            "idAdd": "addTelefonoField",
             "label": "Telefono"
         },
         {
             "type": "email",
             "varName": "mail",
-            "idEdit": "MailField",
-            "idUpdate": "addMailField",
+            "idUpdate": "MailField",
+            "idAdd": "addMailField",
             "label": "Email"
         },
     ],
@@ -299,8 +299,8 @@ const fields = {
         {
             "type": "text",
             "varName": "nome",
-            "idEdit": "NomeField",
-            "idUpdate": "addNomeField",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
             "label": "Nome"
         },
     ],
@@ -308,8 +308,8 @@ const fields = {
         {
             "type": "text",
             "varName": "nome",
-            "idEdit": "NomeField",
-            "idUpdate": "addNomeField",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
             "label": "Nome"
         },
     ],
@@ -317,8 +317,8 @@ const fields = {
         {
             "type": "text",
             "varName": "nome",
-            "idEdit": "NomeField",
-            "idUpdate": "addNomeField",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
             "label": "Nome"
         },
     ],
@@ -326,8 +326,8 @@ const fields = {
         {
             "type": "text",
             "varName": "nome",
-            "idEdit": "NomeField",
-            "idUpdate": "addNomeField",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
             "label": "Nome"
         },
     ],
@@ -335,15 +335,15 @@ const fields = {
         {
             "type": "number",
             "varName": "id_fascicolo",
-            "idEdit": "FascicoloField",
-            "idUpdate": "addFascicoloField",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
             "label": "ID Fascicolo"
         },
         {
             "type": "number",
             "varName": "id_cliente",
-            "idEdit": "ClienteField",
-            "idUpdate": "addClienteField",
+            "idUpdate": "ClienteField",
+            "idAdd": "addClienteField",
             "label": "ID Cliente"
         },
     ],
@@ -351,29 +351,29 @@ const fields = {
         {
             "type": "number",
             "varName": "id_fascicolo",
-            "idEdit": "FascicoloField",
-            "idUpdate": "addFascicoloField",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
             "label": "ID Fascicolo"
         },
         {
             "type": "number",
             "varName": "somma",
-            "idEdit": "SommaField",
-            "idUpdate": "addSommaField",
+            "idUpdate": "SommaField",
+            "idAdd": "addSommaField",
             "label": "Somma"
         },
         {
             "type": "number",
             "varName": "rimborso",
-            "idEdit": "RimborsoField",
-            "idUpdate": "addRimborsoField",
+            "idUpdate": "RimborsoField",
+            "idAdd": "addRimborsoField",
             "label": "Rimborso"
         },
         {
             "type": "text",
             "varName": "note",
-            "idEdit": "NoteField",
-            "idUpdate": "addNoteField",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
             "label": "Note"
         },
     ],
@@ -381,30 +381,88 @@ const fields = {
         {
             "type": "number",
             "varName": "id_fascicolo",
-            "idEdit": "FascicoloField",
-            "idUpdate": "addFascicoloField",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
             "label": "ID Fascicolo"
         },
         {
             "type": "number",
             "varName": "id_specialista",
-            "idEdit": "SpecialistaField",
-            "idUpdate": "addSpecialistaField",
+            "idUpdate": "SpecialistaField",
+            "idAdd": "addSpecialistaField",
             "label": "ID Specialista"
         },
         {
             "type": "number",
             "varName": "numero_specialista",
-            "idEdit": "NumeroSpecialistaField",
-            "idUpdate": "addNumeroSpecialistaField",
+            "idUpdate": "NumeroSpecialistaField",
+            "idAdd": "addNumeroSpecialistaField",
             "label": "Numero Specialista"
         },
         {
             "type": "number",
             "varName": "accettato",
-            "idEdit": "AccettatoField",
-            "idUpdate": "addAccettatoField",
+            "idUpdate": "AccettatoField",
+            "idAdd": "addAccettatoField",
             "label": "Accettato"
+        },
+    ],
+    "fascicolo": [
+        {
+            "type": "date",
+            "varName": "data_apertura",
+            "idUpdate": "DataAperturaField",
+            "idAdd": "addDataAperturaField",
+            "label": "Data Apertura"
+        },
+        {
+            "type": "date",
+            "varName": "data_chiusura",
+            "idUpdate": "DataChiusuraField",
+            "idAdd": "addDataChiusuraField",
+            "label": "Data Chiusura"
+        },
+        {
+            "type": "number",
+            "varName": "stato",
+            "idUpdate": "StatoField",
+            "idAdd": "addStatoField",
+            "label": "Stato"
+        },
+        {
+            "type": "number",
+            "varName": "id_ufficio",
+            "idUpdate": "UfficioField",
+            "idAdd": "addUfficioField",
+            "label": "ID Ufficio"
+        },
+        {
+            "type": "number",
+            "varName": "referente",
+            "idUpdate": "ReferenteField",
+            "idAdd": "addReferenteField",
+            "label": "Referente"
+        },
+        {
+            "type": "number",
+            "varName": "caso",
+            "idUpdate": "CasoField",
+            "idAdd": "addCasoField",
+            "label": "Caso"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "label": "Note"
+        },
+        {
+            "type": "text",
+            "varName": "link",
+            "idUpdate": "LinkField",
+            "idAdd": "addLinkField",
+            "label": "Link"
         },
     ],
 };
