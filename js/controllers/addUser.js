@@ -11,7 +11,7 @@ $(document).on('submit', '#addUser', function (e) {
     //da aggiungere un controllo
     if (true) {
         $.ajax({
-            url: url, 
+            url: url,
             type: "post",
             data: {
                 arr_value: dataValue,
@@ -39,89 +39,71 @@ function Ottieni_Array(page, getValue) {
     switch (page) {
         //caso
         case "caso":
-            break;
+            if (getValue)
+                return Get_Value_Add(fields.caso);
+            return Get_Names(fields.caso);
         //cliente
-        case "cliente":
-            break;
-        //fascicolo
-        case "fascicolo":
-            break;
-        //fascicolo-cliente
-        case "fascicolo-cliente":
-            break; 
-        //fascicolo-specialista
-        case "fascicolo-specialista":
-            break;
-        //metodo_pagamento
-        case "metodo-pagamento":
-            break;
-        //pagamento
-        case "pagamento":
-            break;
-        //rata
-        case "rata":
-            break;
-        //specialista
-        case "specialista":
-            break;
-        //spese
-        case "spese":
-            break;
-        //stato
-        case "stato":
-            break;
-        //ufficio
-        case "ufficio":
-            break;
-    }
-    switch (page) {
-        //wp_cliente
         case "cliente":
             if (getValue)
                 return Get_Value_Add(fields.cliente);
             return Get_Names(fields.cliente);
-        //wp_cliente_specialista
-        case "cliente-specialista":
+        //fascicolo
+        case "fascicolo":
             if (getValue)
-                return Get_Value_Add(fields.cliente_s);
-            return Get_Names(fields.cliente_s);
-        //wp_documenti_caso
-        case "documenti-caso":
+                return Get_Value_Add(fields.fascicolo);
+            return Get_Names(fields.fascicolo);
+        //fascicolo-cliente
+        case "fascicolo-cliente":
             if (getValue)
-                return Get_Value_Add(fields.documenti_c);
-            return Get_Names(fields.documenti_c);
-        //wp_metodo_pagamento
+                return Get_Value_Add(fields.fascicolo_c);
+            return Get_Names(fields.fascicolo_c);
+        //fascicolo-specialista
+        case "fascicolo-specialista":
+            if (getValue)
+                return Get_Value_Add(fields.fascicolo_s);
+            return Get_Names(fields.fascicolo_s);
+        //metodo_pagamento
         case "metodo-pagamento":
             if (getValue)
                 return Get_Value_Add(fields.metodo_p);
             return Get_Names(fields.metodo_p);
-        //wp_pagamento
+        //pagamento
         case "pagamento":
             if (getValue)
                 return Get_Value_Add(fields.pagamento);
             return Get_Names(fields.pagamento);
-        //wp_rata
+        //rata
         case "rata":
             if (getValue)
                 return Get_Value_Add(fields.rata);
             return Get_Names(fields.rata);
-        //wp_specialista
+        //specialista
         case "specialista":
             if (getValue)
                 return Get_Value_Add(fields.specialista);
             return Get_Names(fields.specialista);
-        //wp_tipo_caso
-        case "tipo-caso":
+        //spese
+        case "spese":
             if (getValue)
-                return Get_Value_Add(fields.tipo_c);
-            return Get_Names(fields.tipo_c);
+                return Get_Value_Add(fields.spese);
+            return Get_Names(fields.spese);
+        //stato
+        case "stato":
+            if (getValue)
+                return Get_Value_Add(fields.stato);
+            return Get_Names(fields.stato);
+        //ufficio
+        case "ufficio":
+            if (getValue)
+                return Get_Value_Add(fields.ufficio);
+            return Get_Names(fields.ufficio);
     }
 }
 function Get_Value_Add(arr) {
     let tmp = [];
     for (let i = 0; i < arr.length; i++) {
-        console.log("riga n " + i + " nome id variabile: " + arr[i].idUpdate);
-        tmp.push($("#" + arr[i].idUpdate).val());
+        console.log("riga n " + i + " nome id variabile: " + arr[i].idAdd);
+        tmp.push($("#" + arr[i].idAdd).val());
         //console.log("riga n " + i + " valore form: " + $("#" + arr[i].idUpdate).val());
     }
     return tmp;
