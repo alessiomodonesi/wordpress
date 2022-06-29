@@ -1,7 +1,7 @@
 var $ = jQuery;
 $(document).on('click', '.editbtn ', function (event) {
     let page = $('#title').val();
-    console.log("Questa è la pagina, scemoo: " + page);
+    console.log("Questa è la pagina: " + page);
     let url = Get_URL(page, 'wp-content/themes/my-theme/php/get_single_data.php');
 
     var table = $('#table').DataTable();
@@ -22,7 +22,11 @@ $(document).on('click', '.editbtn ', function (event) {
             $('#id').val(id);
             $('#trid').val(trid);
             switch (page) {
-                //wp_cliente
+                //caso
+                case "caso":
+                    $('#NomeField').val(json.nome);
+                    break;
+                //cliente
                 case "cliente":
                     $('#NomeField').val(json.nome);
                     $('#CognomeField').val(json.cognome);
@@ -30,56 +34,73 @@ $(document).on('click', '.editbtn ', function (event) {
                     $('#IndirizzoField').val(json.indirizzo);
                     $('#TelefonoField').val(json.numero_telefono);
                     $('#MailField').val(json.mail);
-                    $('#UfficioField').val(json.ufficio_usa);
+                    break;
+                //fascicolo
+                case "fascicolo":
+                    $('#DataAperturaField').val(json.data_apertura);
+                    $('#DataChiusuraField').val(json.data_chiusura);
+                    $('#StatoField').val(json.stato);
+                    $('#UfficioField').val(json.id_ufficio);
+                    $('#ReferenteField').val(json.referente);
                     $('#CasoField').val(json.caso);
-                    $('#ApplicantField').val(json.id_applicant);
+                    $('#NoteField').val(json.note);
+                    $('#LinkField').val(json.link);
                     break;
-        
-                //wp_cliente_specialista
-                case "cliente-specialista":
+                //fascicolo-cliente
+                case "fascicolo-cliente":
+                    $('#NomeField').val(json.id_fascicolo);
+                    $('#ClienteField').val(json.id_cliente);
+                    break;
+                //fascicolo-specialista
+                case "fascicolo-specialista":
+                    $('#NomeField').val(json.id_fascicolo);
                     $('#SpecialistaField').val(json.id_specialista);
-                    $('#NumeroField').val(json.numero_specialista);
+                    $('#NumeroSpecialistaField').val(json.numero_specialista);
+                    $('#AccettatoField').val(json.accettato);
                     break;
-        
-                //wp_documenti_caso
-                case "documenti-caso":
-                    $('#DocumentoField').val(json.documento);
-                    break;
-        
-                //wp_metodo_pagamento
+                //metodo_pagamento
                 case "metodo-pagamento":
                     $('#NomeField').val(json.nome);
                     break;
-        
-                //wp_pagamento
+                //pagamento
                 case "pagamento":
-                    $('#ClienteField').val(json.id_cliente);
-                    $('#TotaleField').val(json.totale);
-                    $('#TotaleVeroField').val(json.totale_vero);
+                    $('#CreazioneField').val(json.id_fascicolo);
+                    $('#TotaleField').val(json.creazione);
+                    $('#TotaleVeroField').val(json.totale);
+                    $('#NomeField').val(json.totale_vero);
+                    $('#NomeField').val(json.accettato);
                     break;
-        
-                //wp_rata
+                //rata
                 case "rata":
                     $('#PagamentoField').val(json.id_pagamento);
                     $('#SommaField').val(json.somma);
                     $('#DataPagamentoField').val(json.data_pagamento);
                     $('#TipoPagamentoField').val(json.tipo_pagamento);
                     break;
-        
-                //wp_specialista
+                //specialista
                 case "specialista":
                     $('#NomeField').val(json.nome);
                     $('#CognomeField').val(json.cognome);
                     $('#DataNascitaField').val(json.data_nascita);
-                    $('#MailField').val(json.mail);
                     $('#TelefonoField').val(json.numero_telefono);
+                    $('#MailField').val(json.mail);
                     break;
-        
-                //wp_tipo_caso
-                case "tipo-caso":
-                    $('#NomeField').val(json.nome_caso);
+                //spese
+                case "spese":
+                    $('#NomeField').val(json.id_fascicolo);
+                    $('#NomeField').val(json.somma);
+                    $('#NomeField').val(json.rimborso);
+                    $('#NomeField').val(json.note);
                     break;
-            }
+                //stato
+                case "stato":
+                    $('#NomeField').val(json.nome);
+                    break;
+                //ufficio
+                case "ufficio":
+                    $('#NomeField').val(json.nome);
+                    break;
+            }    
         }
     })
 });

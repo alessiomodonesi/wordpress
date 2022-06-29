@@ -147,6 +147,17 @@ function addSubmitButton(_type, _divClass, _buttonClass, _buttonText, _formId) {
 }
 
 const fields = {
+
+    "caso": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
+    ],
+
     "cliente": [
         {
             "type": "text",
@@ -191,222 +202,7 @@ const fields = {
             "label": "Email"
         }
     ],
-    "pagamento": [
-        {
-            "type": "number",
-            "varName": "id_fascicolo",
-            "idUpdate": "FascicoloField",
-            "idAdd": "addFascicoloField",
-            "label": "ID Fascicolo"
-        },
-        {
-            "type": "date",
-            "varName": "creazione",
-            "idUpdate": "CreazioneField",
-            "idAdd": "addCreazioneField",
-            "label": "Data Creazione"
-        },
-        {
-            "type": "number",
-            "varName": "totale",
-            "idUpdate": "TotaleField",
-            "idAdd": "addTotaleField",
-            "label": "Totale"
-        },
-        {
-            "type": "number",
-            "varName": "totale_vero",
-            "idUpdate": "TotaleVeroField",
-            "idAdd": "addTotaleVeroField",
-            "label": "Totale Vero"
-        },
-        {
-            "type": "number",
-            "varName": "accettato",
-            "idUpdate": "AccettatoField",
-            "idAdd": "addAccettatoField",
-            "label": "Accettato"
-        },
-    ],
-    "rata": [
-        {
-            "type": "number",
-            "varName": "id_pagamento",
-            "idUpdate": "PagamentoField",
-            "idAdd": "addPagamentoField",
-            "label": "ID Pagamento"
-        },
-        {
-            "type": "number",
-            "varName": "somma",
-            "idUpdate": "SommaField",
-            "idAdd": "addSommaField",
-            "label": "Somma"
-        },
-        {
-            "type": "date",
-            "varName": "data_pagamento",
-            "idUpdate": "DataPagamentoField",
-            "idAdd": "addDataPagamentoField",
-            "label": "Data Pagamento"
-        },
-        {
-            "type": "number",
-            "varName": "tipo_pagamento",
-            "idUpdate": "TipoPagamentoField",
-            "idAdd": "addTipoPagamentoField",
-            "label": "Tipo Pagamento"
-        },
-    ],
-    "specialista": [
-        {
-            "type": "text",
-            "varName": "nome",
-            "idUpdate": "NomeField",
-            "idAdd": "addNomeField",
-            "label": "Nome"
-        },
-        {
-            "type": "text",
-            "varName": "cognome",
-            "idUpdate": "CognomeField",
-            "idAdd": "addCognomeField",
-            "label": "Cognome"
-        },
-        {
-            "type": "date",
-            "varName": "data_nascita",
-            "idUpdate": "DataNascitaField",
-            "idAdd": "addDataNascitaField",
-            "label": "Data Nascita"
-        },
-        {
-            "type": "text",
-            "varName": "numero_telefono",
-            "idUpdate": "TelefonoField",
-            "idAdd": "addTelefonoField",
-            "label": "Telefono"
-        },
-        {
-            "type": "email",
-            "varName": "mail",
-            "idUpdate": "MailField",
-            "idAdd": "addMailField",
-            "label": "Email"
-        },
-    ],
-    "metodo_p": [
-        {
-            "type": "text",
-            "varName": "nome",
-            "idUpdate": "NomeField",
-            "idAdd": "addNomeField",
-            "label": "Nome"
-        },
-    ],
-    "caso": [
-        {
-            "type": "text",
-            "varName": "nome",
-            "idUpdate": "NomeField",
-            "idAdd": "addNomeField",
-            "label": "Nome"
-        },
-    ],
-    "stato": [
-        {
-            "type": "text",
-            "varName": "nome",
-            "idUpdate": "NomeField",
-            "idAdd": "addNomeField",
-            "label": "Nome"
-        },
-    ],
-    "ufficio": [
-        {
-            "type": "text",
-            "varName": "nome",
-            "idUpdate": "NomeField",
-            "idAdd": "addNomeField",
-            "label": "Nome"
-        },
-    ],
-    "fascicolo_c": [
-        {
-            "type": "number",
-            "varName": "id_fascicolo",
-            "idUpdate": "FascicoloField",
-            "idAdd": "addFascicoloField",
-            "label": "ID Fascicolo"
-        },
-        {
-            "type": "number",
-            "varName": "id_cliente",
-            "idUpdate": "ClienteField",
-            "idAdd": "addClienteField",
-            "label": "ID Cliente"
-        },
-    ],
-    "spese": [
-        {
-            "type": "number",
-            "varName": "id_fascicolo",
-            "idUpdate": "FascicoloField",
-            "idAdd": "addFascicoloField",
-            "label": "ID Fascicolo"
-        },
-        {
-            "type": "number",
-            "varName": "somma",
-            "idUpdate": "SommaField",
-            "idAdd": "addSommaField",
-            "label": "Somma"
-        },
-        {
-            "type": "number",
-            "varName": "rimborso",
-            "idUpdate": "RimborsoField",
-            "idAdd": "addRimborsoField",
-            "label": "Rimborso"
-        },
-        {
-            "type": "text",
-            "varName": "note",
-            "idUpdate": "NoteField",
-            "idAdd": "addNoteField",
-            "label": "Note"
-        },
-    ],
-    "fascicolo_s": [
-        {
-            "type": "number",
-            "varName": "id_fascicolo",
-            "idUpdate": "FascicoloField",
-            "idAdd": "addFascicoloField",
-            "label": "ID Fascicolo"
-        },
-        {
-            "type": "number",
-            "varName": "id_specialista",
-            "idUpdate": "SpecialistaField",
-            "idAdd": "addSpecialistaField",
-            "label": "ID Specialista"
-        },
-        {
-            "type": "number",
-            "varName": "numero_specialista",
-            "idUpdate": "NumeroSpecialistaField",
-            "idAdd": "addNumeroSpecialistaField",
-            "label": "Numero Specialista"
-        },
-        {
-            "type": "number",
-            "varName": "accettato",
-            "idUpdate": "AccettatoField",
-            "idAdd": "addAccettatoField",
-            "label": "Accettato"
-        },
-    ],
+
     "fascicolo": [
         {
             "type": "date",
@@ -463,6 +259,222 @@ const fields = {
             "idUpdate": "LinkField",
             "idAdd": "addLinkField",
             "label": "Link"
+        },
+    ],
+
+    "fascicolo_c": [
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
+            "label": "ID Fascicolo"
+        },
+        {
+            "type": "number",
+            "varName": "id_cliente",
+            "idUpdate": "ClienteField",
+            "idAdd": "addClienteField",
+            "label": "ID Cliente"
+        },
+    ],
+
+    "fascicolo_s": [
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
+            "label": "ID Fascicolo"
+        },
+        {
+            "type": "number",
+            "varName": "id_specialista",
+            "idUpdate": "SpecialistaField",
+            "idAdd": "addSpecialistaField",
+            "label": "ID Specialista"
+        },
+        {
+            "type": "number",
+            "varName": "numero_specialista",
+            "idUpdate": "NumeroSpecialistaField",
+            "idAdd": "addNumeroSpecialistaField",
+            "label": "Numero Specialista"
+        },
+        {
+            "type": "number",
+            "varName": "accettato",
+            "idUpdate": "AccettatoField",
+            "idAdd": "addAccettatoField",
+            "label": "Accettato"
+        },
+    ],
+
+    "metodo_p": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
+    ],
+
+    "pagamento": [
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
+            "label": "ID Fascicolo"
+        },
+        {
+            "type": "date",
+            "varName": "creazione",
+            "idUpdate": "CreazioneField",
+            "idAdd": "addCreazioneField",
+            "label": "Data Creazione"
+        },
+        {
+            "type": "number",
+            "varName": "totale",
+            "idUpdate": "TotaleField",
+            "idAdd": "addTotaleField",
+            "label": "Totale"
+        },
+        {
+            "type": "number",
+            "varName": "totale_vero",
+            "idUpdate": "TotaleVeroField",
+            "idAdd": "addTotaleVeroField",
+            "label": "Totale Vero"
+        },
+        {
+            "type": "number",
+            "varName": "accettato",
+            "idUpdate": "AccettatoField",
+            "idAdd": "addAccettatoField",
+            "label": "Accettato"
+        },
+    ],
+
+    "rata": [
+        {
+            "type": "number",
+            "varName": "id_pagamento",
+            "idUpdate": "PagamentoField",
+            "idAdd": "addPagamentoField",
+            "label": "ID Pagamento"
+        },
+        {
+            "type": "number",
+            "varName": "somma",
+            "idUpdate": "SommaField",
+            "idAdd": "addSommaField",
+            "label": "Somma"
+        },
+        {
+            "type": "date",
+            "varName": "data_pagamento",
+            "idUpdate": "DataPagamentoField",
+            "idAdd": "addDataPagamentoField",
+            "label": "Data Pagamento"
+        },
+        {
+            "type": "number",
+            "varName": "tipo_pagamento",
+            "idUpdate": "TipoPagamentoField",
+            "idAdd": "addTipoPagamentoField",
+            "label": "Tipo Pagamento"
+        },
+    ],
+
+    "specialista": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
+        {
+            "type": "text",
+            "varName": "cognome",
+            "idUpdate": "CognomeField",
+            "idAdd": "addCognomeField",
+            "label": "Cognome"
+        },
+        {
+            "type": "date",
+            "varName": "data_nascita",
+            "idUpdate": "DataNascitaField",
+            "idAdd": "addDataNascitaField",
+            "label": "Data Nascita"
+        },
+        {
+            "type": "text",
+            "varName": "numero_telefono",
+            "idUpdate": "TelefonoField",
+            "idAdd": "addTelefonoField",
+            "label": "Telefono"
+        },
+        {
+            "type": "email",
+            "varName": "mail",
+            "idUpdate": "MailField",
+            "idAdd": "addMailField",
+            "label": "Email"
+        },
+    ],
+
+    "spese": [
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
+            "label": "ID Fascicolo"
+        },
+        {
+            "type": "number",
+            "varName": "somma",
+            "idUpdate": "SommaField",
+            "idAdd": "addSommaField",
+            "label": "Somma"
+        },
+        {
+            "type": "number",
+            "varName": "rimborso",
+            "idUpdate": "RimborsoField",
+            "idAdd": "addRimborsoField",
+            "label": "Rimborso"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "label": "Note"
+        },
+    ],
+
+    "stato": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
+    ],
+
+    "ufficio": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
         },
     ],
 };
