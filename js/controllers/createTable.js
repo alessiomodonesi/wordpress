@@ -9,6 +9,7 @@ $(document).ready(function () {
     $('#table').DataTable({
         "fnCreatedRow": function (nRow, aData, iDataIndex) {
             $(nRow).attr('id', aData[0]);
+            console.log("Numero di colonne secondo il db: " + aData.length);
         },
         'serverSide': 'true',
         'responsive': 'true',
