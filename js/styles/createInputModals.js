@@ -5,8 +5,8 @@ $(document).ready(function () {
     switch (page) {
         //caso
         case "caso":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.caso, "updateUser");
+            createModal(fields.caso, "addUser");
             break;
         //cliente
         case "cliente":
@@ -15,53 +15,53 @@ $(document).ready(function () {
             break;
         //fascicolo
         case "fascicolo":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.fascicolo, "updateUser");
+            createModal(fields.fascicolo, "addUser");
             break;
         //fascicolo-cliente
         case "fascicolo-cliente":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.fascicolo_c, "updateUser");
+            createModal(fields.fascicolo_c, "addUser");
             break; 
         //fascicolo-specialista
         case "fascicolo-specialista":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.fascicolo_s, "updateUser");
+            createModal(fields.fascicolo_s, "addUser");
             break;
         //metodo_pagamento
         case "metodo-pagamento":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.metodo_p, "updateUser");
+            createModal(fields.metodo_p, "addUser");
             break;
         //pagamento
         case "pagamento":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.pagamento, "updateUser");
+            createModal(fields.pagamento, "addUser");
             break;
         //rata
         case "rata":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.rata, "updateUser");
+            createModal(fields.rata, "addUser");
             break;
         //specialista
         case "specialista":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.specialista, "updateUser");
+            createModal(fields.specialista, "addUser");
             break;
         //spese
         case "spese":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.spese, "updateUser");
+            createModal(fields.spese, "addUser");
             break;
         //stato
         case "stato":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.stato, "updateUser");
+            createModal(fields.stato, "addUser");
             break;
         //ufficio
         case "ufficio":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
+            createModal(fields.ufficio, "updateUser");
+            createModal(fields.ufficio, "addUser");
             break;
     }
 });
