@@ -51,17 +51,17 @@ $(document).on('submit', '#updateUser', function (e) {
 o il nome delle varie colonne del database in base alla tabella */
 function Setup_Array(page, getValue) {
     switch (page) {
+        //acconto
+        case "acconto":
+            if(getValue)
+             return Get_Array(fields.acconto);
+            return Get_Names(fields.acconto);
+            break;
         //caso
         case "caso":
             if(getValue)
              return Get_Array(fields.caso);
             return Get_Names(fields.caso);
-            break;
-        //cliente
-        case "cliente":
-            if(getValue)
-             return Get_Array(fields.cliente);
-            return Get_Names(fields.cliente);
             break;
         //fascicolo
         case "fascicolo":
@@ -69,17 +69,17 @@ function Setup_Array(page, getValue) {
              return Get_Array(fields.fascicolo);
             return Get_Names(fields.fascicolo);
             break;
-        //fascicolo-cliente
-        case "fascicolo-cliente":
-            if(getValue)
-             return Get_Array(fields.fascicolo_c);
-            return Get_Names(fields.fascicolo_c);
-            break; 
         //fascicolo-specialista
         case "fascicolo-specialista":
             if(getValue)
              return Get_Array(fields.fascicolo_s);
             return Get_Names(fields.fascicolo_s);
+            break;
+        //gestito
+        case "gestito":
+            if(getValue)
+             return Get_Array(fields.gestito);
+            return Get_Names(fields.gestito);
             break;
         //metodo_pagamento
         case "metodo-pagamento":
@@ -98,6 +98,12 @@ function Setup_Array(page, getValue) {
             if(getValue)
              return Get_Array(fields.rata);
             return Get_Names(fields.rata);
+            break;
+        //referente
+        case "referente":
+            if(getValue)
+             return Get_Array(fields.referente);
+            return Get_Names(fields.referente);
             break;
         //specialista
         case "specialista":
