@@ -12,25 +12,25 @@ $(document).ready(function () {
 function Get_Title_Btn(page) {
     let title, btn;
     switch (page) {
+        case "acconto":
+            title = "Acconti";
+            btn = "Aggiungi acconto";
+            break;
         case "caso":
             title = "Casi";
             btn = "Aggiungi caso";
-            break;
-        case "cliente":
-            title = "Clienti";
-            btn = "Aggiungi cliente";
             break;
         case "fascicolo":
             title = "Fascicoli";
             btn = "Aggiungi fascicolo";
             break;
-        case "fascicolo-cliente":
-            title = "Fascicoli clienti";
-            btn = "Aggiungi fascicolo";
-            break;
         case "fascicolo-specialista":
             title = "Fascicoli specialisti";
             btn = "Aggiungi fascicolo";
+            break;
+        case "gestito":
+            title = "Gestiti";
+            btn = "Aggiungi gestito";
             break;
         case "metodo-pagamento":
             title = "Metodi di pagamento";
@@ -43,6 +43,10 @@ function Get_Title_Btn(page) {
         case "rata":
             title = "Rate";
             btn = "Aggiungi rata";
+            break;
+        case "referente":
+            title = "Referenti";
+            btn = "Aggiungi referente";
             break;
         case "specialista":
             title = "Specialisti";
