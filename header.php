@@ -14,12 +14,12 @@
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse d-flex justify-content-center">
-                    <a class="navbar-brand" href="http://localhost/wordpress2/home-page" id="home">Home</a>
+                    <a class="navbar-brand home" href="http://localhost/wordpress2/home-page">Home</a>
                     <div class="row">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-title">
 
-                            <li class="nav-item dropdown" id="menu-1">
-                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Gestiti&Specialisti</a>
+                            <li class="nav-item dropdown menu">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Gestiti & Specialisti</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress2/gestito">Gestiti</a></li>
                                     <li><hr class="dropdown-divider"></li>
@@ -29,7 +29,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item dropdown" id="menu-2">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Fascicoli</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress2/fascicolo">Fascicoli</a></li>
@@ -38,7 +38,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item dropdown" id="menu-3">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Pagamenti</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress2/pagamento">Pagamenti</a></li>
@@ -53,7 +53,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item dropdown" id="menu-4">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Altro</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress2/caso">Casi</a></li>
