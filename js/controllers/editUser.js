@@ -48,12 +48,12 @@ $(document).on('click', '.editbtn ', function (event) {
                     break;
                 //fascicolo-cliente
                 case "fascicolo-cliente":
-                    $('#NomeField').val(json.id_fascicolo);
+                    $('#FascicoloField').val(json.id_fascicolo);
                     $('#ClienteField').val(json.id_cliente);
                     break;
                 //fascicolo-specialista
                 case "fascicolo-specialista":
-                    $('#NomeField').val(json.id_fascicolo);
+                    $('#FascicoloField').val(json.id_fascicolo);
                     $('#SpecialistaField').val(json.id_specialista);
                     $('#NumeroSpecialistaField').val(json.numero_specialista);
                     $('#AccettatoField').val(json.accettato);
@@ -64,11 +64,11 @@ $(document).on('click', '.editbtn ', function (event) {
                     break;
                 //pagamento
                 case "pagamento":
-                    $('#CreazioneField').val(json.id_fascicolo);
-                    $('#TotaleField').val(json.creazione);
-                    $('#TotaleVeroField').val(json.totale);
-                    $('#NomeField').val(json.totale_vero);
-                    $('#NomeField').val(json.accettato);
+                    $('#FascicoloField').val(json.id_fascicolo);
+                    $('#CreazioneField').val(json.creazione);
+                    $('#TotaleField').val(json.totale);
+                    $('#TotaleVeroField').val(json.totale_vero);
+                    $('#AccettatoField').val(json.accettato);
                     break;
                 //rata
                 case "rata":
@@ -87,10 +87,10 @@ $(document).on('click', '.editbtn ', function (event) {
                     break;
                 //spese
                 case "spese":
-                    $('#NomeField').val(json.id_fascicolo);
-                    $('#NomeField').val(json.somma);
-                    $('#NomeField').val(json.rimborso);
-                    $('#NomeField').val(json.note);
+                    $('#FascicoloField').val(json.id_fascicolo);
+                    $('#SommaField').val(json.somma);
+                    $('#RimborsoField').val(json.rimborso);
+                    $('#NoteField').val(json.note);
                     break;
                 //stato
                 case "stato":
