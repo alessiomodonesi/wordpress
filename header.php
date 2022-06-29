@@ -19,8 +19,7 @@
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-title">
 
                             <li class="nav-item dropdown" id="menu-1">
-                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false" id="nav-title">Gestiti&Specialisti</a>
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Gestiti&Specialisti</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/gestito">Gestiti</a></li>
                                     <li><hr class="dropdown-divider"></li>
