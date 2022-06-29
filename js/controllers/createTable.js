@@ -7,7 +7,7 @@ $(document).ready(function () {
     let dataNames = Setup_Array(page, false);//va a prendere i nomi dei campi della tabella
 
     var table = $('#table').DataTable({
-        'dom': 'lBfrtip',
+        //'dom': 'lBfrtip',
         "fnCreatedRow": function (nRow, aData, iDataIndex) {
             $(nRow).attr('id', aData[0]);
             console.log("Numero di colonne secondo il db: " + aData.length);
@@ -30,9 +30,9 @@ $(document).ready(function () {
             "bSortable": false,
             "aTargets": [page_data.nCol]
         }],
-        'buttons': [
-            'copy', 'excel', 'pdf'
-        ]
+        /*'buttons': [
+            'print', 'pdf', 'excel'
+        ]*/
     });
 });
 
