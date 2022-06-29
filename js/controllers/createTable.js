@@ -29,11 +29,8 @@ $(document).ready(function () {
         "aoColumnDefs": [{
             "bSortable": false,
             "aTargets": [page_data.nCol]
-        }]
-    });
-
-    new $.fn.dataTable.Buttons(table, {
-        buttons: [
+        }],
+        'buttons': [
             'copy', 'excel', 'pdf'
         ]
     });
