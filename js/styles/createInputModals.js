@@ -22,7 +22,7 @@ $(document).ready(function () {
         case "fascicolo-cliente":
             createModal(fields.fascicolo_c, "updateUser");
             createModal(fields.fascicolo_c, "addUser");
-            break; 
+            break;
         //fascicolo-specialista
         case "fascicolo-specialista":
             createModal(fields.fascicolo_s, "updateUser");
@@ -158,7 +158,7 @@ const fields = {
         },
     ],
 
-    "cliente": [
+    "gestito": [
         {
             "type": "text",
             "varName": "nome",
@@ -200,6 +200,13 @@ const fields = {
             "idUpdate": "MailField",
             "idAdd": "addMailField",
             "label": "Email"
+        },
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
+            "label": "ID Fascicolo"
         }
     ],
 
@@ -234,6 +241,13 @@ const fields = {
         },
         {
             "type": "number",
+            "varName": "persone_gestite",
+            "idUpdate": "PersoneGestiteField",
+            "idAdd": "addPersoneGestiteField",
+            "label": "Persone Gestite"
+        },
+        {
+            "type": "number",
             "varName": "referente",
             "idUpdate": "ReferenteField",
             "idAdd": "addReferenteField",
@@ -261,24 +275,6 @@ const fields = {
             "label": "Link"
         },
     ],
-
-    "fascicolo_c": [
-        {
-            "type": "number",
-            "varName": "id_fascicolo",
-            "idUpdate": "FascicoloField",
-            "idAdd": "addFascicoloField",
-            "label": "ID Fascicolo"
-        },
-        {
-            "type": "number",
-            "varName": "id_cliente",
-            "idUpdate": "ClienteField",
-            "idAdd": "addClienteField",
-            "label": "ID Cliente"
-        },
-    ],
-
     "fascicolo_s": [
         {
             "type": "number",
@@ -293,6 +289,20 @@ const fields = {
             "idUpdate": "SpecialistaField",
             "idAdd": "addSpecialistaField",
             "label": "ID Specialista"
+        },
+        {
+            "type": "date",
+            "varName": "data_assegnazione",
+            "idUpdate": "DataAssegnazioneField",
+            "idAdd": "addDataAssegnazioneField",
+            "label": "Data Assegnazione"
+        },
+        {
+            "type": "date",
+            "varName": "data_conclusione",
+            "idUpdate": "DataConclusioneField",
+            "idAdd": "addDataConclusioneField",
+            "label": "Data Conclusione"
         },
         {
             "type": "number",
@@ -372,13 +382,6 @@ const fields = {
             "idUpdate": "SommaField",
             "idAdd": "addSommaField",
             "label": "Somma"
-        },
-        {
-            "type": "date",
-            "varName": "data_pagamento",
-            "idUpdate": "DataPagamentoField",
-            "idAdd": "addDataPagamentoField",
-            "label": "Data Pagamento"
         },
         {
             "type": "number",
@@ -475,6 +478,80 @@ const fields = {
             "idUpdate": "NomeField",
             "idAdd": "addNomeField",
             "label": "Nome"
+        },
+    ],
+    "acconto": [
+        {
+            "type": "number",
+            "varName": "id_rata",
+            "idUpdate": "RataField",
+            "idAdd": "addRataField",
+            "label": "ID Rata"
+        },
+        {
+            "type": "number",
+            "varName": "somma",
+            "idUpdate": "SommaField",
+            "idAdd": "addSommaField",
+            "label": "Somma"
+        },
+        {
+            "type": "date",
+            "varName": "data_pagamento",
+            "idUpdate": "DataPagamentoField",
+            "idAdd": "addDataPagamentoField",
+            "label": "Data Pagamento"
+        },
+        {
+            "type": "number",
+            "varName": "metodo_pagamento",
+            "idUpdate": "MetodoPagamentoField",
+            "idAdd": "addMetodoPagamentoField",
+            "label": "Metodo Pagamento"
+        },
+    ],
+    "referente": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
+        {
+            "type": "text",
+            "varName": "cognome",
+            "idUpdate": "CognomeField",
+            "idAdd": "addCognomeField",
+            "label": "Cognome"
+        },
+        {
+            "type": "date",
+            "varName": "data_nascita",
+            "idUpdate": "DataField",
+            "idAdd": "addDataField",
+            "label": "Data"
+        },
+        {
+            "type": "text",
+            "varName": "indirizzo",
+            "idUpdate": "IndirizzoField",
+            "idAdd": "addIndirizzoField",
+            "label": "Indirizzo"
+        },
+        {
+            "type": "text",
+            "varName": "numero_telefono",
+            "idUpdate": "TelefonoField",
+            "idAdd": "addTelefonoField",
+            "label": "Telefono"
+        },
+        {
+            "type": "email",
+            "varName": "mail",
+            "idUpdate": "MailField",
+            "idAdd": "addMailField",
+            "label": "Email"
         },
     ],
 };
