@@ -3,62 +3,54 @@ $(document).ready(function () {
     console.log("inizio creazione input div");
     let page = $('#title').val();
     switch (page) {
-        //caso
+        case "acconto":
+            createModal(fields.acconto, "updateUser");
+            createModal(fields.acconto, "addUser");
+            break;
         case "caso":
             createModal(fields.caso, "updateUser");
             createModal(fields.caso, "addUser");
             break;
-        //cliente
-        case "cliente":
-            createModal(fields.cliente, "updateUser");
-            createModal(fields.cliente, "addUser");
-            break;
-        //fascicolo
         case "fascicolo":
             createModal(fields.fascicolo, "updateUser");
             createModal(fields.fascicolo, "addUser");
             break;
-        //fascicolo-cliente
-        case "fascicolo-cliente":
-            createModal(fields.fascicolo_c, "updateUser");
-            createModal(fields.fascicolo_c, "addUser");
-            break;
-        //fascicolo-specialista
         case "fascicolo-specialista":
             createModal(fields.fascicolo_s, "updateUser");
             createModal(fields.fascicolo_s, "addUser");
             break;
-        //metodo_pagamento
+        case "gestito":
+            createModal(fields.gestito, "updateUser");
+            createModal(fields.gestito, "addUser");
+            break;
         case "metodo-pagamento":
             createModal(fields.metodo_p, "updateUser");
             createModal(fields.metodo_p, "addUser");
             break;
-        //pagamento
         case "pagamento":
             createModal(fields.pagamento, "updateUser");
             createModal(fields.pagamento, "addUser");
             break;
-        //rata
         case "rata":
             createModal(fields.rata, "updateUser");
             createModal(fields.rata, "addUser");
             break;
-        //specialista
+        case "referente":
+            createModal(fields.referente, "updateUser");
+            createModal(fields.referente, "addUser");
+            break;
         case "specialista":
             createModal(fields.specialista, "updateUser");
             createModal(fields.specialista, "addUser");
             break;
-        //spese
         case "spese":
             createModal(fields.spese, "updateUser");
             createModal(fields.spese, "addUser");
             break;
-        //stato
         case "stato":
             createModal(fields.stato, "updateUser");
             createModal(fields.stato, "addUser");
             break;
-        //ufficio
         case "ufficio":
             createModal(fields.ufficio, "updateUser");
             createModal(fields.ufficio, "addUser");
