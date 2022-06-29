@@ -22,18 +22,16 @@ $(document).on('click', '.editbtn ', function (event) {
             $('#id').val(id);
             $('#trid').val(trid);
             switch (page) {
+                //acconto
+                case "acconto":
+                    $('#RataFiled').val(json.id_rata);
+                    $('#SommaFiled').val(json.somma);
+                    $('#DataPagamentoField').val(json.data_pagamento);
+                    $('#MetodoPagamentoField').val(json.metodo_pagamento);
+                    break;
                 //caso
                 case "caso":
                     $('#NomeField').val(json.nome);
-                    break;
-                //cliente
-                case "cliente":
-                    $('#NomeField').val(json.nome);
-                    $('#CognomeField').val(json.cognome);
-                    $('#DataField').val(json.data_nascita);
-                    $('#IndirizzoField').val(json.indirizzo);
-                    $('#TelefonoField').val(json.numero_telefono);
-                    $('#MailField').val(json.mail);
                     break;
                 //fascicolo
                 case "fascicolo":
@@ -46,17 +44,22 @@ $(document).on('click', '.editbtn ', function (event) {
                     $('#NoteField').val(json.note);
                     $('#LinkField').val(json.link);
                     break;
-                //fascicolo-cliente
-                case "fascicolo-cliente":
-                    $('#FascicoloField').val(json.id_fascicolo);
-                    $('#ClienteField').val(json.id_cliente);
-                    break;
                 //fascicolo-specialista
                 case "fascicolo-specialista":
                     $('#FascicoloField').val(json.id_fascicolo);
                     $('#SpecialistaField').val(json.id_specialista);
                     $('#NumeroSpecialistaField').val(json.numero_specialista);
                     $('#AccettatoField').val(json.accettato);
+                    break;
+                //gestito
+                case "gestito":
+                    $('#NomeField').val(json.nome);
+                    $('#CognomeField').val(json.cognome);
+                    $('#DataField').val(json.data_nascita);
+                    $('#IndirizzoField').val(json.indirizzo);
+                    $('#TelefonoField').val(json.numero_telefono);
+                    $('#MailField').val(json.mail);
+                    $('#FascicoloField').val(json.id_fascicolo);
                     break;
                 //metodo_pagamento
                 case "metodo-pagamento":
@@ -76,6 +79,15 @@ $(document).on('click', '.editbtn ', function (event) {
                     $('#SommaField').val(json.somma);
                     $('#DataPagamentoField').val(json.data_pagamento);
                     $('#TipoPagamentoField').val(json.tipo_pagamento);
+                    break;
+                //referente
+                case "referente":
+                    $('#NomeField').val(json.nome);
+                    $('#CognomeField').val(json.cognome);
+                    $('#DataField').val(json.data_nascita);
+                    $('#IndirizzoField').val(json.indirizzo);
+                    $('#TelefonoField').val(json.numero_telefono);
+                    $('#MailFIeld').val(json.mail);
                     break;
                 //specialista
                 case "specialista":
