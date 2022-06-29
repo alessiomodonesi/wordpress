@@ -104,7 +104,7 @@ function Get_Value_Add(arr) {
     for (let i = 0; i < arr.length; i++) {
         console.log("riga n " + i + " nome id variabile: " + arr[i].idAdd);
         tmp.push($("#" + arr[i].idAdd).val());
-        //console.log("riga n " + i + " valore form: " + $("#" + arr[i].idUpdate).val());
+        //console.log("riga n " + i + " valore form: " + $("#" + arr[i].idAdd).val());
     }
     return tmp;
 }
