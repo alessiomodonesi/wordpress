@@ -147,6 +147,36 @@ function addSubmitButton(_type, _divClass, _buttonClass, _buttonText, _formId) {
 }
 
 const fields = {
+    "acconto": [
+        {
+            "type": "number",
+            "varName": "id_rata",
+            "idUpdate": "RataField",
+            "idAdd": "addRataField",
+            "label": "ID Rata"
+        },
+        {
+            "type": "number",
+            "varName": "somma",
+            "idUpdate": "SommaField",
+            "idAdd": "addSommaField",
+            "label": "Somma"
+        },
+        {
+            "type": "date",
+            "varName": "data_pagamento",
+            "idUpdate": "DataPagamentoField",
+            "idAdd": "addDataPagamentoField",
+            "label": "Data Pagamento"
+        },
+        {
+            "type": "number",
+            "varName": "metodo_pagamento",
+            "idUpdate": "MetodoPagamentoField",
+            "idAdd": "addMetodoPagamentoField",
+            "label": "Metodo Pagamento"
+        },
+    ],
 
     "caso": [
         {
@@ -156,58 +186,6 @@ const fields = {
             "idAdd": "addNomeField",
             "label": "Nome"
         },
-    ],
-
-    "gestito": [
-        {
-            "type": "text",
-            "varName": "nome",
-            "idUpdate": "NomeField",
-            "idAdd": "addNomeField",
-            "label": "Nome"
-        },
-        {
-            "type": "text",
-            "varName": "cognome",
-            "idUpdate": "CognomeField",
-            "idAdd": "addCognomeField",
-            "label": "Cognome"
-        },
-        {
-            "type": "date",
-            "varName": "data_nascita",
-            "idUpdate": "DataField",
-            "idAdd": "addDataField",
-            "label": "Data"
-        },
-        {
-            "type": "text",
-            "varName": "indirizzo",
-            "idUpdate": "IndirizzoField",
-            "idAdd": "addIndirizzoField",
-            "label": "Indirizzo"
-        },
-        {
-            "type": "text",
-            "varName": "numero_telefono",
-            "idUpdate": "TelefonoField",
-            "idAdd": "addTelefonoField",
-            "label": "Telefono"
-        },
-        {
-            "type": "email",
-            "varName": "mail",
-            "idUpdate": "MailField",
-            "idAdd": "addMailField",
-            "label": "Email"
-        },
-        {
-            "type": "number",
-            "varName": "id_fascicolo",
-            "idUpdate": "FascicoloField",
-            "idAdd": "addFascicoloField",
-            "label": "ID Fascicolo"
-        }
     ],
 
     "fascicolo": [
@@ -275,6 +253,7 @@ const fields = {
             "label": "Link"
         },
     ],
+
     "fascicolo_s": [
         {
             "type": "number",
@@ -318,6 +297,58 @@ const fields = {
             "idAdd": "addAccettatoField",
             "label": "Accettato"
         },
+    ],
+
+    "gestito": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
+        {
+            "type": "text",
+            "varName": "cognome",
+            "idUpdate": "CognomeField",
+            "idAdd": "addCognomeField",
+            "label": "Cognome"
+        },
+        {
+            "type": "date",
+            "varName": "data_nascita",
+            "idUpdate": "DataField",
+            "idAdd": "addDataField",
+            "label": "Data"
+        },
+        {
+            "type": "text",
+            "varName": "indirizzo",
+            "idUpdate": "IndirizzoField",
+            "idAdd": "addIndirizzoField",
+            "label": "Indirizzo"
+        },
+        {
+            "type": "text",
+            "varName": "numero_telefono",
+            "idUpdate": "TelefonoField",
+            "idAdd": "addTelefonoField",
+            "label": "Telefono"
+        },
+        {
+            "type": "email",
+            "varName": "mail",
+            "idUpdate": "MailField",
+            "idAdd": "addMailField",
+            "label": "Email"
+        },
+        {
+            "type": "number",
+            "varName": "id_fascicolo",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addFascicoloField",
+            "label": "ID Fascicolo"
+        }
     ],
 
     "metodo_p": [
@@ -389,6 +420,51 @@ const fields = {
             "idUpdate": "TipoPagamentoField",
             "idAdd": "addTipoPagamentoField",
             "label": "Tipo Pagamento"
+        },
+    ],
+
+    "referente": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
+        {
+            "type": "text",
+            "varName": "cognome",
+            "idUpdate": "CognomeField",
+            "idAdd": "addCognomeField",
+            "label": "Cognome"
+        },
+        {
+            "type": "date",
+            "varName": "data_nascita",
+            "idUpdate": "DataField",
+            "idAdd": "addDataField",
+            "label": "Data"
+        },
+        {
+            "type": "text",
+            "varName": "indirizzo",
+            "idUpdate": "IndirizzoField",
+            "idAdd": "addIndirizzoField",
+            "label": "Indirizzo"
+        },
+        {
+            "type": "text",
+            "varName": "numero_telefono",
+            "idUpdate": "TelefonoField",
+            "idAdd": "addTelefonoField",
+            "label": "Telefono"
+        },
+        {
+            "type": "email",
+            "varName": "mail",
+            "idUpdate": "MailField",
+            "idAdd": "addMailField",
+            "label": "Email"
         },
     ],
 
@@ -478,80 +554,6 @@ const fields = {
             "idUpdate": "NomeField",
             "idAdd": "addNomeField",
             "label": "Nome"
-        },
-    ],
-    "acconto": [
-        {
-            "type": "number",
-            "varName": "id_rata",
-            "idUpdate": "RataField",
-            "idAdd": "addRataField",
-            "label": "ID Rata"
-        },
-        {
-            "type": "number",
-            "varName": "somma",
-            "idUpdate": "SommaField",
-            "idAdd": "addSommaField",
-            "label": "Somma"
-        },
-        {
-            "type": "date",
-            "varName": "data_pagamento",
-            "idUpdate": "DataPagamentoField",
-            "idAdd": "addDataPagamentoField",
-            "label": "Data Pagamento"
-        },
-        {
-            "type": "number",
-            "varName": "metodo_pagamento",
-            "idUpdate": "MetodoPagamentoField",
-            "idAdd": "addMetodoPagamentoField",
-            "label": "Metodo Pagamento"
-        },
-    ],
-    "referente": [
-        {
-            "type": "text",
-            "varName": "nome",
-            "idUpdate": "NomeField",
-            "idAdd": "addNomeField",
-            "label": "Nome"
-        },
-        {
-            "type": "text",
-            "varName": "cognome",
-            "idUpdate": "CognomeField",
-            "idAdd": "addCognomeField",
-            "label": "Cognome"
-        },
-        {
-            "type": "date",
-            "varName": "data_nascita",
-            "idUpdate": "DataField",
-            "idAdd": "addDataField",
-            "label": "Data"
-        },
-        {
-            "type": "text",
-            "varName": "indirizzo",
-            "idUpdate": "IndirizzoField",
-            "idAdd": "addIndirizzoField",
-            "label": "Indirizzo"
-        },
-        {
-            "type": "text",
-            "varName": "numero_telefono",
-            "idUpdate": "TelefonoField",
-            "idAdd": "addTelefonoField",
-            "label": "Telefono"
-        },
-        {
-            "type": "email",
-            "varName": "mail",
-            "idUpdate": "MailField",
-            "idAdd": "addMailField",
-            "label": "Email"
         },
     ],
 };
