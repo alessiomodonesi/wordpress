@@ -36,35 +36,34 @@ $(document).ready(function () {
 function Get_Table(page) {
     let table, id, number;
     switch (page) {
+        //acconto
+        case "acconto":
+            table = "acconto";
+            id = "id_acconto";
+            number = 5;
+            break;
         //caso
         case "caso":
             table = "caso";
             id = "id";
             number = 2;
             break;
-        //cliente
-        case "cliente":
-            table = "cliente";
-            id = "id";
-            number = 7;
-            break;
         //fascicolo
         case "fascicolo":
             table = "fascicolo";
             id = "id";
-            number = 9;
+            number = 10;
             break;
-        //fascicolo-cliente
-        case "fascicolo-cliente":
-            table = "fascicolo_cliente";
-            id = "id_fascicolo";
-            number = 2;
-            break; 
         //fascicolo-specialista
         case "fascicolo-specialista":
             table = "fascicolo_specialista";
             id = "id_fascicolo";
-            number = 4;
+            number = 6;
+            break;
+        case "gestito":
+            table = "gestito";
+            id = "id";
+            number = 8;
             break;
         //metodo_pagamento
         case "metodo-pagamento":
@@ -82,7 +81,12 @@ function Get_Table(page) {
         case "rata":
             table = "rata";
             id = "id_rata";
-            number = 5;
+            number = 4;
+            break;
+        case "referente":
+            table = "referente";
+            id = "id";
+            number = 7;
             break;
         //specialista
         case "specialista":

@@ -5,11 +5,11 @@
 body {
   background: white !important;
 }
-.btnAdd {
-  text-align: right;
-  width: 83%;
-  margin-bottom: 20px;
-  padding-right: 9vw !important;
+#addBtn {
+  margin-left: 65%;
+  margin-bottom: -0.5%;
+  height: 1.95vw !important;
+  line-height: 1.5vw !important;
 }
 #nav-title {
   color: white !important;
