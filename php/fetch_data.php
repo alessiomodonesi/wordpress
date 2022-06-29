@@ -56,7 +56,8 @@ function create_sub_array($row, $table, $id, $arr)
 {
     $sub_array = array();
     //id della tabella come primo elemento
-    $sub_array[] = $row[$id];
+    if($table != "spese" && $table != "fascicolo_specialista")
+        $sub_array[] = $row[$id];
     for($i = 0; $i < count($arr); $i++){
         $sub_array[] = $row[$arr[$i]];
     }

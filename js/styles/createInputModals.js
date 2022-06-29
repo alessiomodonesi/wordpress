@@ -66,12 +66,12 @@ function createModal(_form, _formId) {
             id = _form[i].idUpdate;
         else if (_formId == "addUser")
             id = _form[i].idAdd;
-        addInputDiv(_form[i].label, _form[i].type, _form[i].varName, id, _formId);
+        addInputDiv(_form[i].label, _form[i].type, _form[i].varName, id, _formId, _form[i].classes);
     }
     addSubmitButton(submitButtonInfo.type, submitButtonInfo.divClass, submitButtonInfo.buttonClass, submitButtonInfo.buttonText, _formId);
 }
 
-function addInputDiv(_label, _type, _var, _id, _formId) {
+function addInputDiv(_label, _type, _var, _id, _formId, _classes) {
     // create a new div element
     const div1 = document.createElement("div");
     div1.classList.add("mb-3");
@@ -96,6 +96,8 @@ function addInputDiv(_label, _type, _var, _id, _formId) {
     // create a new input element and add it to the div
     const input = document.createElement("input");
     input.classList.add("form-control");
+    if (_classes != undefined)
+        input.classList.add(_classes);
     input.setAttribute("type", _type);
     input.setAttribute("name", _var);
     input.setAttribute("id", _id);
@@ -294,7 +296,8 @@ const fields = {
             "label": "Numero Specialista"
         },
         {
-            "type": "number",
+            "type": "checkbox",
+            "classes": "form-check-input",
             "varName": "accettato",
             "idUpdate": "AccettatoField",
             "idAdd": "addAccettatoField",
@@ -394,7 +397,8 @@ const fields = {
             "label": "Totale Vero"
         },
         {
-            "type": "number",
+            "type": "checkbox",
+            "classes": "form-check-input",
             "varName": "accettato",
             "idUpdate": "AccettatoField",
             "idAdd": "addAccettatoField",
@@ -418,11 +422,12 @@ const fields = {
             "label": "Somma"
         },
         {
-            "type": "number",
-            "varName": "tipo_pagamento",
-            "idUpdate": "TipoPagamentoField",
-            "idAdd": "addTipoPagamentoField",
-            "label": "Tipo Pagamento"
+            "type": "checkbox",
+            "classes": "form-check-input",
+            "varName": "pagata",
+            "idUpdate": "PagataField",
+            "idAdd": "addPagataField",
+            "label": "Pagata"
         },
     ],
 
@@ -525,7 +530,8 @@ const fields = {
             "label": "Somma"
         },
         {
-            "type": "number",
+            "type": "checkbox",
+            "classes": "form-check-input",
             "varName": "rimborso",
             "idUpdate": "RimborsoField",
             "idAdd": "addRimborsoField",

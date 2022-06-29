@@ -7,6 +7,10 @@ $(document).on('submit', '#addUser', function (e) {
     var dataValue = Ottieni_Array(page, true);//va a prendere i valori aggiunti dall'utente
     let pageData = Get_Table(page);//prende le informazioni base sulla tabella
     let dataNames = Ottieni_Array(page, false);//va a prendere i nomi delle colonne del database
+    let dataType = Get_Type(page);//prende i tipi di dati della tabella
+
+    console.log("dataValue:\n");
+    console.log(dataValue);
 
     //da aggiungere un controllo
     if (true) {
@@ -17,6 +21,7 @@ $(document).on('submit', '#addUser', function (e) {
                 arr_value: dataValue,
                 arr_name: dataNames,
                 tabella: pageData.tab,
+                arr_type: dataType,
             },
             success: function (data) {
                 var json = JSON.parse(data);
@@ -100,8 +105,24 @@ function Get_Value_Add(arr) {
     let tmp = [];
     for (let i = 0; i < arr.length; i++) {
         console.log("riga n " + i + " nome id variabile: " + arr[i].idAdd);
-        tmp.push($("#" + arr[i].idAdd).val());
+        if (arr[i].type == "checkbox") {
+            if ($("#" + arr[i].idAdd).is(":checked"))
+                tmp.push(1);
+            else
+                tmp.push(0);
+        }
+        else
+            tmp.push($("#" + arr[i].idAdd).val());
         //console.log("riga n " + i + " valore form: " + $("#" + arr[i].idAdd).val());
+    }
+    return tmp;
+}
+
+function Get_Type(arr) {
+    let tmp = [];
+    for (let i = 0; i < arr.length; i++) {
+        console.log("riga n " + i + " tipo variabile: " + arr[i].type);
+        tmp.push(arr[i].type);
     }
     return tmp;
 }

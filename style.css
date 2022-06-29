@@ -5,6 +5,11 @@
 body {
   background: white !important;
 }
+
+.form-check-input{
+  margin-left: 0vw !important;
+}
+
 #nav-title {
   color: white !important;
   font-size: 23.5px;
@@ -75,13 +80,13 @@ body {
 @media screen and (min-width: 1400px) {
   /* XXL */
   #addBtn {
-    margin-left: calc(100vw - 71%) !important;
+    margin-left: calc(100vw - 75%) !important;
   }
 }
 
 @media screen and (min-width: 1800px) {
   /* XXL */
   #addBtn {
-    margin-left: calc(100vw - 56%) !important;
+    margin-left: calc(100vw - 58%) !important;
   }
 }

@@ -4,6 +4,7 @@ include('connection.php');
 $arr_value = $_POST['arr_value'];//prende i valori inseriti dall'utente
 $arr_nomi = $_POST['arr_name'];//prende i nomi dei cambi della tabella
 $tabella = $_POST['tabella'];//prende le informazioni base sulla tabella
+$arr_type = $_POST['arr_type'];//prende i tipi di dati dei campi della tabella
 
 
 //Inserisce tutt i dati nella tabella neglia ppositi campi
@@ -17,10 +18,18 @@ for($i = 0; $i < count($arr_nomi); $i++){
 }
 
 for($i = 0; $i < count($arr_value); $i++){
-    if($i < count($arr_value) - 1)
-        $sql .= " '$arr_value[$i]',";
-    else
-        $sql .= " '$arr_value[$i]')";
+    if($i < count($arr_value) - 1){
+        if($arr_type[$i] == "checkbox")
+            $sql .= " b'$arr_value[$i]',";
+        else
+            $sql .= " '$arr_value[$i]',";
+    }
+    else{
+        if($arr_type[$i] == "checkbox")
+            $sql .= " b'$arr_value[$i]')";
+        else
+            $sql .= " '$arr_value[$i]')";
+    }
 }
 
 $query = mysqli_query($connect, $sql);

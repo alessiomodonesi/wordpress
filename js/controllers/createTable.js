@@ -7,7 +7,7 @@ $(document).ready(function () {
     let dataNames = Setup_Array(page, false);//va a prendere i nomi dei campi della tabella
 
     var table = $('#table').DataTable({
-        dom: 'Bfrtip',
+        'dom': 'lBfrtip',
         "fnCreatedRow": function (nRow, aData, iDataIndex) {
             $(nRow).attr('id', aData[0]);
             console.log("Numero di colonne secondo il db: " + aData.length);
@@ -31,12 +31,12 @@ $(document).ready(function () {
             "aTargets": [page_data.nCol]
         }]
     });
-    
-    new $.fn.dataTable.Buttons( table, {
+
+    new $.fn.dataTable.Buttons(table, {
         buttons: [
             'copy', 'excel', 'pdf'
         ]
-    } );
+    });
 });
 
 //Funzione che restituisce i dati principali di una tabella in base alla pagina in cui ci si trova
