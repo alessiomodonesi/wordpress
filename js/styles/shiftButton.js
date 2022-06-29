@@ -1,10 +1,9 @@
 var $ = jQuery;
 $(document).ready(function () {
-    //un po' di delay, perchè per non si sa quale arcano motivo, lo fa partire per primo seppur ci sia document on load .-.
-    console.log("PAPEREEEEEE");
+    //un po' di delay, per dare dle tempo alla pagina di caricarsi correttamente
     setTimeout(SpostaButton, 10);
 });
-//questa funzione serve a creare tutte le colonne della tabella secondo i suoi campi 
+//questa funzione serve per prendere e spostare il pulsante "Aggiungi" all'interno della tabella
 function SpostaButton() {
     let btn = document.getElementById("addBtn");
     btn.remove();
