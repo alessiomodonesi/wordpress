@@ -51,89 +51,83 @@ function Setup_Array(page, getValue) {
     switch (page) {
         //caso
         case "caso":
+            if(getValue)
+             return Get_Array(fields.caso);
+            return Get_Names(fields.caso);
             break;
         //cliente
         case "cliente":
+            if(getValue)
+             return Get_Array(fields.cliente);
+            return Get_Names(fields.cliente);
             break;
         //fascicolo
         case "fascicolo":
+            if(getValue)
+             return Get_Array(fields.fascicolo);
+            return Get_Names(fields.fascicolo);
             break;
         //fascicolo-cliente
         case "fascicolo-cliente":
+            if(getValue)
+             return Get_Array(fields.fascicolo_c);
+            return Get_Names(fields.fascicolo_c);
             break; 
         //fascicolo-specialista
         case "fascicolo-specialista":
+            if(getValue)
+             return Get_Array(fields.fascicolo_s);
+            return Get_Names(fields.fascicolo_s);
             break;
         //metodo_pagamento
         case "metodo-pagamento":
+            if(getValue)
+             return Get_Array(fields.metodo_p);
+            return Get_Names(fields.metodo_p);
             break;
         //pagamento
         case "pagamento":
+            if(getValue)
+             return Get_Array(fields.pagamento);
+            return Get_Names(fields.pagamento);
             break;
         //rata
         case "rata":
+            if(getValue)
+             return Get_Array(fields.rata);
+            return Get_Names(fields.rata);
             break;
         //specialista
         case "specialista":
+            if(getValue)
+            return Get_Array(fields.specialista);
+            return Get_Names(fields.specialista);
             break;
         //spese
         case "spese":
+            if(getValue)
+             return Get_Array(fields.spese);
+            return Get_Names(fields.spese);
             break;
         //stato
         case "stato":
+            if(getValue)
+             return Get_Array(fields.stato);
+            return Get_Names(fields.stato);
             break;
         //ufficio
         case "ufficio":
+            if(getValue)
+             return Get_Array(fields.ufficio);
+            return Get_Names(fields.ufficio);
             break;
-    }
-    switch (page) {
-        //wp_cliente
-        case "cliente":
-            if (getValue)
-                return Get_Array(fields.cliente);
-            return Get_Names(fields.cliente);
-        //wp_cliente_specialista
-        case "cliente-specialista":
-            if (getValue)
-                return Get_Array(fields.cliente_s);
-            return Get_Names(fields.cliente_s);
-        //wp_documenti_caso
-        case "documenti-caso":
-            if (getValue)
-                return Get_Array(fields.documenti_c);
-            return Get_Names(fields.documenti_c);
-        //wp_metodo_pagamento
-        case "metodo-pagamento":
-            if (getValue)
-                return Get_Array(fields.metodo_p);
-            return Get_Names(fields.metodo_p);
-        //wp_pagamento
-        case "pagamento":
-            if (getValue)
-                return Get_Array(fields.pagamento);
-            return Get_Names(fields.pagamento);
-        //wp_rata
-        case "rata":
-            if (getValue)
-                return Get_Array(fields.rata);
-            return Get_Names(fields.rata);
-        //wp_specialista
-        case "specialista":
-            if (getValue)
-                return Get_Array(fields.specialista);
-            return Get_Names(fields.specialista);
-        //wp_tipo_caso
-        case "tipo-caso":
-            if (getValue)
-                return Get_Array(fields.tipo_c);
-            return Get_Names(fields.tipo_c);
     }
 }
 function Get_Array(arr) {
     let tmp = [];
     for (let i = 0; i < arr.length; i++) {
-        console.log("riga n " + i + " nome id variabile: " + arr[i].idEdit);
-        tmp.push($('#' + arr[i].idEdit).val());
+        console.log("riga n " + i + " nome id variabile: " + arr[i].idUpdate);
+        tmp.push($('#' + arr[i].idUpdate).val());
     }
     return tmp;
 }
