@@ -2,11 +2,11 @@
 
 <div class="container-fluid"><br />
     <h1 class="title text-center" id="titolo"></h1>
-    <input type="hidden" id="title" value="<?php echo get_the_title(); ?>"><hr />
+    <input type="hidden" id="title" value="<?php echo get_the_title(); ?>">
+    <hr />
     <div class="row">
-        <div class="btnAdd">
-            <a href="#!" data-id="" data-bs-toggle="modal" data-bs-target="#addUserModal" class="btn btn-outline-success btn-sm" id="addBtn"></a>
-        </div>
+        <a href="#!" data-id="" data-bs-toggle="modal" data-bs-target="#addUserModal"
+            class="btn btn-outline-success btn-sm" id="addBtn"></a>
     </div>
     <div class="row">
         <div class="container-fluid">
