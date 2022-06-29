@@ -21,6 +21,7 @@ $(document).on('click', '.editbtn ', function (event) {
             var json = JSON.parse(data);
             $('#id').val(id);
             $('#trid').val(trid);
+            //riempe i campi con i dati del database
             switch (page) {
                 //acconto
                 case "acconto":
@@ -112,7 +113,7 @@ $(document).on('click', '.editbtn ', function (event) {
                 case "ufficio":
                     $('#NomeField').val(json.nome);
                     break;
-            }    
+            }
         }
     })
 });
