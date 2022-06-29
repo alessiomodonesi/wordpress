@@ -9,6 +9,7 @@ $(document).ready(function () {
     btn.appendChild(btnText);
     titolo.appendChild(titleText);
 });
+//a seconda della pagina ritorna il titolo e il testo da aggiungere al bottone
 function Get_Title_Btn(page) {
     let title, btn;
     switch (page) {

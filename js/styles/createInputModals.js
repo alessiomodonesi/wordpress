@@ -57,7 +57,7 @@ $(document).ready(function () {
             break;
     }
 });
-
+//si occupa di creare gli input da inserire nei moduli che l'utente compilerà
 function createModal(_form, _formId) {
     console.log("creazione degli input di " + _formId);
     for (let i = 0; i < _form.length; i++) {
@@ -112,7 +112,7 @@ function addInputDiv(_label, _type, _var, _id, _formId) {
 
     console.log("created correctly input div: " + _label);
 }
-
+//aggiunge il pulsante "submit" alla fine del form
 function addSubmitButton(_type, _divClass, _buttonClass, _buttonText, _formId) {
     // create a new div element
     const div1 = document.createElement("div");
@@ -137,7 +137,18 @@ function addSubmitButton(_type, _divClass, _buttonClass, _buttonText, _formId) {
 
     console.log("created correctly button: " + _buttonText);
 }
+//SPIEGAZIONE
+/*
+"fields" è un oggetto che contiene tutti i campi che compongono una tabella
+ogni oggetto al suo interno contiente un array degli elementi essenziali e necessari al funzionamento del modulo
+e all'invio dei dati al server
 
+type: tipo di input
+label: label del campo
+varName: nome della variabile in cui verrà salvato il valore del campo, e coincide con il nome della colonna della tabella nel database
+idUpdate: id del campo che viene usato per la modifica dei dati
+idAdd: id del campo che viene usato per l'inserimento dei dati, aggiunta di un nuovo record
+*/
 const fields = {
     "acconto": [
         {
@@ -550,6 +561,8 @@ const fields = {
     ],
 };
 
+
+//oggetto che contiente le informazioni del pulsante del form
 const submitButtonInfo = {
     "type": "submit",
     "divClass": "text-center",
