@@ -54,7 +54,7 @@ function Create_Table_Index() {
 //Questo array contiene tutti i campi di ogni tabella 
 const tHead = {
     "acconto": [
-        "ID",
+        "ID acconto",
         "ID rata",
         "Somma",
         "Data pagamento",
@@ -111,7 +111,7 @@ const tHead = {
     ],
 
     "pagamento": [
-        "ID",
+        "ID pagamento",
         "ID fascicolo",
         "Creazione",
         "Totale",
@@ -121,7 +121,7 @@ const tHead = {
     ],
 
     "rata": [
-        "ID",
+        "ID rata",
         "ID pagamento",
         "Somma",
         "Pagata y/n",
