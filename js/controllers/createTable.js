@@ -2,9 +2,9 @@ var $ = jQuery;
 $(document).ready(function () {
     let page = $('#title').val();
     console.log("Questa è la pagina: " + page);
-    let page_data = Get_Table(page);
+    let page_data = Get_Table(page);//prende i dati principali della tabella in base alla pagina
     let url = Get_URL(page, 'wp-content/themes/my-theme/php/fetch_data.php');
-    let dataNames = Setup_Array(page, false);
+    let dataNames = Setup_Array(page, false);//va a prendere i nomi dei campi della tabella
 
     $('#table').DataTable({
         "fnCreatedRow": function (nRow, aData, iDataIndex) {
@@ -31,6 +31,7 @@ $(document).ready(function () {
     });
 });
 
+//Funzione che restituisce i dati principali di una tabella in base alla pagina in cui ci si trova
 function Get_Table(page) {
     let table, id, number;
     switch (page) {
