@@ -47,6 +47,8 @@ $(document).on('submit', '#updateUser', function (e) {
     }
 });
 
+/*Questa funzione ritorna o l'insieme di dati modificati dall'utente tramite input 
+o il nome delle varie colonne del database in base alla tabella */
 function Setup_Array(page, getValue) {
     switch (page) {
         //caso
@@ -123,6 +125,7 @@ function Setup_Array(page, getValue) {
             break;
     }
 }
+//Questa funzione ritorna l'insieme dei valori cambiati dall'utente a mano tramite input
 function Get_Array(arr) {
     let tmp = [];
     for (let i = 0; i < arr.length; i++) {
@@ -131,6 +134,7 @@ function Get_Array(arr) {
     }
     return tmp;
 }
+/*Questa funzione ritorna il nome dei vari campi delle colonne del database */ 
 function Get_Names(arr) {
     let tmp = [];
     for (let i = 0; i < arr.length; i++) {

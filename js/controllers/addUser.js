@@ -4,9 +4,9 @@ $(document).on('submit', '#addUser', function (e) {
     let page = $('#title').val();
     let url = Get_URL(page, 'wp-content/themes/my-theme/php/add_user.php');
 
-    var dataValue = Ottieni_Array(page, true);
-    let pageData = Get_Table(page);
-    let dataNames = Ottieni_Array(page, false);
+    var dataValue = Ottieni_Array(page, true);//va a prendere i valori aggiunti dall'utente
+    let pageData = Get_Table(page);//prende le informazioni base sulla tabella
+    let dataNames = Ottieni_Array(page, false);//va a prendere i nomi delle colonne del database
 
     //da aggiungere un controllo
     if (true) {
@@ -35,6 +35,8 @@ $(document).on('submit', '#addUser', function (e) {
     }
 });
 
+/*Questa funzione ritorna o l'insieme dei valori dei campi inseriti dall'utente a mano 
+o il nome dei campi delle colonne del database in base alla tabella*/
 function Ottieni_Array(page, getValue) {
     switch (page) {
         //caso
@@ -99,6 +101,8 @@ function Ottieni_Array(page, getValue) {
             return Get_Names(fields.ufficio);
     }
 }
+/*Questa funzione ti ritorna un array con tutti i valori degli input(i campi aggiunti dall'utente)
+che sono stati introdotti dall'utente*/
 function Get_Value_Add(arr) {
     let tmp = [];
     for (let i = 0; i < arr.length; i++) {
