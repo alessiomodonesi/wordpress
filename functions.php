@@ -7,7 +7,7 @@ if ($browser == "Google Chrome") {
         wp_enqueue_style('customstyle', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
         wp_enqueue_style('bootstrap', get_template_directory_uri() . "/css/bootstrap/bootstrap.min.css'", array(), '5.1.3', 'all');
         wp_enqueue_style('data_tables', get_template_directory_uri() . "/datatables/Data-1.12.1/css/jquery.dataTables.min.css", array(), '1.12.1', 'all');
-        wp_enqueue_style('responsive_css', get_template_directory_uri() . "/responsive/css/responsive.jqueryui.min.css", array(), '2.3.0', 'all');
+        wp_enqueue_style('responsive_css', get_template_directory_uri() . "/exstensions/responsive/css/responsive.jqueryui.min.css", array(), '2.3.0', 'all');
         
         //wp_enqueue_style('exstension_css', "https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/datatables.min.css", array(), '1.12.1', 'all');
     }
@@ -19,7 +19,7 @@ if ($browser == "Google Chrome") {
         wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.6.0.slim.min.js', array(), '3.6.0', true);
         wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap/bootstrap.bundle.min.js', array(), '5.1.3', true);
         wp_enqueue_script('data_tables', get_template_directory_uri() . '/datatables/Data-1.12.1/js/jquery.dataTables.min.js', array(), '1.12.1', true);
-        wp_enqueue_style('responsive_js', get_template_directory_uri() . "/responsive/js/responsive.jqueryui.min.js", array(), '2.3.0', 'all');
+        wp_enqueue_style('responsive_js', get_template_directory_uri() . "/exstensions/responsive/js/responsive.jqueryui.min.js", array(), '2.3.0', 'all');
 
         /*wp_enqueue_script('pdfmake', get_template_directory_uri() . '/pdfmake/pdfmake.min.js', array(), '0.1.36', true);
         wp_enqueue_script('fontspdfmake', get_template_directory_uri() . '/pdfmake/vfs_fonts.js', array(), '0.1.36', true);*/
