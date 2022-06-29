@@ -75,7 +75,7 @@ body {
 @media screen and (min-width: 1400px) {
   /* XXL */
   #addBtn {
-    margin-left: calc(100vw - 70%) !important;
+    margin-left: calc(100vw - 71%) !important;
   }
 }
 
