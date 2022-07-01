@@ -6,7 +6,11 @@ body {
   background: white !important;
 }
 
-.form-check-input{
+.front-page-content {
+  color: black !important;
+}
+
+.form-check-input {
   margin-left: 0vw !important;
 }
 
@@ -26,6 +30,10 @@ body {
   color: white !important;
   margin-right: 2%;
   margin-left: 2%;
+}
+
+.text-area-modal {
+  resize: none;
 }
 
 #intestazione {

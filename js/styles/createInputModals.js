@@ -94,13 +94,28 @@ function addInputDiv(_label, _type, _var, _id, _formId, _classes) {
     div2.classList.add("col-md-9");
 
     // create a new input element and add it to the div
-    const input = document.createElement("input");
-    input.classList.add("form-control");
-    if (_classes != undefined)
-        input.classList.add(_classes);
-    input.setAttribute("type", _type);
-    input.setAttribute("name", _var);
-    input.setAttribute("id", _id);
+    var input = "";
+
+    if (_var != "note") {
+        input = document.createElement("input");
+        input.classList.add("form-control");
+        if (_classes != undefined)
+            input.classList.add(_classes);
+        input.setAttribute("type", _type);
+        input.setAttribute("name", _var);
+        input.setAttribute("id", _id);
+    }
+    else {
+        input = document.createElement("textarea");
+        input.classList.add("form-control");
+        if (_classes != undefined)
+            input.classList.add(_classes);
+        input.setAttribute("type", _type);
+        input.setAttribute("name", _var);
+        input.setAttribute("id", _id);
+
+        input.setAttribute("rows", textAreaInfo.rows);
+    }
 
     //get updateUser form
     const form = document.getElementById(_formId);
@@ -139,6 +154,11 @@ function addSubmitButton(_type, _divClass, _buttonClass, _buttonText, _formId) {
 
     console.log("created correctly button: " + _buttonText);
 }
+//contiene le informazioni per la textarea presente nel campo "note"
+const textAreaInfo = {
+    "rows": 5,
+}
+
 //SPIEGAZIONE
 /*
 "fields" è un oggetto che contiene tutti i campi che compongono una tabella
@@ -248,6 +268,7 @@ const fields = {
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
+            "classes": "text-area-modal",
             "label": "Note"
         },
         {
@@ -542,6 +563,7 @@ const fields = {
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
+            "classes": "text-area-modal",
             "label": "Note"
         },
     ],

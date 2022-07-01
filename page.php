@@ -61,10 +61,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
 
+            <!-- fascicolo e spese, hanno l'input "note" -->
             <div class="modal-body">
                 <form id="addUser" action="">
                     <!-- guarda createInputModals.js -->
                 </form>
+                <!-- <textarea type="text" style="resize:none" rows="3" cols="25" name="comment" form="addUser">Enter text here...</textarea> -->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Chiudi</button>

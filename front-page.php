@@ -1,6 +1,6 @@
 <?php include('php/connection.php'); get_header(); get_footer(); ?>
 
-<div class="container-fluid">
+<div class="container-fluid front-page-content">
     <div class="row" id="intestazione">
         <div class="col-12">
             <h1 class="title text-center">Home Page</h1>
