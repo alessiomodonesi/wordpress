@@ -27,7 +27,7 @@ if ($browser == "Google Chrome") {
         //wp_enqueue_script('exstension_js', "https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/datatables.min.js", array(), '0.1.36', true);
         //Custom JS
         wp_enqueue_script('createInputDiv', get_template_directory_uri() . '/js/styles/createInputModals.js', array(), '1.0', true);
-        wp_enqueue_script('createTh', get_template_directory_uri() . '/js/styles/createTh.js', array(), '1.0', true);
+        wp_enqueue_script('addIndexTable', get_template_directory_uri() . '/js/styles/addIndexTable.js', array(), '1.0', true);
         wp_enqueue_script('getTitle', get_template_directory_uri() . '/js/styles/getTitle.js', array(), '1.0', true);
         wp_enqueue_script('shiftBtn', get_template_directory_uri() . '/js/styles/shiftButton.js', array(), '1.0', true);
 
