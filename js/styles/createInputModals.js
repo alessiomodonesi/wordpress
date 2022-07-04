@@ -7,9 +7,21 @@ $(document).ready(function () {
             createModal(fields.acconto, "updateUser");
             createModal(fields.acconto, "addUser");
             break;
+        case "allegati":
+            createModal(fields.allegati, "updateUser");
+            createModal(fields.allegati, "addUser");
+            break;
+        case "appuntamenti":
+            createModal(fields.appuntamenti, "updateUser");
+            createModal(fields.appuntamenti, "addUser");
+            break;
         case "caso":
             createModal(fields.caso, "updateUser");
             createModal(fields.caso, "addUser");
+            break;
+        case "chiamata":
+            createModal(fields.chiamata, "updateUser");
+            createModal(fields.chiamata, "addUser");
             break;
         case "fascicolo":
             createModal(fields.fascicolo, "updateUser");
@@ -31,6 +43,10 @@ $(document).ready(function () {
             createModal(fields.pagamento, "updateUser");
             createModal(fields.pagamento, "addUser");
             break;
+        case "prospective":
+            createModal(fields.prospective, "updateUser");
+            createModal(fields.prospective, "addUser");
+            break;
         case "rata":
             createModal(fields.rata, "updateUser");
             createModal(fields.rata, "addUser");
@@ -46,6 +62,10 @@ $(document).ready(function () {
         case "spese":
             createModal(fields.spese, "updateUser");
             createModal(fields.spese, "addUser");
+            break;
+        case "sponsor":
+            createModal(fields.sponsor, "updateUser");
+            createModal(fields.sponsor, "addUser");
             break;
         case "stato":
             createModal(fields.stato, "updateUser");
@@ -201,6 +221,168 @@ const fields = {
             "idAdd": "addMetodoPagamentoField",
             "label": "Metodo Pagamento"
         },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
+    ],
+
+    "allegati": [
+        {
+            "type": "text",
+            "varName": "nome_file",
+            "idUpdate": "NomeFileField",
+            "idAdd": "addNomeFileField",
+            "label": "Nome File"
+        },
+        {
+            "type": "text",
+            "varName": "percorso",
+            "idUpdate": "PercorsoField",
+            "idAdd": "addPercorsoField",
+            "label": "Percorso"
+        },
+        {
+            "type": "text",
+            "varName": "estensione_file",
+            "idUpdate": "EstensioneFileField",
+            "idAdd": "addEstensioneFileField",
+            "label": "Estensione File"
+        },
+        {
+            "type": "number",
+            "varName": "codice_tipo_file",
+            "idUpdate": "CodiceTipoFileField",
+            "idAdd": "addCodiceTipoFileField",
+            "label": "Codice Tipo File"
+        },
+        {
+            "type": "number",
+            "varName": "eliminato",
+            "idUpdate": "EliminatoField",
+            "idAdd": "addEliminatoField",
+            "label": "Eliminato"
+        },
+        {
+            "type": "date",
+            "varName": "data_caricamento",
+            "idUpdate": "DataCaricamentoField",
+            "idAdd": "addDataCaricamentoField",
+            "label": "Data Caricamento"
+        },
+        {
+            "type": "number",
+            "varName": "acconto",
+            "idUpdate": "AccontoField",
+            "idAdd": "addAccontoField",
+            "label": "Acconto"
+        },
+        {
+            "type": "number",
+            "varName": "rata",
+            "idUpdate": "RataField",
+            "idAdd": "addRataField",
+            "label": "Rata"
+        },
+        {
+            "type": "number",
+            "varName": "pagamento",
+            "idUpdate": "PagamentoField",
+            "idAdd": "addPagamentoField",
+            "label": "Pagamento"
+        },
+        {
+            "type": "number",
+            "varName": "referente",
+            "idUpdate": "ReferenteField",
+            "idAdd": "addRataField",
+            "label": "Referente"
+        },
+        {
+            "type": "number",
+            "varName": "fascicolo",
+            "idUpdate": "FascicoloField",
+            "idAdd": "addRataField",
+            "label": "Fascicolo"
+        },
+        {
+            "type": "number",
+            "varName": "gestito",
+            "idUpdate": "GestitoField",
+            "idAdd": "addRataField",
+            "label": "Gestito"
+        },
+    ],
+
+    "appuntamenti": [
+        {
+            "type": "number",
+            "varName": "id_prospective",
+            "idUpdate": "IdProspectiveField",
+            "idAdd": "addIdProspectiveField",
+            "label": "ID Prospective"
+        },
+        {
+            "type": "number",
+            "varName": "numero_telefono",
+            "idUpdate": "NumeroTelefonoField",
+            "idAdd": "addNumeroTelefonoField",
+            "label": "Numero Telefono"
+        },
+        {
+            "type": "date",
+            "varName": "data_chiamata",
+            "idUpdate": "DataChiamataField",
+            "idAdd": "addDataChiamataField",
+            "label": "Data Chiamata"
+        },
+        {
+            "type": "number",
+            "varName": "stato",
+            "idUpdate": "StatoField",
+            "idAdd": "addStatoField",
+            "label": "Stato"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
     ],
 
     "caso": [
@@ -211,9 +393,62 @@ const fields = {
             "idAdd": "addNomeField",
             "label": "Nome"
         },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
+    ],
+
+    "chiamata": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
     ],
 
     "fascicolo": [
+        {
+            "type": "text",
+            "varName": "nickname",
+            "idUpdate": "NicknameField",
+            "idAdd": "addNicknameField",
+            "label": "Nickname"
+        },
         {
             "type": "date",
             "varName": "data_apertura",
@@ -265,18 +500,46 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "link",
+            "idUpdate": "LinkField",
+            "idAdd": "addLinkField",
+            "label": "Link"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
             "classes": "text-area-modal",
             "label": "Note"
-        },
-        {
-            "type": "text",
-            "varName": "link",
-            "idUpdate": "LinkField",
-            "idAdd": "addLinkField",
-            "label": "Link"
         },
     ],
 
@@ -324,6 +587,42 @@ const fields = {
             "idAdd": "addAccettatoField",
             "label": "Accettato"
         },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
     ],
 
     "gestito": [
@@ -340,6 +639,13 @@ const fields = {
             "idUpdate": "CognomeField",
             "idAdd": "addCognomeField",
             "label": "Cognome"
+        },
+        {
+            "type": "text",
+            "varName": "middle_name",
+            "idUpdate": "MiddleNameField",
+            "idAdd": "addMiddleNameField",
+            "label": "Middle Name"
         },
         {
             "type": "date",
@@ -375,7 +681,50 @@ const fields = {
             "idUpdate": "FascicoloField",
             "idAdd": "addFascicoloField",
             "label": "ID Fascicolo"
-        }
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "number",
+            "varName": "obbligo_gdpr",
+            "idUpdate": "ObbligoGdprField",
+            "idAdd": "addObbligoGdprField",
+            "label": "Obbligo GDPR"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
     ],
 
     "metodo_p": [
@@ -385,6 +734,42 @@ const fields = {
             "idUpdate": "NomeField",
             "idAdd": "addNomeField",
             "label": "Nome"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
         },
     ],
 
@@ -425,6 +810,116 @@ const fields = {
             "idAdd": "addAccettatoField",
             "label": "Accettato"
         },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
+    ],
+
+    "prospective": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
+        {
+            "type": "text",
+            "varName": "cognome",
+            "idUpdate": "CognomeField",
+            "idAdd": "addCognomeField",
+            "label": "Cognome"
+        },
+        {
+            "type": "text",
+            "varName": "middle_name",
+            "idUpdate": "MiddleNameField",
+            "idAdd": "addMiddleNameField",
+            "label": "Middle Name"
+        },
+        {
+            "type": "number",
+            "varName": "numero_telefono",
+            "idUpdate": "NumeroTelefonoField",
+            "idAdd": "addNumeroTelefonoField",
+            "label": "Numero Telefono"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "number",
+            "varName": "obbligo_gdpr",
+            "idUpdate": "ObbligoGdprField",
+            "idAdd": "addObbligoGdprField",
+            "label": "Obbligo GDPR"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
     ],
 
     "rata": [
@@ -450,6 +945,42 @@ const fields = {
             "idAdd": "addPagataField",
             "label": "Pagata"
         },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
     ],
 
     "referente": [
@@ -466,6 +997,13 @@ const fields = {
             "idUpdate": "CognomeField",
             "idAdd": "addCognomeField",
             "label": "Cognome"
+        },
+        {
+            "type": "text",
+            "varName": "middle_name",
+            "idUpdate": "MiddleNameField",
+            "idAdd": "addMiddleNameField",
+            "label": "Middle Name"
         },
         {
             "type": "date",
@@ -495,6 +1033,63 @@ const fields = {
             "idAdd": "addMailField",
             "label": "Email"
         },
+        {
+            "type": "number",
+            "varName": "sponsor",
+            "idUpdate": "SponsorField",
+            "idAdd": "addSponsorField",
+            "label": "Sponsor"
+        },
+        {
+            "type": "number",
+            "varName": "perc_sponsor",
+            "idUpdate": "PercSponsorField",
+            "idAdd": "addPercSponsorField",
+            "label": "Perc Sponsor"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "number",
+            "varName": "obbligo_gdpr",
+            "idUpdate": "ObbligoGdprField",
+            "idAdd": "addObbligoGdprField",
+            "label": "Obbligo GDPR"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
     ],
 
     "specialista": [
@@ -513,11 +1108,25 @@ const fields = {
             "label": "Cognome"
         },
         {
+            "type": "text",
+            "varName": "middle_name",
+            "idUpdate": "MiddleNameField",
+            "idAdd": "addMiddleNameField",
+            "label": "Middle Name"
+        },
+        {
             "type": "date",
             "varName": "data_nascita",
             "idUpdate": "DataNascitaField",
             "idAdd": "addDataNascitaField",
             "label": "Data Nascita"
+        },
+        {
+            "type": "text",
+            "varName": "codice_fiscale",
+            "idUpdate": "CodiceFiscaleField",
+            "idAdd": "addCodiceFiscaleField",
+            "label": "Codice Fiscale"
         },
         {
             "type": "text",
@@ -532,6 +1141,49 @@ const fields = {
             "idUpdate": "MailField",
             "idAdd": "addMailField",
             "label": "Email"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "number",
+            "varName": "obbligo_gdpr",
+            "idUpdate": "ObbligoGdprField",
+            "idAdd": "addObbligoGdprField",
+            "label": "Obbligo GDPR"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
         },
     ],
 
@@ -566,6 +1218,44 @@ const fields = {
             "classes": "text-area-modal",
             "label": "Note"
         },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+    ],
+
+    "sponsor": [
+        {
+            "type": "text",
+            "varName": "nome",
+            "idUpdate": "NomeField",
+            "idAdd": "addNomeField",
+            "label": "Nome"
+        },
     ],
 
     "stato": [
@@ -575,6 +1265,42 @@ const fields = {
             "idUpdate": "NomeField",
             "idAdd": "addNomeField",
             "label": "Nome"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
         },
     ],
 
@@ -586,9 +1312,44 @@ const fields = {
             "idAdd": "addNomeField",
             "label": "Nome"
         },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
+            "varName": "note",
+            "idUpdate": "NoteField",
+            "idAdd": "addNoteField",
+            "classes": "text-area-modal",
+            "label": "Note"
+        },
     ],
 };
-
 
 //oggetto che contiente le informazioni del pulsante del form
 const submitButtonInfo = {

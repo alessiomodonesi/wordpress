@@ -26,6 +26,8 @@
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/referente">Referenti</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/specialista">Specialisti</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="http://localhost/wordpress/sponsor">Sponsor</a></li>
                                 </ul>
                             </li>
 
@@ -54,6 +56,17 @@
                             </li>
 
                             <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Appuntamenti</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="http://localhost/wordpress/appuntamenti">Appuntamenti</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="http://localhost/wordpress/chiamata">Chiamata</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="http://localhost/wordpress/prospective">Prospective</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Altro</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/caso">Casi</a></li>
@@ -61,6 +74,8 @@
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/stato">Stati</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/ufficio">Uffici</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="http://localhost/wordpress/allegati">Allegati</a></li>
                                 </ul>
                             </li>
                             

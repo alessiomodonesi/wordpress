@@ -44,11 +44,29 @@ function Get_Table(page) {
         case "acconto":
             table = "acconto";
             id = "id_acconto";
-            number = 5;
+            number = 10;
+            break;
+        //allegati
+        case "allegati":
+            table = "allegati";
+            id = "id";
+            number = 13;
+            break;
+        //appuntamenti
+        case "appuntamenti":
+            table = "appuntamenti";
+            id = "id";
+            number = 6;
             break;
         //caso
         case "caso":
             table = "caso";
+            id = "id";
+            number = 7;
+            break;
+        //chiamata
+        case "chiamata":
+            table = "chiamata";
             id = "id";
             number = 2;
             break;
@@ -56,65 +74,77 @@ function Get_Table(page) {
         case "fascicolo":
             table = "fascicolo";
             id = "id";
-            number = 10;
+            number = 15;
             break;
         //fascicolo-specialista
         case "fascicolo-specialista":
             table = "fascicolo_specialista";
             id = "id_fascicolo";
-            number = 6;
+            number = 11;
             break;
         case "gestito":
             table = "gestito";
             id = "id";
-            number = 8;
+            number = 15;
             break;
         //metodo_pagamento
         case "metodo-pagamento":
             table = "metodo_pagamento";
             id = "id";
-            number = 2;
+            number = 7;
             break;
         //pagamento
         case "pagamento":
             table = "pagamento";
             id = "id_pagamento";
-            number = 6;
+            number = 11;
+            break;
+        //prospective
+        case "prospective":
+            table = "prospective";
+            id = "id";
+            number = 11;
             break;
         //rata
         case "rata":
             table = "rata";
             id = "id_rata";
-            number = 4;
+            number = 9;
             break;
         case "referente":
             table = "referente";
             id = "id";
-            number = 7;
+            number = 16;
             break;
         //specialista
         case "specialista":
             table = "specialista";
             id = "id";
-            number = 6;
+            number = 14;
             break;
         //spese
         case "spese":
             table = "spese";
             id = "id_fascicolo";
-            number = 4;
+            number = 8;
+            break;
+        //sponsor
+        case "sponsor":
+            table = "sponsor";
+            id = "id";
+            number = 2;
             break;
         //stato
         case "stato":
             table = "stato";
             id = "id";
-            number = 2;
+            number = 7;
             break;
         //ufficio
         case "ufficio":
             table = "ufficio";
             id = "id";
-            number = 2;
+            number = 7;
             break;
     }
     return { tab: table, tab_id: id, nCol: number };
