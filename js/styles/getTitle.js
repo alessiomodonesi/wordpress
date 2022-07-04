@@ -17,9 +17,21 @@ function Get_Title_Btn(page) {
             title = "Acconti";
             btn = "Aggiungi acconto";
             break;
+        case "allegati":
+            title = "Allegati";
+            btn = "Aggiungi allegato";
+            break;
+        case "appuntamenti":
+            title = "Appuntamenti";
+            btn = "Aggiungi appuntamento";
+            break;
         case "caso":
             title = "Casi";
             btn = "Aggiungi caso";
+            break;
+        case "chiamata":
+            title = "Chiamate";
+            btn = "Aggiungi chiamata";
             break;
         case "fascicolo":
             title = "Fascicoli";
@@ -41,6 +53,10 @@ function Get_Title_Btn(page) {
             title = "Pagamenti";
             btn = "Aggiungi pagamento";
             break;
+        case "prospective":
+            title = "Prospetivi";
+            btn = "Aggiungi prospect";
+            break;
         case "rata":
             title = "Rate";
             btn = "Aggiungi rata";
@@ -56,6 +72,10 @@ function Get_Title_Btn(page) {
         case "spese":
             title = "Spese";
             btn = "Aggiungi spesa";
+            break;
+        case "sponsor":
+            title = "Sponsor";
+            btn = "Aggiungi sponsor";
             break;
         case "stato":
             title = "Stato";

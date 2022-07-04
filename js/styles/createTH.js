@@ -12,8 +12,17 @@ function Create_Table_Index() {
         case "acconto":
             createThElements(tHead.acconto);
             break;
+        case "allegati":
+            createThElements(tHead.allegati);
+            break;
+        case "appuntamenti":
+            createThElements(tHead.appuntamenti);
+            break;
         case "caso":
             createThElements(tHead.caso);
+            break;
+        case "chiamata":
+            createThElements(tHead.chiamata);
             break;
         case "fascicolo":
             createThElements(tHead.fascicolo);
@@ -30,6 +39,9 @@ function Create_Table_Index() {
         case "pagamento":
             createThElements(tHead.pagamento);
             break;
+        case "prospective":
+            createThElements(tHead.prospective);
+            break;
         case "rata":
             createThElements(tHead.rata);
             break;
@@ -41,6 +53,9 @@ function Create_Table_Index() {
             break;
         case "spese":
             createThElements(tHead.spese);
+            break;
+        case "sponsor":
+            createThElements(tHead.sponsor);
             break;
         case "stato":
             createThElements(tHead.stato);
@@ -59,10 +74,53 @@ const tHead = {
         "Somma",
         "Data pagamento",
         "Metodo pagamento",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
+        "Opzioni"
+    ],
+
+    "allegati": [
+        "ID",
+        "Nome File",
+        "Percorso",
+        "Estensione File",
+        "Codice Tipo File",
+        "Eliminato",
+        "Data Caricamento",
+        "Acconto",
+        "Rata",
+        "Pagamento",
+        "Referente",
+        "Fascicolo",
+        "Gestito",
+        "Opzioni"
+    ],
+
+    "appuntamenti": [
+        "ID",
+        "ID Prospective",
+        "Numero Telefono",
+        "Data Chiamata",
+        "Stato",
+        "Note",
         "Opzioni"
     ],
 
     "caso": [
+        "ID",
+        "Nome",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
+        "Opzioni"
+    ],
+
+    "chiamata": [
         "ID",
         "Nome",
         "Opzioni"
@@ -70,6 +128,7 @@ const tHead = {
 
     "fascicolo": [
         "ID",
+        "Nickname",
         "Data apertura",
         "Data chiusura",
         "Stato",
@@ -77,8 +136,12 @@ const tHead = {
         "Persone gestite",
         "Referente",
         "Caso",
-        "Note",
         "Link",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
         "Opzioni"
     ],
 
@@ -89,6 +152,11 @@ const tHead = {
         "Data conclusione",
         "Numero specialista",
         "Accettato y/n",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
         "Opzioni"
     ],
 
@@ -96,17 +164,29 @@ const tHead = {
         "ID",
         "Nome",
         "Cognome",
+        "Middle Name",
         "Data di nascita",
         "Indirizzo",
         "Telefono",
         "Email",
         "ID fascicolo",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Obbligo GDPR",
+        "Note",
         "Opzioni"
-    ], 
+    ],
 
     "metodo_pagamento": [
         "ID",
         "Nome",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
         "Opzioni"
     ],
 
@@ -117,6 +197,26 @@ const tHead = {
         "Totale",
         "Totale vero",
         "Accettato y/n",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
+        "Opzioni"
+    ],
+
+    "prospective": [
+        "ID",
+        "Nome",
+        "Cognome",
+        "Middle Name",
+        "Telefono",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Obbligo GDPR",
+        "Note",
         "Opzioni"
     ],
 
@@ -125,6 +225,11 @@ const tHead = {
         "ID pagamento",
         "Somma",
         "Pagata y/n",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
         "Opzioni"
     ],
 
@@ -132,10 +237,19 @@ const tHead = {
         "ID",
         "Nome",
         "Cognome",
+        "Middle Name",
         "Data di nascita",
         "Indirizzo",
         "Telefono",
         "Email",
+        "Sponsor",
+        "Perc Sponsor",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Obbligo GDPR",
+        "Note",
         "Opzioni"
     ],
 
@@ -143,9 +257,17 @@ const tHead = {
         "ID",
         "Nome",
         "Cognome",
+        "Middle Name",
         "Data di nascita",
+        "Codice fiscale",
         "Telefono",
         "Email",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Obbligo GDPR",
+        "Note",
         "Opzioni"
     ],
 
@@ -154,18 +276,38 @@ const tHead = {
         "Somma",
         "Rimborso",
         "Note",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Opzioni"
+    ],
+
+    "sponsor": [
+        "ID",
+        "Nome",
         "Opzioni"
     ],
 
     "stato": [
         "ID",
         "Nome",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
         "Opzioni"
     ],
 
     "ufficio": [
         "ID",
         "Nome",
+        "Log Utente",
+        "Log Azione",
+        "Data Inserimento Record",
+        "Data Modifica Record",
+        "Note",
         "Opzioni"
     ],
 }

@@ -61,11 +61,26 @@ function Setup_Array(page, getValue) {
             if (getValue)
                 return Get_Array(fields.acconto);
             return Get_Names(fields.acconto);
+        //allegati
+        case "allegati":
+            if (getValue)
+                return Get_Array(fields.allegati);
+            return Get_Names(fields.allegati);
+        //appuntamenti
+        case "appuntamenti":
+            if (getValue)
+                return Get_Array(fields.appuntamenti);
+            return Get_Names(fields.appuntamenti);
         //caso
         case "caso":
             if (getValue)
                 return Get_Array(fields.caso);
             return Get_Names(fields.caso);
+        //chiamata
+        case "chiamata":
+            if (getValue)
+                return Get_Array(fields.chiamata);
+            return Get_Names(fields.chiamata);
         //fascicolo
         case "fascicolo":
             if (getValue)
@@ -91,6 +106,11 @@ function Setup_Array(page, getValue) {
             if (getValue)
                 return Get_Array(fields.pagamento);
             return Get_Names(fields.pagamento);
+        //prospective
+        case "prospective":
+            if (getValue)
+                return Get_Array(fields.prospective);
+            return Get_Names(fields.prospective);
         //rata
         case "rata":
             if (getValue)
@@ -111,6 +131,11 @@ function Setup_Array(page, getValue) {
             if (getValue)
                 return Get_Array(fields.spese);
             return Get_Names(fields.spese);
+        //sponsor
+        case "sponsor":
+            if (getValue)
+                return Get_Array(fields.sponsor);
+            return Get_Names(fields.sponsor);
         //stato
         case "stato":
             if (getValue)

@@ -31,7 +31,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown menu">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Fascicoli</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/fascicolo">Fascicoli</a></li>
@@ -40,7 +40,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown menu">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Pagamenti</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/pagamento">Pagamenti</a></li>
@@ -55,7 +55,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown menu">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Appuntamenti</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/appuntamenti">Appuntamenti</a></li>
@@ -66,7 +66,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown menu">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-title">Altro</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="http://localhost/wordpress/caso">Casi</a></li>

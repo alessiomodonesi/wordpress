@@ -118,24 +118,22 @@ function addInputDiv(_label, _type, _var, _id, _formId, _classes) {
 
     if (_var != "note") {
         input = document.createElement("input");
-        input.classList.add("form-control");
-        if (_classes != undefined)
-            input.classList.add(_classes);
-        input.setAttribute("type", _type);
-        input.setAttribute("name", _var);
-        input.setAttribute("id", _id);
     }
     else {
         input = document.createElement("textarea");
-        input.classList.add("form-control");
-        if (_classes != undefined)
-            input.classList.add(_classes);
-        input.setAttribute("type", _type);
-        input.setAttribute("name", _var);
-        input.setAttribute("id", _id);
-
         input.setAttribute("rows", textAreaInfo.rows);
     }
+
+    input.classList.add("form-control");
+    if (_classes != undefined)
+        input.classList.add(_classes);
+    input.setAttribute("type", _type);
+
+    if (_type == "number")//impedisce che un utente SBADATO inserisca un valore negativo
+        input.setAttribute("min", 0);
+
+    input.setAttribute("name", _var);
+    input.setAttribute("id", _id);
 
     //get updateUser form
     const form = document.getElementById(_formId);
@@ -327,21 +325,21 @@ const fields = {
             "type": "number",
             "varName": "referente",
             "idUpdate": "ReferenteField",
-            "idAdd": "addRataField",
+            "idAdd": "addReferenteField",
             "label": "Referente"
         },
         {
             "type": "number",
             "varName": "fascicolo",
             "idUpdate": "FascicoloField",
-            "idAdd": "addRataField",
+            "idAdd": "addFascicoloField",
             "label": "Fascicolo"
         },
         {
             "type": "number",
             "varName": "gestito",
             "idUpdate": "GestitoField",
-            "idAdd": "addRataField",
+            "idAdd": "addGestitoField",
             "label": "Gestito"
         },
     ],
