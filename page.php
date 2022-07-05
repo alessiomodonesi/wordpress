@@ -15,17 +15,13 @@
     </div>
 
     <div class="row">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-10 offset-md-1">
-                    <table id="table" class="table">
-                        <thead>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div class="col-12">
+            <table id="table" class="table display nowrap">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
