@@ -1,0 +1,4 @@
+Quando viene l'errore:
+Uncaught SyntaxError: Unexpected token < in JSON at position 0
+
+Non viene passata una variabile al file php

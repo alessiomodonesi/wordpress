@@ -7,7 +7,7 @@ $(document).on('submit', '#addUser', function (e) {
     var dataValue = Ottieni_Array(page, true);//va a prendere i valori aggiunti dall'utente
     let pageData = Get_Table(page);//prende le informazioni base sulla tabella
     let dataNames = Ottieni_Array(page, false);//va a prendere i nomi delle colonne del database
-    let dataType = Get_Type(page);//prende i tipi di dati della tabella
+    let dataType = Get_Type(fields[page]);//prende i tipi di dati della tabella
 
     console.log("dataValue:\n");
     console.log(dataValue);
