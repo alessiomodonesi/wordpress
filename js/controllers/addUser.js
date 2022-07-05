@@ -60,8 +60,13 @@ function Get_Value_Add(arr) {
             else
                 tmp.push(0);
         }
-        else
-            tmp.push($("#" + arr[i].idAdd).val());
+        else {
+            let valore = $('#' + arr[i].idAdd).val();
+            if (arr[i].idAdd == "addDateTimeRecordUpdateField" || arr[i].idAdd == "addDateTimeRecordInsertField") {
+                valore += Get_Current_Date();
+            }
+            tmp.push(valore);
+        }
         //console.log("riga n " + i + " valore form: " + $("#" + arr[i].idAdd).val());
     }
     return tmp;

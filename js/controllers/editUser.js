@@ -30,6 +30,19 @@ $(document).on('click', '.editbtn ', function (event) {
 //permette di dare il valore ad ogni input, in maniera corretta indipendentemente dalla pagina
 function Get_Fields_ID(json, arr) {
     for (let i = 0; i < arr.length; i++) {
-        $('#' + arr[i].idUpdate).val(json[arr[i].varName]);
+        let val = json[arr[i].varName];
+        if (arr[i].idUpdate == "DateTimeRecordUpdateField" || arr[i].idUpdate == "DateTimeRecordInsertField") {
+            val = Remove_Data(val);
+        }
+        console.log("Questo è il valore: " + val);
+        $('#' + arr[i].idUpdate).val(val);
     }
+}
+
+function Remove_Data(time) {
+    let editedTime = time;
+    for (let i = 0; i < 9; i++) {
+        editedTime = editedTime.slice(0, -1);
+    }
+    return editedTime;
 }
