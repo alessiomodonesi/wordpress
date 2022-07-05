@@ -2,80 +2,8 @@ var $ = jQuery;
 $(document).ready(function () {
     console.log("inizio creazione input div");
     let page = $('#title').val();
-    switch (page) {
-        case "acconto":
-            createModal(fields.acconto, "updateUser");
-            createModal(fields.acconto, "addUser");
-            break;
-        case "allegati":
-            createModal(fields.allegati, "updateUser");
-            createModal(fields.allegati, "addUser");
-            break;
-        case "appuntamenti":
-            createModal(fields.appuntamenti, "updateUser");
-            createModal(fields.appuntamenti, "addUser");
-            break;
-        case "caso":
-            createModal(fields.caso, "updateUser");
-            createModal(fields.caso, "addUser");
-            break;
-        case "chiamata":
-            createModal(fields.chiamata, "updateUser");
-            createModal(fields.chiamata, "addUser");
-            break;
-        case "fascicolo":
-            createModal(fields.fascicolo, "updateUser");
-            createModal(fields.fascicolo, "addUser");
-            break;
-        case "fascicolo-specialista":
-            createModal(fields.fascicolo_s, "updateUser");
-            createModal(fields.fascicolo_s, "addUser");
-            break;
-        case "gestito":
-            createModal(fields.gestito, "updateUser");
-            createModal(fields.gestito, "addUser");
-            break;
-        case "metodo-pagamento":
-            createModal(fields.metodo_p, "updateUser");
-            createModal(fields.metodo_p, "addUser");
-            break;
-        case "pagamento":
-            createModal(fields.pagamento, "updateUser");
-            createModal(fields.pagamento, "addUser");
-            break;
-        case "prospective":
-            createModal(fields.prospective, "updateUser");
-            createModal(fields.prospective, "addUser");
-            break;
-        case "rata":
-            createModal(fields.rata, "updateUser");
-            createModal(fields.rata, "addUser");
-            break;
-        case "referente":
-            createModal(fields.referente, "updateUser");
-            createModal(fields.referente, "addUser");
-            break;
-        case "specialista":
-            createModal(fields.specialista, "updateUser");
-            createModal(fields.specialista, "addUser");
-            break;
-        case "spese":
-            createModal(fields.spese, "updateUser");
-            createModal(fields.spese, "addUser");
-            break;
-        case "sponsor":
-            createModal(fields.sponsor, "updateUser");
-            createModal(fields.sponsor, "addUser");
-            break;
-        case "stato":
-            createModal(fields.stato, "updateUser");
-            createModal(fields.stato, "addUser");
-            break;
-        case "ufficio":
-            createModal(fields.ufficio, "updateUser");
-            createModal(fields.ufficio, "addUser");
-            break;
-    }
+    createModal(fields[page], "updateUser");
+    createModal(fields[page], "addUser");
 });
 //si occupa di creare gli input da inserire nei moduli che l'utente compilerà
 function createModal(_form, _formId) {

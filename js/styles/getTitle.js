@@ -37,7 +37,7 @@ function Get_Title_Btn(page) {
             title = "Fascicoli";
             btn = "Aggiungi fascicolo";
             break;
-        case "fascicolo-specialista":
+        case "fascicolo_s":
             title = "Fascicoli specialisti";
             btn = "Aggiungi fascicolo";
             break;
@@ -45,7 +45,7 @@ function Get_Title_Btn(page) {
             title = "Gestiti";
             btn = "Aggiungi gestito";
             break;
-        case "metodo-pagamento":
+        case "metodo_p":
             title = "Metodi di pagamento";
             btn = "Aggiungi metodo di pagamento";
             break;

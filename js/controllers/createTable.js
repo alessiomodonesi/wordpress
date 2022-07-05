@@ -77,7 +77,7 @@ function Get_Table(page) {
             number = 15;
             break;
         //fascicolo-specialista
-        case "fascicolo-specialista":
+        case "fascicolo_s":
             table = "fascicolo_specialista";
             id = "id_fascicolo";
             number = 11;
@@ -88,7 +88,7 @@ function Get_Table(page) {
             number = 15;
             break;
         //metodo_pagamento
-        case "metodo-pagamento":
+        case "metodo_p":
             table = "metodo_pagamento";
             id = "id";
             number = 7;

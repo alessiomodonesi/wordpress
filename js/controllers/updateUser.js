@@ -87,7 +87,7 @@ function Setup_Array(page, getValue) {
                 return Get_Array(fields.fascicolo);
             return Get_Names(fields.fascicolo);
         //fascicolo-specialista
-        case "fascicolo-specialista":
+        case "fascicolo_s":
             if (getValue)
                 return Get_Array(fields.fascicolo_s);
             return Get_Names(fields.fascicolo_s);
@@ -97,7 +97,7 @@ function Setup_Array(page, getValue) {
                 return Get_Array(fields.gestito);
             return Get_Names(fields.gestito);
         //metodo_pagamento
-        case "metodo-pagamento":
+        case "metodo_p":
             if (getValue)
                 return Get_Array(fields.metodo_p);
             return Get_Names(fields.metodo_p);

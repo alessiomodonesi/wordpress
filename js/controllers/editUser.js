@@ -22,71 +22,7 @@ $(document).on('click', '.editbtn ', function (event) {
             $('#id').val(id);
             $('#trid').val(trid);
             //riempe i campi con i dati del database
-            switch (page) {
-                //acconto
-                case "acconto":
-                    Get_Fields_ID(json, fields.acconto);
-                    break;
-                //allegati
-                case "allegati":
-                    Get_Fields_ID(json, fields.allegati);
-                //caso
-                case "caso":
-                    Get_Fields_ID(json, fields.caso);
-                    break;
-                //fascicolo
-                case "fascicolo":
-                    Get_Fields_ID(json, fields.fascicolo);
-                    break;
-                //fascicolo-specialista
-                case "fascicolo-specialista":
-                    Get_Fields_ID(json, fields.fascicolo_s);
-                    break;
-                //gestito
-                case "gestito":
-                    Get_Fields_ID(json, fields.gestito);
-                    break;
-                //metodo_pagamento
-                case "metodo-pagamento":
-                    Get_Fields_ID(json, fields.metodo_p);
-                    break;
-                //pagamento
-                case "pagamento":
-                    Get_Fields_ID(json, fields.pagamento);
-                    break;
-                //prospective
-                case "prospective":
-                    Get_Fields_ID(json, fields.prospective);
-                    break;
-                //rata
-                case "rata":
-                    Get_Fields_ID(json, fields.rata);
-                    break;
-                //referente
-                case "referente":
-                    Get_Fields_ID(json, fields.referente);
-                    break;
-                //specialista
-                case "specialista":
-                    Get_Fields_ID(json, fields.specialista);
-                    break;
-                //spese
-                case "spese":
-                    Get_Fields_ID(json, fields.spese);
-                    break;
-                //sponsor
-                case "sponsor":
-                    Get_Fields_ID(json, fields.sponsor);
-                    break;
-                //stato
-                case "stato":
-                    Get_Fields_ID(json, fields.stato);
-                    break;
-                //ufficio
-                case "ufficio":
-                    Get_Fields_ID(json, fields.ufficio);
-                    break;
-            }
+            Get_Fields_ID(json, fields[page]);
         }
     })
 });

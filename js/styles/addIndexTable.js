@@ -8,62 +8,7 @@ $(window).on("load", function () {
 function Create_Table_Index() {
     console.log("inizio creazione th");
     let page = $('#title').val();
-    switch (page) {
-        case "acconto":
-            createThElements(tHead.acconto);
-            break;
-        case "allegati":
-            createThElements(tHead.allegati);
-            break;
-        case "appuntamenti":
-            createThElements(tHead.appuntamenti);
-            break;
-        case "caso":
-            createThElements(tHead.caso);
-            break;
-        case "chiamata":
-            createThElements(tHead.chiamata);
-            break;
-        case "fascicolo":
-            createThElements(tHead.fascicolo);
-            break;
-        case "fascicolo-specialista":
-            createThElements(tHead.fascicolo_specialista);
-            break;
-        case "gestito":
-            createThElements(tHead.gestito);
-            break;
-        case "metodo-pagamento":
-            createThElements(tHead.metodo_pagamento);
-            break;
-        case "pagamento":
-            createThElements(tHead.pagamento);
-            break;
-        case "prospective":
-            createThElements(tHead.prospective);
-            break;
-        case "rata":
-            createThElements(tHead.rata);
-            break;
-        case "referente":
-            createThElements(tHead.referente);
-            break;
-        case "specialista":
-            createThElements(tHead.specialista);
-            break;
-        case "spese":
-            createThElements(tHead.spese);
-            break;
-        case "sponsor":
-            createThElements(tHead.sponsor);
-            break;
-        case "stato":
-            createThElements(tHead.stato);
-            break;
-        case "ufficio":
-            createThElements(tHead.ufficio);
-            break;
-    };
+    createThElements(tHead[page]);
 }
 
 //Questo array contiene tutti i campi di ogni tabella 
@@ -145,7 +90,7 @@ const tHead = {
         "Opzioni"
     ],
 
-    "fascicolo_specialista": [
+    "fascicolo_s": [
         "ID fascicolo",
         "ID specialista",
         "Data assegnazione",
@@ -179,7 +124,7 @@ const tHead = {
         "Opzioni"
     ],
 
-    "metodo_pagamento": [
+    "metodo_p": [
         "ID",
         "Nome",
         "Log Utente",
