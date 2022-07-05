@@ -55,16 +55,21 @@ $(document).on('submit', '#updateUser', function (e) {
 /*Questa funzione ritorna o l'insieme di dati modificati dall'utente tramite input 
 o il nome delle varie colonne del database in base alla tabella */
 function Setup_Array(page, getValue) {
+    let dataType = Get_Type(fields[page]);//prende i tipi di dati della tabella
     if (getValue)
-        return Get_Array(fields[page]);
+        return Get_Array(fields[page], dataType);
     return Get_Names(fields[page]);
 }
 //Questa funzione ritorna l'insieme dei valori cambiati dall'utente a mano tramite input
-function Get_Array(arr) {
+function Get_Array(arr, types) {
     let tmp = [];
     for (let i = 0; i < arr.length; i++) {
         console.log("riga n " + i + " nome id variabile: " + arr[i].idUpdate);
-        tmp.push($('#' + arr[i].idUpdate).val());
+        let valore = $('#' + arr[i].idUpdate).val();
+        if (arr[i].idUpdate == "DateTimeRecordUpdateField") {
+            valore += Get_Current_Date();
+        }
+        tmp.push(valore);
     }
     return tmp;
 }
@@ -76,4 +81,11 @@ function Get_Names(arr) {
         tmp.push(arr[i].varName);
     }
     return tmp;
+}
+
+function Get_Current_Date() {
+    let current = new Date();
+    let orario = current.toLocaleTimeString().replace(' PM', '');
+    orario = current.toLocaleTimeString().replace(' AM', '');
+    return " " + orario;
 }
