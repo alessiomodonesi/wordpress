@@ -16,7 +16,7 @@
 
     <div class="row">
         <div class="col-12">
-            <table id="table" class="table display nowrap">
+            <table id="table" class="table display wrap">
                 <thead>
                 </thead>
                 <tbody>
