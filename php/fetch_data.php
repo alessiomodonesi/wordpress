@@ -61,7 +61,20 @@ function create_sub_array($row, $table, $id, $arr)
     for($i = 0; $i < count($arr); $i++){
         $sub_array[] = $row[$arr[$i]];
     }
-    $sub_array[] = '<a href="#!" data-id="' . $row[$id] . '" class="btn btn-outline-primary btn-sm editbtn">Modifica</a> <a href="#!" data-id="' . $row[$id] . '" class="btn btn-outline-danger btn-sm deleteBtn">Elimina</a>';
+    $sub_array[] = '<a 
+                        href="#!" 
+                        data-id="' . $row[$id] . '" 
+                        class="btn btn-outline-primary btn-sm editbtn" 
+                        style="margin-bottom: 5px; width: 75px;">
+                        Modifica
+                    </a> 
+                    <a 
+                        href="#!" 
+                        data-id="' . $row[$id] . '"
+                        class="btn btn-outline-danger btn-sm deleteBtn"
+                        style="margin-bottom: 5px; width: 75px;">
+                        Elimina
+                    </a>';
     return $sub_array;
 }
 

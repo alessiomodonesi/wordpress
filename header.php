@@ -13,7 +13,7 @@
     <header class="sticky-top" id="header_chrome">
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse d-flex justify-content-center">
+                <div class="collapse navbar-collapse d-flex navScritte">
                     <a class="navbar-brand home" href="http://localhost/wordpress/home-page">Home</a>
                     <div class="row">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-title">
