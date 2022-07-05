@@ -69,6 +69,9 @@ function Get_Array(arr, types) {
         if (arr[i].idUpdate == "DateTimeRecordUpdateField") {
             valore += Get_Current_Date();
         }
+        if (arr[i].idUpdate == "DateTimeRecordInsertField") {
+            valore += " " + dateRemoved;
+        }
         tmp.push(valore);
     }
     return tmp;

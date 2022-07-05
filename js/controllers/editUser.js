@@ -1,4 +1,5 @@
 var $ = jQuery;
+var dateRemoved;
 $(document).on('click', '.editbtn ', function (event) {
     let page = $('#title').val();
     console.log("Questa è la pagina: " + page);
@@ -31,18 +32,26 @@ $(document).on('click', '.editbtn ', function (event) {
 function Get_Fields_ID(json, arr) {
     for (let i = 0; i < arr.length; i++) {
         let val = json[arr[i].varName];
-        if (arr[i].idUpdate == "DateTimeRecordUpdateField" || arr[i].idUpdate == "DateTimeRecordInsertField") {
-            val = Remove_Data(val);
+        if (arr[i].idUpdate == "DateTimeRecordUpdateField") {
+            val = Remove_Date(val);
+        }
+        if (arr[i].idUpdate == "DateTimeRecordInsertField") {
+            Save_Previous_Date(val);
+            val = Remove_Date(val);
         }
         console.log("Questo è il valore: " + val);
         $('#' + arr[i].idUpdate).val(val);
     }
 }
 
-function Remove_Data(time) {
+function Remove_Date(time) {
     let editedTime = time;
     for (let i = 0; i < 9; i++) {
         editedTime = editedTime.slice(0, -1);
     }
     return editedTime;
+}
+
+function Save_Previous_Date(time) {
+    dateRemoved = time.substring(11);
 }
