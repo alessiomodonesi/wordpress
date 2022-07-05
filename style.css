@@ -22,8 +22,6 @@ body {
 .home {
   color: white !important;
   font-size: 23.5px !important;
-  /*margin-left: -5%;
-  margin-right: 1.5% !important;*/
 }
 
 .menu {
@@ -71,14 +69,8 @@ body {
 }
 @media screen and (min-width: 1400px) {
   /* XXL */
-  #addBtn {
-    margin-left: calc(100vw - 75%) !important;
-  }
 }
 
 @media screen and (min-width: 1800px) {
   /* XXL */
-  #addBtn {
-    margin-left: calc(100vw - 58%) !important;
-  }
 }
