@@ -17,7 +17,7 @@ $(document).ready(function () {
     responsive: "true",
     processing: "true",
 
-    scrollY: "400px",
+    scrollY: "60vh",
     scrollCollapse: "true",
     paging: false,
 
