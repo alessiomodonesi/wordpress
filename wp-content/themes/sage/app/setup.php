@@ -1,128 +1,136 @@
 <?php
 
-/**
- * Theme setup.
- */
-
 namespace App;
 
-use function Roots\bundle;
+use Roots\Sage\Container;
+use Roots\Sage\Assets\JsonManifest;
+use Roots\Sage\Template\Blade;
+use Roots\Sage\Template\BladeProvider;
 
 /**
- * Register the theme assets.
- *
- * @return void
+ * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    bundle('app')->enqueue();
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+
+    if (is_single() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
 }, 100);
 
 /**
- * Register the theme assets with the block editor.
- *
- * @return void
- */
-add_action('enqueue_block_editor_assets', function () {
-    bundle('editor')->enqueue();
-}, 100);
-
-/**
- * Register the initial theme setup.
- *
- * @return void
+ * Theme setup
  */
 add_action('after_setup_theme', function () {
+
     /**
      * Enable features from the Soil plugin if activated.
+     * for Soil 4.x
      * @link https://roots.io/plugins/soil/
      */
     add_theme_support('soil', [
         'clean-up',
         'nav-walker',
         'nice-search',
-        'relative-urls',
+        'relative-urls'
     ]);
 
-    /**
-     * Disable full-site editing support.
-     *
-     * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
-     */
-    remove_theme_support('block-templates');
 
     /**
-     * Register the navigation menus.
-     * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
-     */
-    register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage'),
-    ]);
-
-    /**
-     * Disable the default block patterns.
-     * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-the-default-block-patterns
-     */
-    remove_theme_support('core-block-patterns');
-
-    /**
-     * Enable plugins to manage the document title.
+     * Enable plugins to manage the document title
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
      */
     add_theme_support('title-tag');
 
     /**
-     * Enable post thumbnail support.
+     * Register navigation menus
+     * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
+     */
+    register_nav_menus([
+        'primary_navigation' => __('Primary Navigation', 'sage')
+    ]);
+
+    /**
+     * Enable post thumbnails
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
 
     /**
-     * Enable responsive embed support.
-     * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content
-     */
-    add_theme_support('responsive-embeds');
-
-    /**
-     * Enable HTML5 markup support.
+     * Enable HTML5 markup support
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
      */
-    add_theme_support('html5', [
-        'caption',
-        'comment-form',
-        'comment-list',
-        'gallery',
-        'search-form',
-        'script',
-        'style',
-    ]);
+    add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
 
     /**
-     * Enable selective refresh for widgets in customizer.
+     * Enable selective refresh for widgets in customizer
      * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    /**
+     * Use main stylesheet for visual editor
+     * @see resources/assets/styles/layouts/_tinymce.scss
+     */
+    add_editor_style(asset_path('styles/main.css'));
 }, 20);
 
 /**
- * Register the theme sidebars.
- *
- * @return void
+ * Register sidebars
  */
 add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
     ];
-
     register_sidebar([
-        'name' => __('Primary', 'sage'),
-        'id' => 'sidebar-primary',
+        'name'          => __('Primary', 'sage'),
+        'id'            => 'sidebar-primary'
     ] + $config);
-
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer',
+        'name'          => __('Footer', 'sage'),
+        'id'            => 'sidebar-footer'
     ] + $config);
+});
+
+/**
+ * Updates the `$post` variable on each iteration of the loop.
+ * Note: updated value is only available for subsequently loaded views, such as partials
+ */
+add_action('the_post', function ($post) {
+    sage('blade')->share('post', $post);
+});
+
+/**
+ * Setup Sage options
+ */
+add_action('after_setup_theme', function () {
+    /**
+     * Add JsonManifest to Sage container
+     */
+    sage()->singleton('sage.assets', function () {
+        return new JsonManifest(config('assets.manifest'), config('assets.uri'));
+    });
+
+    /**
+     * Add Blade to Sage container
+     */
+    sage()->singleton('sage.blade', function (Container $app) {
+        $cachePath = config('view.compiled');
+        if (!file_exists($cachePath)) {
+            wp_mkdir_p($cachePath);
+        }
+        (new BladeProvider($app))->register();
+        return new Blade($app['view']);
+    });
+
+    /**
+     * Create @asset() Blade directive
+     */
+    sage('blade')->compiler()->directive('asset', function ($asset) {
+        return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
+    });
 });
