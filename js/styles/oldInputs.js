@@ -1,110 +1,3 @@
-var $ = jQuery;
-$(document).ready(function () {
-    console.log("inizio creazione input div");
-    let page = $('#title').val();
-    createModal(fields[page], "updateUser");
-    createModal(fields[page], "addUser");
-});
-//si occupa di creare gli input da inserire nei moduli che l'utente compilerà
-function createModal(_form, _formId) {
-    console.log("creazione degli input di " + _formId);
-    for (let i = 0; i < _form.length; i++) {
-        let id;
-        if (_formId == "updateUser")
-            id = _form[i].idUpdate;
-        else if (_formId == "addUser")
-            id = _form[i].idAdd;
-        addInputDiv(_form[i].label, _form[i].type, _form[i].varName, id, _formId, _form[i].classes);
-    }
-    addSubmitButton(submitButtonInfo.type, submitButtonInfo.divClass, submitButtonInfo.buttonClass, submitButtonInfo.buttonText, _formId);
-}
-
-function addInputDiv(_label, _type, _var, _id, _formId, _classes) {
-    // create a new div element
-    const div1 = document.createElement("div");
-    div1.classList.add("mb-3");
-    div1.classList.add("row");
-
-    // create a new label element
-    const label = document.createElement("label");
-    label.classList.add("col-md-3");
-    label.classList.add("form-label");
-    label.setAttribute("for", _id);
-
-    // and give it some content
-    const labelText = document.createTextNode(_label);
-
-    // add the text node to the newly created label
-    label.appendChild(labelText);
-
-    // create a new div
-    const div2 = document.createElement("div");
-    div2.classList.add("col-md-9");
-
-    // create a new input element and add it to the div
-    var input = "";
-
-    if (_var != "note") {
-        input = document.createElement("input");
-    }
-    else {
-        input = document.createElement("textarea");
-        input.setAttribute("rows", textAreaInfo.rows);
-    }
-
-    input.classList.add("form-control");
-    if (_classes != undefined)
-        input.classList.add(_classes);
-    input.setAttribute("type", _type);
-
-    if (_type == "number")//impedisce che un utente SBADATO inserisca un valore negativo
-        input.setAttribute("min", 0);
-
-    input.setAttribute("name", _var);
-    input.setAttribute("id", _id);
-
-    //get updateUser form
-    const form = document.getElementById(_formId);
-
-    div1.appendChild(label);
-    div2.appendChild(input);
-    div1.appendChild(div2);
-
-    // add the newly created elements and its content into the form
-    form.appendChild(div1);
-
-    console.log("created correctly input div: " + _label);
-}
-//aggiunge il pulsante "submit" alla fine del form
-function addSubmitButton(_type, _divClass, _buttonClass, _buttonText, _formId) {
-    // create a new div element
-    const div1 = document.createElement("div");
-    div1.classList.add(_divClass);
-
-    // create a new button element
-    const button = document.createElement("button");
-    for (let i = 0; i < _buttonClass.length; i++) {
-        button.classList.add(_buttonClass[i]);
-    }
-    button.setAttribute("type", _type);
-
-    // and give it some content
-    const buttonText = document.createTextNode(_buttonText);
-
-    // add the text node to the newly created button
-    button.appendChild(buttonText);
-    div1.appendChild(button);
-
-    // add the newly created button and its content into the form
-    document.getElementById(_formId).appendChild(div1);
-
-    console.log("created correctly button: " + _buttonText);
-}
-//contiene le informazioni per la textarea presente nel campo "note"
-const textAreaInfo = {
-    "rows": 5,
-}
-
 //SPIEGAZIONE
 /*
 "fields" è un oggetto che contiene tutti i campi che compongono una tabella
@@ -117,7 +10,7 @@ varName: nome della variabile in cui verrà salvato il valore del campo, e coinc
 idUpdate: id del campo che viene usato per la modifica dei dati
 idAdd: id del campo che viene usato per l'inserimento dei dati, aggiunta di un nuovo record
 */
-const fields = {
+const fields2 = {
     "acconto": [
         {
             "type": "number",
@@ -146,6 +39,34 @@ const fields = {
             "idUpdate": "MetodoPagamentoField",
             "idAdd": "addMetodoPagamentoField",
             "label": "Metodo Pagamento"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
         },
         {
             "type": "text",
@@ -293,6 +214,34 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -377,6 +326,34 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -428,6 +405,34 @@ const fields = {
             "idUpdate": "AccettatoField",
             "idAdd": "addAccettatoField",
             "label": "Accettato"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
         },
         {
             "type": "text",
@@ -498,6 +503,41 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "number",
+            "varName": "obbligo_gdpr",
+            "idUpdate": "ObbligoGdprField",
+            "idAdd": "addObbligoGdprField",
+            "label": "Obbligo GDPR"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -513,6 +553,34 @@ const fields = {
             "idUpdate": "NomeField",
             "idAdd": "addNomeField",
             "label": "Nome"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
         },
         {
             "type": "text",
@@ -563,6 +631,34 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -602,6 +698,41 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "number",
+            "varName": "obbligo_gdpr",
+            "idUpdate": "ObbligoGdprField",
+            "idAdd": "addObbligoGdprField",
+            "label": "Obbligo GDPR"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -632,6 +763,34 @@ const fields = {
             "idUpdate": "PagataField",
             "idAdd": "addPagataField",
             "label": "Pagata"
+        },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
         },
         {
             "type": "text",
@@ -709,6 +868,41 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "number",
+            "varName": "obbligo_gdpr",
+            "idUpdate": "ObbligoGdprField",
+            "idAdd": "addObbligoGdprField",
+            "label": "Obbligo GDPR"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -769,6 +963,41 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "number",
+            "varName": "obbligo_gdpr",
+            "idUpdate": "ObbligoGdprField",
+            "idAdd": "addObbligoGdprField",
+            "label": "Obbligo GDPR"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -808,6 +1037,34 @@ const fields = {
             "classes": "text-area-modal",
             "label": "Note"
         },
+        {
+            "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
     ],
 
     "sponsor": [
@@ -830,6 +1087,34 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -848,6 +1133,34 @@ const fields = {
         },
         {
             "type": "text",
+            "varName": "log_utente",
+            "idUpdate": "LogUtenteField",
+            "idAdd": "addLogUtenteField",
+            "label": "Log Utente"
+        },
+        {
+            "type": "text",
+            "varName": "log_azione",
+            "idUpdate": "LogAzioneField",
+            "idAdd": "addLogAzioneField",
+            "label": "Log Azione"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_insert",
+            "idUpdate": "DateTimeRecordInsertField",
+            "idAdd": "addDateTimeRecordInsertField",
+            "label": "Data Inserimento Record"
+        },
+        {
+            "type": "date",
+            "varName": "date_time_record_update",
+            "idUpdate": "DateTimeRecordUpdateField",
+            "idAdd": "addDateTimeRecordUpdateField",
+            "label": "Data Aggiornamento Record"
+        },
+        {
+            "type": "text",
             "varName": "note",
             "idUpdate": "NoteField",
             "idAdd": "addNoteField",
@@ -855,12 +1168,4 @@ const fields = {
             "label": "Note"
         },
     ],
-};
-
-//oggetto che contiente le informazioni del pulsante del form
-const submitButtonInfo = {
-    "type": "submit",
-    "divClass": "text-center",
-    "buttonClass": ["btn", "btn-outline-primary"],
-    "buttonText": "Invia"
 };

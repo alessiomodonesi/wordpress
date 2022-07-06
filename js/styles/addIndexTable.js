@@ -19,10 +19,6 @@ const tHead = {
         "Somma",
         "Data pagamento",
         "Metodo pagamento",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],
@@ -57,10 +53,6 @@ const tHead = {
     "caso": [
         "ID",
         "Nome",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],
@@ -82,10 +74,6 @@ const tHead = {
         "Referente",
         "Caso",
         "Link",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],
@@ -97,10 +85,6 @@ const tHead = {
         "Data conclusione",
         "Numero specialista",
         "Accettato y/n",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],
@@ -115,11 +99,6 @@ const tHead = {
         "Telefono",
         "Email",
         "ID fascicolo",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
-        "Obbligo GDPR",
         "Note",
         "Opzioni"
     ],
@@ -127,10 +106,6 @@ const tHead = {
     "metodo_p": [
         "ID",
         "Nome",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],
@@ -142,10 +117,6 @@ const tHead = {
         "Totale",
         "Totale vero",
         "Accettato y/n",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],
@@ -156,11 +127,6 @@ const tHead = {
         "Cognome",
         "Middle Name",
         "Telefono",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
-        "Obbligo GDPR",
         "Note",
         "Opzioni"
     ],
@@ -170,10 +136,6 @@ const tHead = {
         "ID pagamento",
         "Somma",
         "Pagata y/n",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],
@@ -189,11 +151,6 @@ const tHead = {
         "Email",
         "Sponsor",
         "Perc Sponsor",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
-        "Obbligo GDPR",
         "Note",
         "Opzioni"
     ],
@@ -207,11 +164,6 @@ const tHead = {
         "Codice fiscale",
         "Telefono",
         "Email",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
-        "Obbligo GDPR",
         "Note",
         "Opzioni"
     ],
@@ -221,10 +173,6 @@ const tHead = {
         "Somma",
         "Rimborso",
         "Note",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Opzioni"
     ],
 
@@ -237,10 +185,6 @@ const tHead = {
     "stato": [
         "ID",
         "Nome",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],
@@ -248,10 +192,6 @@ const tHead = {
     "ufficio": [
         "ID",
         "Nome",
-        "Log Utente",
-        "Log Azione",
-        "Data Inserimento Record",
-        "Data Modifica Record",
         "Note",
         "Opzioni"
     ],

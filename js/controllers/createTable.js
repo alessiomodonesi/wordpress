@@ -12,7 +12,7 @@ $(document).ready(function () {
       $(nRow).attr("id", aData[0]);
       console.log("Numero di colonne secondo il db: " + aData.length);
     },
-    scrollX: page_data.sX,
+    //scrollX: page_data.sX,
     serverSide: "true",
     responsive: "true",
     processing: "true",
@@ -51,7 +51,7 @@ function Get_Table(page) {
     case "acconto":
       table = "acconto";
       id = "id_acconto";
-      number = 10;
+      number = 6;
       scrollX = false;
       break;
     //allegati
@@ -72,7 +72,7 @@ function Get_Table(page) {
     case "caso":
       table = "caso";
       id = "id";
-      number = 7;
+      number = 3;
       scrollX = false;
       break;
     //chiamata
@@ -86,63 +86,63 @@ function Get_Table(page) {
     case "fascicolo":
       table = "fascicolo";
       id = "id";
-      number = 15;
+      number = 11;
       break;
     //fascicolo-specialista
     case "fascicolo_s":
       table = "fascicolo_specialista";
       id = "id_fascicolo";
-      number = 11;
+      number = 7;
       break;
     case "gestito":
       table = "gestito";
       id = "id";
-      number = 15;
+      number = 10;
       break;
     //metodo_pagamento
     case "metodo_p":
       table = "metodo_pagamento";
       id = "id";
-      number = 7;
+      number = 3;
       scrollX = false;
       break;
     //pagamento
     case "pagamento":
       table = "pagamento";
       id = "id_pagamento";
-      number = 11;
+      number = 7;
       scrollX = false;
       break;
     //prospective
     case "prospective":
       table = "prospective";
       id = "id";
-      number = 11;
+      number = 6;
       scrollX = false;
       break;
     //rata
     case "rata":
       table = "rata";
       id = "id_rata";
-      number = 9;
+      number = 5;
       scrollX = false;
       break;
     case "referente":
       table = "referente";
       id = "id";
-      number = 16;
+      number = 11;
       break;
     //specialista
     case "specialista":
       table = "specialista";
       id = "id";
-      number = 14;
+      number = 9;
       break;
     //spese
     case "spese":
       table = "spese";
       id = "id_fascicolo";
-      number = 8;
+      number = 4;
       scrollX = false;
       break;
     //sponsor
@@ -156,14 +156,14 @@ function Get_Table(page) {
     case "stato":
       table = "stato";
       id = "id";
-      number = 7;
+      number = 3;
       scrollX = false;
       break;
     //ufficio
     case "ufficio":
       table = "ufficio";
       id = "id";
-      number = 7;
+      number = 3;
       scrollX = false;
       break;
   }

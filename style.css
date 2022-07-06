@@ -7,7 +7,13 @@ body {
   background: white !important;
 }
 
-.navScritte{
+.editbtn,
+.deleteBtn {
+  margin-bottom: 5px;
+  width: 70px;
+}
+
+.navScritte {
   margin-left: 23vw;
 }
 

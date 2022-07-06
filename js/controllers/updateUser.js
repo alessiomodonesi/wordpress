@@ -31,7 +31,7 @@ $(document).on('submit', '#updateUser', function (e) {
                 if (status == 'true') {
                     table = $('#table').DataTable();//crea una nuova tabella
                     //crea i bottoni per modificare il singolo record
-                    var button = '<td><a href="#!" data-id="' + id_valore + '" class="btn btn-outline-primary btn-sm editbtn" style="margin-bottom: 5px; width: 75px;">Modifica</a> <a href="#!" data-id="' + id_valore + '"class="btn btn-outline-danger btn-sm deleteBtn" style="margin-bottom: 5px; width: 75px;">Elimina</a></td>';
+                    var button = '<td><a href="#!" data-id="' + id_valore + '" class="btn btn-outline-primary btn-sm editbtn">Modifica</a> <a href="#!" data-id="' + id_valore + '"class="btn btn-outline-danger btn-sm deleteBtn">Elimina</a></td>';
                     //crea la riga della tabella
                     var row = table.row("[id='" + trid + "']");
                     dataValue.push(button); dataValue.unshift(id_valore);

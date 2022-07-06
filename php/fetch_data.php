@@ -56,7 +56,7 @@ function create_sub_array($row, $table, $id, $arr)
 {
     $sub_array = array();
     //id della tabella come primo elemento
-    if($table != "spese" && $table != "fascicolo_specialista")
+    if($table != "SPESE" && $table != "FASCICOLO_SPECIALISTA")
         $sub_array[] = $row[$id];
     for($i = 0; $i < count($arr); $i++){
         $sub_array[] = $row[$arr[$i]];
@@ -64,15 +64,13 @@ function create_sub_array($row, $table, $id, $arr)
     $sub_array[] = '<a 
                         href="#!" 
                         data-id="' . $row[$id] . '" 
-                        class="btn btn-outline-primary btn-sm editbtn" 
-                        style="margin-bottom: 5px; width: 75px;">
+                        class="btn btn-outline-primary btn-sm editbtn">
                         Modifica
                     </a> 
                     <a 
                         href="#!" 
                         data-id="' . $row[$id] . '"
-                        class="btn btn-outline-danger btn-sm deleteBtn"
-                        style="margin-bottom: 5px; width: 75px;">
+                        class="btn btn-outline-danger btn-sm deleteBtn">
                         Elimina
                     </a>';
     return $sub_array;
