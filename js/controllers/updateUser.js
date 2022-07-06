@@ -36,7 +36,7 @@ $(document).on('submit', '#updateUser', function (e) {
                     var button = '<td><a href="#!" data-id="' + id_valore + '" class="btn btn-outline-primary btn-sm editbtn">Modifica</a> <a href="#!" data-id="' + id_valore + '"class="btn btn-outline-danger btn-sm deleteBtn">Elimina</a></td>';
                     //crea la riga della tabella
                     var row = table.row("[id='" + trid + "']");
-                    dataValue.push(button); dataValue.unshift(id_valore);
+                    dataValue.push(button); //dataValue.unshift(id_valore);
 
                     console.log("Questa è la riga di visualizzazione: ");
                     console.log(dataValue);
@@ -67,6 +67,12 @@ function Get_Array(arr) {
     for (let i = 0; i < arr.length; i++) {
         console.log("riga n " + i + " nome id variabile: " + arr[i].idUpdate);
         let valore = $('#' + arr[i].idUpdate).val();
+        if (arr[i].type == "checkbox") {
+            if ($("#" + arr[i].idUpdate).is(":checked"))
+                valore = 1;
+            else
+                valore = 0;
+        }
         if (arr[i].idUpdate == "DateTimeRecordUpdateField") {
             valore += Get_Current_Date();
         }
