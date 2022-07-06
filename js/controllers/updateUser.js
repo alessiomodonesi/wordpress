@@ -36,7 +36,12 @@ $(document).on('submit', '#updateUser', function (e) {
                     var button = '<td><a href="#!" data-id="' + id_valore + '" class="btn btn-outline-primary btn-sm editbtn">Modifica</a> <a href="#!" data-id="' + id_valore + '"class="btn btn-outline-danger btn-sm deleteBtn">Elimina</a></td>';
                     //crea la riga della tabella
                     var row = table.row("[id='" + trid + "']");
-                    dataValue.push(button); //dataValue.unshift(id_valore);
+                    dataValue.push(button);
+
+                    page = page.toLowerCase();
+                    if (page != "spese" && page != "fascicolo_s") {
+                        dataValue.unshift(id_valore);
+                    }
 
                     console.log("Questa è la riga di visualizzazione: ");
                     console.log(dataValue);
