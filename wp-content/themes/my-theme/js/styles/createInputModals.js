@@ -701,7 +701,7 @@ const fields = {
             "label": "Sponsor"
         },
         {
-            "type": "number",
+            "type": "text",
             "varName": "perc_sponsor",
             "idUpdate": "PercSponsorField",
             "idAdd": "addPercSponsorField",
