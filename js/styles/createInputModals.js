@@ -127,7 +127,7 @@ const fields = {
             "label": "ID Rata"
         },
         {
-            "type": "number",
+            "type": "text",
             "varName": "somma",
             "idUpdate": "SommaField",
             "idAdd": "addSommaField",
@@ -619,7 +619,7 @@ const fields = {
             "label": "ID Pagamento"
         },
         {
-            "type": "number",
+            "type": "text",
             "varName": "somma",
             "idUpdate": "SommaField",
             "idAdd": "addSommaField",
@@ -786,7 +786,7 @@ const fields = {
             "label": "ID Fascicolo"
         },
         {
-            "type": "number",
+            "type": "text",
             "varName": "somma",
             "idUpdate": "SommaField",
             "idAdd": "addSommaField",

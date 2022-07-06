@@ -78,6 +78,9 @@ function Get_Array(arr) {
             else
                 valore = 0;
         }
+        if (arr[i].varName == "somma") {
+            valore = Format_Decimal(valore); //formatta la cifra
+        }
         if (arr[i].idUpdate == "DateTimeRecordUpdateField") {
             valore += Get_Current_Date();
         }
@@ -103,4 +106,21 @@ function Get_Current_Date() {
     let orario = current.toLocaleTimeString().replace(' PM', '');
     orario = current.toLocaleTimeString().replace(' AM', '');
     return " " + orario;
+}
+
+function Format_Decimal(numero) {
+    const stringLength = numero.length;
+    let virgolaDecimale = numero.charAt(stringLength - 3);//divisorio per i centesimi
+    if (virgolaDecimale == "." || virgolaDecimale == ",") {
+        let lastN = numero.charAt(stringLength - 1);//ultimo numero
+        let penLastN = numero.charAt(stringLength - 2);//penultimo numero
+        for (let i = 0; i < 3; i++) {//toglie la virgola e le ultime due cifre
+            numero = numero.slice(0, -1);
+        }
+        numero += "." + penLastN + lastN;
+        console.log("cifra formattata: " + numero);
+        return numero;
+    }
+    numero += ".00";
+    return numero;
 }
