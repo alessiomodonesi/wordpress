@@ -20,13 +20,13 @@
 
 // ** Impostazioni database - È possibile ottenere queste informazioni dal proprio fornitore di hosting ** //
 /** Il nome del database di WordPress */
-define( 'DB_NAME', 'wp_evolve' );
+define( 'DB_NAME', 'wordpress' );
 
 /** Nome utente del database */
-define( 'DB_USER', 'admin' );
+define( 'DB_USER', 'root' );
 
 /** Password del database */
-define( 'DB_PASSWORD', '123456' );
+define( 'DB_PASSWORD', '' );
 
 /** Hostname del database */
 define( 'DB_HOST', 'localhost' );
@@ -64,7 +64,7 @@ define( 'NONCE_SALT',       'W7qK_j^#s<3.-e2w,S.;!UJ^j?E?k-&S)-]bRY#ku,qxod*bf_v
  * fornendo a ciascuna installazione un prefisso univoco.
  * Solo numeri, lettere e sottolineatura!
  */
-$table_prefix = 'evo_';
+$table_prefix = 'wp_';
 
 /**
  * Per gli sviluppatori: modalità di debug di WordPress.
