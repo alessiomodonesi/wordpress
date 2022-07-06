@@ -24,6 +24,7 @@
             </table>
         </div>
     </div>
+    <hr />
 </div>
 
 <!-- Modal -->

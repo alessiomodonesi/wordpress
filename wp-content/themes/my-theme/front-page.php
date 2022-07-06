@@ -10,8 +10,11 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-1"></div>
+        <div class="col-10">
             <?php the_content() ?>
         </div>
+        <div class="col-1"></div>
     </div>
+    <hr />
 </div>
