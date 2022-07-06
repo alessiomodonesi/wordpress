@@ -7,22 +7,12 @@ body {
   background: white !important;
 }
 
-.editbtn,
-.deleteBtn {
-  margin-bottom: 5px;
-  width: 70px;
-}
-
 .navScritte {
   margin-left: 23vw;
 }
 
 .front-page-content {
   color: black !important;
-}
-
-.form-check-input {
-  margin-left: 0vw !important;
 }
 
 #nav-title {
@@ -39,20 +29,6 @@ body {
   color: white !important;
   margin-right: 2.5%;
   margin-left: 2.5%;
-}
-
-.text-area-modal {
-  resize: none;
-}
-
-#intestazione {
-  margin-top: 10px;
-}
-
-#addBtn {
-  margin-bottom: -0.5%;
-  height: 1.95vw !important;
-  line-height: 1.5vw !important;
 }
 
 @media screen and (max-width: 400px) {

@@ -10,11 +10,9 @@
     </div>
 
     <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10">
+        <div class="col-10 offset-1">
             <?php the_content() ?>
         </div>
-        <div class="col-1"></div>
     </div>
     <hr />
 </div>
