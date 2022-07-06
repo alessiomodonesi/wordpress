@@ -540,14 +540,14 @@ const fields = {
             "label": "Data Creazione"
         },
         {
-            "type": "number",
+            "type": "text",
             "varName": "totale",
             "idUpdate": "TotaleField",
             "idAdd": "addTotaleField",
             "label": "Totale"
         },
         {
-            "type": "number",
+            "type": "text",
             "varName": "totale_vero",
             "idUpdate": "TotaleVeroField",
             "idAdd": "addTotaleVeroField",

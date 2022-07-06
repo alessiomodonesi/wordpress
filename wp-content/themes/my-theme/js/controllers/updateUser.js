@@ -78,7 +78,7 @@ function Get_Array(arr) {
             else
                 valore = 0;
         }
-        if (arr[i].varName == "somma") {
+        if (arr[i].varName == "somma" || arr[i].varName == "totale" || arr[i].varName == "totale_vero") {
             valore = Format_Decimal(valore); //formatta la cifra
         }
         if (arr[i].idUpdate == "DateTimeRecordUpdateField") {
