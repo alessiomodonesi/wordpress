@@ -9,6 +9,7 @@ $(document).on('submit', '#updateUser', function (e) {
     let url = Get_URL(page, 'wp-content/themes/my-theme/php/update_user.php');
     let pageData = Get_Table(page);
     let dataNames = Setup_Array(page, false);
+    let dataType = Get_Type(fields[page]);//prende i tipi di dati della tabella
 
     var trid = $('#trid').val();
     //console.log("Questo è il trid: " + trid);
@@ -24,6 +25,7 @@ $(document).on('submit', '#updateUser', function (e) {
                 tabella: pageData.tab,
                 id_value: id_valore,
                 id_name: pageData.tab_id,
+                arr_type: dataType
             },
             success: function (data) {
                 var json = JSON.parse(data);
@@ -55,13 +57,12 @@ $(document).on('submit', '#updateUser', function (e) {
 /*Questa funzione ritorna o l'insieme di dati modificati dall'utente tramite input 
 o il nome delle varie colonne del database in base alla tabella */
 function Setup_Array(page, getValue) {
-    let dataType = Get_Type(fields[page]);//prende i tipi di dati della tabella
     if (getValue)
-        return Get_Array(fields[page], dataType);
+        return Get_Array(fields[page]);
     return Get_Names(fields[page]);
 }
 //Questa funzione ritorna l'insieme dei valori cambiati dall'utente a mano tramite input
-function Get_Array(arr, types) {
+function Get_Array(arr) {
     let tmp = [];
     for (let i = 0; i < arr.length; i++) {
         console.log("riga n " + i + " nome id variabile: " + arr[i].idUpdate);
