@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c32e7d6e-cc75-4756-91a0-8d52ba1de8a7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,6 +13,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="SCHEME" value="Project" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -70,10 +76,12 @@
     "last_opened_file_path": "D:/xampp7.4.29/htdocs/wordpress/wp-content/themes/sage",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.stylelint": "D:\\xampp7.4.29\\htdocs\\wordpress\\wp-content\\themes\\sage\\node_modules\\stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -86,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657192055682</updated>
       <workItem from="1657192059258" duration="130000" />
-      <workItem from="1657195034489" duration="164000" />
+      <workItem from="1657195034489" duration="1146000" />
     </task>
     <servers />
   </component>
