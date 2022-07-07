@@ -1,7 +1,8 @@
 var $ = jQuery;
-$(window).on("load", function () {
+$(document).ready(function () {
     //un po' di delay, perchè per non si sa quale arcano motivo, lo fa partire per primo seppur ci sia document on load .-.
-    setTimeout(Create_Table_Index, 1);
+    //setTimeout(Create_Table_Index, 1);
+    Create_Table_Index();
 });
 /*questa funzione crea la tabella aggiungendo il giusto numero di colonne per ognuna di esse
  e dando alle colonne il giusto nome*/
