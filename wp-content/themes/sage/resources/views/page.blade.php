@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@php include('../../app/Controllers/connection.php'); get_header(); get_footer(); @endphp
 
 <div class="container-fluid">
     <div class="row" id="intestazione">

@@ -85,6 +85,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp7.4.29\htdocs\wordpress\wp-content\themes\sage\resources\views\controllers" />
+      <recent name="D:\xampp7.4.29\htdocs\wordpress\wp-content\themes\sage\resources\assets\scripts" />
+      <recent name="D:\xampp7.4.29\htdocs\wordpress\wp-content\themes\sage\resources\assets\scripts\controllers" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657192055682</updated>
       <workItem from="1657192059258" duration="130000" />
-      <workItem from="1657195034489" duration="1146000" />
+      <workItem from="1657195034489" duration="2535000" />
     </task>
     <servers />
   </component>

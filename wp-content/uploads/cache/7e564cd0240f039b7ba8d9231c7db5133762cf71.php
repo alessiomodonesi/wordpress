@@ -1,5 +1,3 @@
-<?php include('../../app/Controllers/connection.php'); get_header(); get_footer(); ?>
-
 <div class="container-fluid">
     <div class="row" id="intestazione">
         <div class="col-12">
@@ -71,4 +69,5 @@
         </div>
     </div>
 </div>
+
 <?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
