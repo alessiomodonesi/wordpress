@@ -8,8 +8,20 @@
     ?>
   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php endif; ?>
+
+
 <?php $__env->startSection('content'); ?>
-  ciao
+<?php (the_field('titolo')); ?>
+<br><hr>
+<?php (the_field('sottotitolo')); ?>
+<br><hr>
+<?php (the_field('spiegazione_vista')); ?>
+<br><hr>
+<?php (the_field('spiegazione_modifica')); ?>
+<br><hr>
+<?php ($table= get_field('tabella')); ?>
+<?php if ($__env->exists('tables.'.$table)) echo $__env->make('tables.'.$table, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
 <?php $__env->stopSection(); ?>
 
 

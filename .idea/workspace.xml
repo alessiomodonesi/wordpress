@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57688033-2e35-44ba-98c5-e35ef306f96b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-config.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="57688033-2e35-44ba-98c5-e35ef306f96b" name="Changes" comment="sage 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/sage/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/assets/styles/common/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/assets/styles/common/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-custom.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-custom.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/2945464d2df494c2e8718e6189c25d0d78face6b.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/2945464d2df494c2e8718e6189c25d0d78face6b.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/296b554faf1a34470d15280caa80e5fd729f5afd.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/296b554faf1a34470d15280caa80e5fd729f5afd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/d497123246fcfb3947e199615b06d1fa7419fbc1.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/d497123246fcfb3947e199615b06d1fa7419fbc1.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,20 +40,25 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9003" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false">
     <xdebug_debug_ports port="9003" />
   </component>
   <component name="PhpServers">
     <servers>
-      <server host="localhost" id="b47ebf19-c3cb-4ced-8c5f-05c9114eb0a9" name="ica" />
-      <server host="localhost" id="4d596286-d140-40b0-9d4a-6980ff6e61bc" name="gestionediocesiadria.test" port="443" />
-      <server host="gestionediocesiadria.test" id="441188bf-d5f7-49ad-9bac-e0328ef92c71" name="gestionediocesiadria.test (1)" port="443" />
+      <server host="ica.test" id="b47ebf19-c3cb-4ced-8c5f-05c9114eb0a9" name="ica" />
+      <server host="gestionediocesiadria.test" id="917ddc34-5fc8-4b3e-8884-8ad66e5c9680" name="gestionediocesiadria.test" port="443" />
     </servers>
   </component>
-  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="ica.test" />
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://ica.test:80" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2BbdGgzJb0U7Jy5saxT0oErG72e" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,8 +75,23 @@
     <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/wp-content/themes/sage_2/node_modules/stylelint" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="de.espend.idea.laravel.ui.TemplateSettingsForm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Editor-PHP" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/sage_2" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/sage_2/resources/assets/styles/common" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ica" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="gestionediocesiadria.test" start_url="http://ica.test">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,24 +104,41 @@
       <workItem from="1657178626212" duration="755000" />
       <workItem from="1657221098840" duration="6918000" />
       <workItem from="1657229369700" duration="220000" />
-      <workItem from="1657229631638" duration="47000" />
+      <workItem from="1657229631638" duration="6597000" />
     </task>
+    <task id="LOCAL-00001" summary="sage 2">
+      <created>1657229817113</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657229817113</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sage 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="sage 2" />
+  </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$</wordpressPath>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wp-content/themes/sage/resources/views/partials/header.blade.php</url>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

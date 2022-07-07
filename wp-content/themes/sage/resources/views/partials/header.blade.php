@@ -1,4 +1,4 @@
-<?php echo "ciao" ?>
+
 <header class="sticky-top">
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">

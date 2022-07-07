@@ -13,8 +13,20 @@
     @endphp
   @endforeach
 @endif
+
+
 @section('content')
-  ciao
+@php(the_field('titolo'))
+<br><hr>
+@php(the_field('sottotitolo'))
+<br><hr>
+@php(the_field('spiegazione_vista'))
+<br><hr>
+@php(the_field('spiegazione_modifica'))
+<br><hr>
+@php($table= get_field('tabella'))
+@includeIf('tables.'.$table)
+
 @endsection
 
 
