@@ -73,7 +73,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/xampp7.4.29/htdocs/wordpress/wp-content/themes/sage",
+    "last_opened_file_path": "D:/xampp7.4.29/htdocs/wordpress/wp-content/themes/sage/app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -86,7 +86,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp7.4.29\htdocs\wordpress\wp-content\themes\sage\app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp7.4.29\htdocs\wordpress\wp-content\themes\sage\app\prova" />
       <recent name="D:\xampp7.4.29\htdocs\wordpress\wp-content\themes\sage\resources\views\controllers" />
       <recent name="D:\xampp7.4.29\htdocs\wordpress\wp-content\themes\sage\resources\assets\scripts" />
       <recent name="D:\xampp7.4.29\htdocs\wordpress\wp-content\themes\sage\resources\assets\scripts\controllers" />
@@ -101,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657192055682</updated>
       <workItem from="1657192059258" duration="130000" />
-      <workItem from="1657195034489" duration="2535000" />
+      <workItem from="1657195034489" duration="3126000" />
     </task>
     <servers />
   </component>

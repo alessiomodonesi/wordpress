@@ -2,8 +2,8 @@
 include('connection.php');
 $output = array();
 $tab = $_POST['tabella'];//prende nome della tabella
-$tab_id = $_POST['id_tabella'];//prende l'id della tabella 
-$arr_nomi = $_POST['arr_name'];//prende i nomi dei campi della tabella 
+$tab_id = $_POST['id_tabella'];//prende l'id della tabella
+$arr_nomi = $_POST['arr_name'];//prende i nomi dei campi della tabella
 
 $total_all_rows = get_records_filtered($connect, $tab);//Tutte le righe
 $query = get_records_by_order($connect, $tab, $tab_id, $arr_nomi);
@@ -61,14 +61,14 @@ function create_sub_array($row, $table, $id, $arr)
     for($i = 0; $i < count($arr); $i++){
         $sub_array[] = $row[$arr[$i]];
     }
-    $sub_array[] = '<a 
-                        href="#!" 
-                        data-id="' . $row[$id] . '" 
+    $sub_array[] = '<a
+                        href="#!"
+                        data-id="' . $row[$id] . '"
                         class="btn btn-outline-primary btn-sm editbtn">
                         Modifica
-                    </a> 
-                    <a 
-                        href="#!" 
+                    </a>
+                    <a
+                        href="#!"
                         data-id="' . $row[$id] . '"
                         class="btn btn-outline-danger btn-sm deleteBtn">
                         Elimina
@@ -93,3 +93,4 @@ function get_search_comands($id, $search_value, $arr)
     }
     return $cmd;
 }
+?>
