@@ -14,6 +14,9 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
+    wp_enqueue_style('datatbales_style', 'https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css', false, null);
+    wp_enqueue_script('datatbales_script', 'https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js', null, true);
+
     //$path è la cartella "scripts" in resources
     $path = asset_path('').'resources/assets/scripts';
     $path = str_replace("/dist", "",$path);
@@ -23,6 +26,11 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('delete', $path.'/controllers/deleteUser.js', array(), '1', true );
     wp_enqueue_script('edit', $path.'/controllers/editUser.js', array(), '1', true );
     wp_enqueue_script('update', $path.'/controllers/updateUser.js', array(), '1', true );
+
+    wp_enqueue_script('indexTable', $path.'/styles/addIndexTable.js', array(), '1', true );
+    wp_enqueue_script('createInputModals', $path.'/styles/createInputModals.js', array(), '1', true );
+    wp_enqueue_script('getTitle', $path.'/styles/getTitle.js', array(), '1', true );
+    wp_enqueue_script('shiftButton', $path.'/styles/shiftButton.js', array(), '1', true );
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
