@@ -85,5 +85,8 @@ function Get_Title_Btn(page) {
             title = "Uffici";
             btn = "Aggiungi ufficio";
             break;
+        default:
+            title = "Home";
+            break;
     } return { title: title, btn: btn };
 }
