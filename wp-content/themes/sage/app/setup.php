@@ -14,6 +14,16 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
+    //$path è la cartella "scripts" in resources
+    $path = asset_path('').'resources/assets/scripts';
+    $path = str_replace("/dist", "",$path);
+
+    wp_enqueue_script('create', $path.'/controllers/createTable.js', array(), '1', true );
+    wp_enqueue_script('add', $path.'/controllers/addUser.js', array(), '1', true );
+    wp_enqueue_script('delete', $path.'/controllers/deleteUser.js', array(), '1', true );
+    wp_enqueue_script('edit', $path.'/controllers/editUser.js', array(), '1', true );
+    wp_enqueue_script('update', $path.'/controllers/updateUser.js', array(), '1', true );
+
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }

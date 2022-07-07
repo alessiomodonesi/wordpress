@@ -40,7 +40,7 @@ $(document).on('submit', '#addUser', function (e) {
     }
 });
 
-/*Questa funzione ritorna o l'insieme dei valori dei campi inseriti dall'utente a mano 
+/*Questa funzione ritorna o l'insieme dei valori dei campi inseriti dall'utente a mano
 o il nome dei campi delle colonne del database in base alla tabella*/
 function Ottieni_Array(page, getValue) {
     if (getValue)
