@@ -6,7 +6,7 @@ $(document).on('submit', '#updateUser', function (e) {
     //console.log("Questo è l'id: " + id_valore);
 
     var dataValue = Setup_Array(page, true);
-    let url = Get_URL(page, 'wp-content/themes/sage/app/Controllers/update_user.php');
+    let url = Get_URL(page, pathDBControllers + "update_user.php");
     let pageData = Get_Table(page);
     let dataNames = Setup_Array(page, false);
     let dataType = Get_Type(fields[page]);//prende i tipi di dati della tabella

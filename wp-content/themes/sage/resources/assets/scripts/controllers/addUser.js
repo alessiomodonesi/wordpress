@@ -2,7 +2,7 @@ var $ = jQuery;
 $(document).on('submit', '#addUser', function (e) {
     e.preventDefault();
     let page = $('#title').val();
-    let url = Get_URL(page, 'wp-content/themes/sage/app/Controllers/add_user.php');
+    let url = Get_URL(page, pathDBControllers + "add_user.php");
 
     var dataValue = Ottieni_Array(page, true);//va a prendere i valori aggiunti dall'utente
     let pageData = Get_Table(page);//prende le informazioni base sulla tabella
