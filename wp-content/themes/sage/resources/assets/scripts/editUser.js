@@ -3,7 +3,7 @@ var dateRemoved;
 $(document).on('click', '.editbtn ', function (event) {
     let page = $('#title').val();
     console.log("Questa è la pagina: " + page);
-    let url = Get_URL(page, 'wp-content/themes/my-theme/php/get_single_data.php');
+    let url = Get_URL(page, 'wp-content/themes/sage/app/Controllers/get_single_data.php');
     let dataType = Get_Type(fields[page]);//prende i tipi di dati della tabella
 
     var table = $('#table').DataTable();

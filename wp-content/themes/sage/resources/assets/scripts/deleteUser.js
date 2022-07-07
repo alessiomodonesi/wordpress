@@ -3,7 +3,7 @@ $(document).on('click', '.deleteBtn', function (event) {
     var table = $('#table').DataTable();//va a prendere la tabella
     event.preventDefault();
     let page = $('#title').val();
-    let url = Get_URL(page, 'wp-content/themes/my-theme/php/delete_user.php');
+    let url = Get_URL(page, 'wp-content/themes/sage/app/Controllers/delete_user.php');
     var id = $(this).data('id');//va a prendere l'id del bottone elimina
     let deleteData = Get_Table(page);//va a prendere nome e id della tabella in base alla pagina in cui i si trova
 

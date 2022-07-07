@@ -3,7 +3,7 @@ $(document).ready(function () {
   let page = $("#title").val();
   console.log("Questa è la pagina: " + page);
   let page_data = Get_Table(page); //prende i dati principali della tabella in base alla pagina
-  let url = Get_URL(page, "wp-content/themes/my-theme/php/fetch_data.php");
+  let url = Get_URL(page, "wp-content/themes/sage/app/Controllers/fetch_data.php");
   let dataNames = Setup_Array(page, false); //va a prendere i nomi dei campi della tabella
 
   var table = $("#table").DataTable({
