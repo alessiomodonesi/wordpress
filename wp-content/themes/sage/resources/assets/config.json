@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/app/themes/sage",
-  "devUrl": "http://ica.test",
+  "devUrl": "http://localhost/wordpress",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[contenthash]",
   "watch": [
