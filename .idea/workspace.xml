@@ -6,14 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="57688033-2e35-44ba-98c5-e35ef306f96b" name="Changes" comment="sage 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/assets/styles/common/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/assets/styles/common/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-custom.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-custom.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/2945464d2df494c2e8718e6189c25d0d78face6b.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/2945464d2df494c2e8718e6189c25d0d78face6b.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/296b554faf1a34470d15280caa80e5fd729f5afd.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/296b554faf1a34470d15280caa80e5fd729f5afd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/d497123246fcfb3947e199615b06d1fa7419fbc1.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/d497123246fcfb3947e199615b06d1fa7419fbc1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/affitti.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/fabbricati.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/parrocchie.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/staff.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/terreni.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/lib/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Editor-PHP/lib/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/sponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/sponsor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/3d74e23fa98a9ea39d9219a650eaf425b4b55d8f.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/3d74e23fa98a9ea39d9219a650eaf425b4b55d8f.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/a6bc8d7b362154b9bd0b422a80259ed3ab7bec88.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/a6bc8d7b362154b9bd0b422a80259ed3ab7bec88.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-custom.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../diocesi/httpdocs/wp-content/themes/sage/resources/views/template-edit-affitti.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,7 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Editor-PHP/controllers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -81,11 +83,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Editor-PHP/controllers" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Editor-PHP" />
       <recent name="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables" />
       <recent name="$PROJECT_DIR$/wp-content/themes/sage_2" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/sage_2/resources/assets/styles/common" />
     </key>
   </component>
   <component name="RunManager">
@@ -105,6 +107,7 @@
       <workItem from="1657221098840" duration="6918000" />
       <workItem from="1657229369700" duration="220000" />
       <workItem from="1657229631638" duration="6597000" />
+      <workItem from="1657236276652" duration="5793000" />
     </task>
     <task id="LOCAL-00001" summary="sage 2">
       <created>1657229817113</created>

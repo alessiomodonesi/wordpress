@@ -10,11 +10,11 @@ ini_set('display_errors', '1');
  */
 $sql_details = array(
 	"type" => "Mysql",     // Database type: "Mysql", "Postgres", "Sqlserver", "Sqlite" or "Oracle"
-	"user" => "dba",          // Database user name
-	"pass" => "yvjFAgcm!8",          // Database password
+	"user" => "root",          // Database user name
+	"pass" => "123",          // Database password
 	"host" => "localhost", // Database host
 	"port" => "",          // Database connection port (can be left empty for default)
-	"db"   => "dbjtfbjgv0totn",          // Database name
+	"db"   => "wp_evolve",          // Database name
 	"dsn"  => "",          // PHP DSN extra information. Set as `charset=utf8mb4` if you are using MySQL
 	"pdoAttr" => array()   // PHP PDO attributes array. See the PHP documentation for all options
 );
