@@ -10,8 +10,8 @@ ini_set('display_errors', '1');
  */
 $sql_details = array(
 	"type" => "Mysql",     // Database type: "Mysql", "Postgres", "Sqlserver", "Sqlite" or "Oracle"
-	"user" => "root",          // Database user name
-	"pass" => "123",          // Database password
+	"user" => "evolve",          // Database user name
+	"pass" => "e_volvetest!8!",          // Database password
 	"host" => "localhost", // Database host
 	"port" => "",          // Database connection port (can be left empty for default)
 	"db"   => "wp_evolve",          // Database name

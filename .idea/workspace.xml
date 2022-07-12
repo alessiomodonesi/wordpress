@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="57688033-2e35-44ba-98c5-e35ef306f96b" name="Changes" comment="sage 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/gestiti.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/sponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/sponsor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/296b554faf1a34470d15280caa80e5fd729f5afd.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/296b554faf1a34470d15280caa80e5fd729f5afd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/a6bc8d7b362154b9bd0b422a80259ed3ab7bec88.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/a6bc8d7b362154b9bd0b422a80259ed3ab7bec88.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/lib/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Editor-PHP/lib/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-config.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-config.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,8 @@
       <workItem from="1657236276652" duration="6377000" />
       <workItem from="1657274466012" duration="12195000" />
       <workItem from="1657352730122" duration="40466000" />
-      <workItem from="1657620461383" duration="7637000" />
+      <workItem from="1657620461383" duration="8109000" />
+      <workItem from="1657640288151" duration="1854000" />
     </task>
     <task id="LOCAL-00001" summary="sage 2">
       <created>1657229817113</created>
