@@ -8,23 +8,17 @@
 
             <li class="nav-item dropdown menu">
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                 aria-expanded="false" id="nav-title">Gestiti & Specialisti</a>
+                 aria-expanded="false" id="nav-title">Referenti & Specialisti</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/gestiti">Gestiti</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
                 <li><a class="dropdown-item" href="/referenti">Referenti</a>
                 </li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li><a class="dropdown-item"
-                       href="http://localhost/wordpress/specialista">Specialisti</a></li>
+                       href="/specialisti">Specialisti</a></li>
                 <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="/sponsor">Sponsor</a></li>
+
               </ul>
             </li>
 
@@ -32,58 +26,29 @@
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                  aria-expanded="false" id="nav-title">Fascicoli</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="http://localhost/wordpress/fascicolo">Fascicoli</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/fascicolo_s">Fascicoli
-                    specialisti</a></li>
+                <li><a class="dropdown-item" href="/fascicoli">Fascicoli</a>
+
               </ul>
             </li>
 
-            <li class="nav-item dropdown menu">
-              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                 aria-expanded="false" id="nav-title">Pagamenti</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="http://localhost/wordpress/pagamento">Pagamenti</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/metodo_p">Metodi di
-                    pagamento</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/acconto">Acconti</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/rata">Rate</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/spese">Spese</a></li>
-              </ul>
-            </li>
+
 
             <li class="nav-item dropdown menu">
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                  aria-expanded="false" id="nav-title">Appuntamenti</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item"
-                       href="http://localhost/wordpress/appuntamenti">Appuntamenti</a></li>
+                       href="/appuntamenti">Appuntamenti</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/chiamata">Chiamata</a>
+                <li><a class="dropdown-item" href="/chiamate">Chiamata</a>
                 </li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li><a class="dropdown-item"
-                       href="http://localhost/wordpress/prospective">Prospective</a></li>
+                       href="/prospective">Prospective</a></li>
               </ul>
             </li>
 
@@ -91,20 +56,24 @@
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                  aria-expanded="false" id="nav-title">Altro</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="http://localhost/wordpress/caso">Casi</a></li>
+                <li><a class="dropdown-item" href="/casi">Casi</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/stato">Stati</a></li>
+                <li><a class="dropdown-item" href="/stati">Stati</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/ufficio">Uffici</a></li>
+                <li><a class="dropdown-item" href="/uffici">Uffici</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="http://localhost/wordpress/allegati">Allegati</a>
+                <li><a class="dropdown-item" href="/metodi-pagamento">Metodi di pagamento</a></li>
+                <hr class="dropdown-divider">
                 </li>
+                <li><a class="dropdown-item" href="/sponsor">Sponsor</a></li>
+
+
               </ul>
             </li>
 

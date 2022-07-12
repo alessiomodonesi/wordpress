@@ -34,10 +34,7 @@
     editor = new $.fn.dataTable.Editor( {
       ajax: "../../../Editor-PHP/controllers/sponsor.php",
       table: "#sponsor",
-      fields: [ {
-        label: "id:",
-        name: "id"
-      },
+      fields: [
         {
           label: "nome:",
           name: "nome"

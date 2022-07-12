@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="57688033-2e35-44ba-98c5-e35ef306f96b" name="Changes" comment="sage 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/affitti.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/fabbricati.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/parrocchie.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/staff.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/terreni.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Editor-PHP/lib/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Editor-PHP/lib/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/gestiti.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/sponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/sponsor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/3d74e23fa98a9ea39d9219a650eaf425b4b55d8f.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/3d74e23fa98a9ea39d9219a650eaf425b4b55d8f.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/296b554faf1a34470d15280caa80e5fd729f5afd.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/296b554faf1a34470d15280caa80e5fd729f5afd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/a6bc8d7b362154b9bd0b422a80259ed3ab7bec88.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/a6bc8d7b362154b9bd0b422a80259ed3ab7bec88.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +34,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-custom.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../diocesi/httpdocs/wp-content/themes/sage/resources/views/template-edit-affitti.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/referenti.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,9 +46,11 @@
     <servers>
       <server host="ica.test" id="b47ebf19-c3cb-4ced-8c5f-05c9114eb0a9" name="ica" />
       <server host="gestionediocesiadria.test" id="917ddc34-5fc8-4b3e-8884-8ad66e5c9680" name="gestionediocesiadria.test" port="443" />
+      <server host="provagenfile.test" id="719d473d-8b9a-4ad6-bb71-da12b4cad06a" name="prova" />
+      <server id="31758220-8a67-4f58-9ca9-1b5561505b3e" />
     </servers>
   </component>
-  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://ica.test:80" />
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://provagenfile.test:80" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" />
   <component name="ProblemsViewState">
@@ -66,6 +65,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Constants" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -77,23 +77,34 @@
     <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/wp-content/themes/sage_2/node_modules/stylelint" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Editor-PHP/controllers" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Editor-PHP" />
       <recent name="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables" />
+      <recent name="$PROJECT_DIR$/Editor-PHP" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/wp-content/themes/sage_2" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Editor-PHP/controllers" />
+      <recent name="$PROJECT_DIR$/file_gen" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Web Page.ica">
     <configuration name="ica" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="gestionediocesiadria.test" start_url="http://ica.test">
       <method v="2" />
     </configuration>
+    <configuration name="prova" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="prova">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Web Page.prova" />
+      <item itemvalue="PHP Web Page.ica" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,7 +118,10 @@
       <workItem from="1657221098840" duration="6918000" />
       <workItem from="1657229369700" duration="220000" />
       <workItem from="1657229631638" duration="6597000" />
-      <workItem from="1657236276652" duration="5793000" />
+      <workItem from="1657236276652" duration="6377000" />
+      <workItem from="1657274466012" duration="12195000" />
+      <workItem from="1657352730122" duration="40466000" />
+      <workItem from="1657620461383" duration="7637000" />
     </task>
     <task id="LOCAL-00001" summary="sage 2">
       <created>1657229817113</created>
@@ -139,6 +153,31 @@
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$</wordpressPath>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/file_gen/file_gen.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/file_gen/index.blade.php</url>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/referenti.blade.php</url>
+          <line>98</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Editor-PHP/controllers/specialista.php</url>
+          <line>24</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

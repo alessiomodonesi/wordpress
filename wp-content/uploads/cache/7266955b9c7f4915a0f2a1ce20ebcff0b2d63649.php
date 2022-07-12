@@ -1,72 +1,48 @@
-<link rel="stylesheet" type="text/css"
-      href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.10.23/af-2.3.5/b-1.6.5/b-colvis-1.6.5/b-html5-1.6.5/b-print-1.6.5/cr-1.5.3/fc-3.3.2/fh-3.1.7/kt-2.5.3/r-2.2.7/rg-1.1.2/rr-1.2.7/sc-2.0.3/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/datetime/1.0.3/css/dataTables.dateTime.min.css">
+<link rel="stylesheet" type="text/css" href="../../../Editor-PHP/css/editor.bootstrap5.css">
+<link rel="stylesheet" type="text/css" href="../../../Editor-PHP/examples/resources/syntax/shCore.css">
+<link rel="stylesheet" type="text/css" href="../../../Editor-PHP/examples/resources/demo.css">
+<style type="text/css" class="init">
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.10.23/af-2.3.5/b-1.6.5/b-colvis-1.6.5/b-html5-1.6.5/b-print-1.6.5/cr-1.5.3/fc-3.3.2/fh-3.1.7/kt-2.5.3/r-2.2.7/rg-1.1.2/rr-1.2.7/sc-2.0.3/datatables.min.js"></script>
-
-<div class="container-fluid pb-3">
-  <div class="row mt-4">
-    <div class="col-12 pt-3 pb-3">
-      <table id="gestiti" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-        <tr>
-          <th>Id</th>
-          <th>Nome</th>
-          <th>Cognome</th>
-          <th>Data di nascita</th>
-          <th>Indirizzo</th>
-          <th>Numero di telefono</th>
-          <th>Mail</th>
-          <th>Id fascicolo</th>
-          <th>Obbligo GDPR</th>
-
-
-        </tr>
-        </thead>
-        <tbody>
-        @php
-          global $wpdb;
-          $result = $wpdb->get_results('SELECT `id`,`nome`,`cognome`,`data_nascita`,`indirizzo`,`numero_telefono`,`mail`,`id_fascicolo`,`obbligo_gdpr` FROM GESTITO');
-
-        @endphp
-        @foreach($result as $row)
-          <tr>
-            <td>{!! $row->id !!}</td>
-            <td>{!! $row->nome !!}</td>
-            <td>{!! $row->cognome !!}</td>
-            <td>{!! $row->data_nascita !!}</td>
-            <td>{!! $row->indirizzo !!}</td>
-            <td>{!! $row->numero_telefono !!}</td>
-            <td>{!! $row->mail !!} </td>
-            <td>{!! $row->id_fascicolo !!}</td>
-            <td>{!! $row->obbligo_gdpr !!}</td>
-          </tr>
-        @endforeach
-        <tfoot>
-        <tr>
-          <th>Id</th>
-          <th>Nome</th>
-          <th>Cognome</th>
-          <th>Data di nascita</th>
-          <th>Indirizzo</th>
-          <th>Numero di telefono</th>
-          <th>Mail</th>
-          <th>Id fascicolo</th>
-          <th>Obbligo GDPR</th>
-        </tr>
-        </tfoot>
-      </table>
-
-    </div>
-  </div>
-</div>
-
-<script>
-  jQuery(document).ready(function ($) {
+</style>
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap4.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/datetime/1.0.3/js/dataTables.dateTime.min.js"></script>
+<script type="text/javascript" language="javascript" src="../../../Editor-PHP/js/dataTables.editor.js"></script>
+<script type="text/javascript" language="javascript" src="../../../Editor-PHP/js/editor.bootstrap5.js"></script>
+<script type="text/javascript" language="javascript" src="../../../Editor-PHP/examples/resources/syntax/shCore.js"></script>
+<script type="text/javascript" language="javascript" src="../../../Editor-PHP/examples/resources/demo.js"></script>
+<script type="text/javascript" language="javascript" src="../../../Editor-PHP/examples/resources/editor-demo.js"></script>
 
 
-    $('#gestiti').DataTable({
+<script type="text/javascript" language="javascript" class="init">
+
+
+
+  var editor; // use a global for the submit and return data rendering in the examples
+  jQuery(document).ready(function($){
+    editor = new $.fn.dataTable.Editor( {
+      ajax: "../../../Editor-PHP/controllers/metodi_pagamento.php",
+      table: "#metodi_pagamento",
+      fields: [
+        {
+          label: "nome:",
+          name: "nome"
+        }
+      ]
+    } );
+
+    var table = $('#metodi_pagamento').DataTable( {
       language: {
 
         "infoFiltered": "(filtrati da _MAX_ elementi totali)",
@@ -259,19 +235,66 @@
 
       },
       "scrollX": true,
+      lengthChange: false,
+      ajax: "../../../Editor-PHP/controllers/metodi_pagamento.php",
+      columns: [
 
-      keys: true,
-      fixedHeader: true,
-      fixedColumns: true,
-      colReorder: true,
-      dom: 'Bfrtip',
-      buttons: [
-        'copyHtml5',
-        'excelHtml5',
-        'csvHtml5',
-        'pdfHtml5'
-      ]
-    });
-  });
+        { data: "id"
+
+        },
+
+        {
+          data: "nome"
+        }
+
+
+      ],
+      select: true
+    } );
+
+    // Display the buttons
+    new $.fn.dataTable.Buttons( table, [
+      { extend: "create", editor: editor },
+      { extend: "edit",   editor: editor },
+      { extend: "remove", editor: editor }
+    ] );
+
+    table.buttons().container()
+      .appendTo( $('.col-md-6:eq(0)', table.table().container() ) );
+  } );
+
+
 
 </script>
+
+
+<div class="container-fluid">
+  <section>
+
+    <div class="demo-html">
+      <table id="metodi_pagamento" class="table table-striped table-bordered table-responsive">
+        <thead>
+        <tr>
+
+          <th>Id</th>
+          <th>Nome</th>
+
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  </section>
+</div>
+
+
+
+
+

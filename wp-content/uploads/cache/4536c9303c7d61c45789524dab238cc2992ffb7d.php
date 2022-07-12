@@ -32,9 +32,9 @@
   var editor; // use a global for the submit and return data rendering in the examples
   jQuery(document).ready(function($){
     editor = new $.fn.dataTable.Editor( {
-      ajax: "../../../Editor-PHP/controllers/sponsor.php",
-      table: "#sponsor",
-      fields: [
+      ajax: "../../../Editor-PHP/controllers/casi.php",
+      table: "#casi",
+      fields: [ 
         {
           label: "nome:",
           name: "nome"
@@ -42,7 +42,7 @@
       ]
     } );
 
-    var table = $('#sponsor').DataTable( {
+    var table = $('#casi').DataTable( {
       language: {
 
         "infoFiltered": "(filtrati da _MAX_ elementi totali)",
@@ -236,7 +236,7 @@
       },
       "scrollX": true,
       lengthChange: false,
-      ajax: "../../../Editor-PHP/controllers/sponsor.php",
+      ajax: "../../../Editor-PHP/controllers/casi.php",
       columns: [
 
         { data: "id" },
@@ -269,7 +269,7 @@
   <section>
 
     <div class="demo-html">
-      <table id="sponsor" class="table table-striped table-bordered table-responsive">
+      <table id="casi" class="table table-striped table-bordered table-responsive">
         <thead>
         <tr>
           <th>Id</th>

@@ -32,17 +32,95 @@
   var editor; // use a global for the submit and return data rendering in the examples
   jQuery(document).ready(function($){
     editor = new $.fn.dataTable.Editor( {
-      ajax: "../../../Editor-PHP/controllers/sponsor.php",
-      table: "#sponsor",
+      ajax: "../../../Editor-PHP/controllers/referenti.php",
+      table: "#referenti",
       fields: [
         {
           label: "nome:",
-          name: "nome"
-        }
+          name: "REFERENTE.nome"
+        },
+        {label: "cognome:",
+          name: "REFERENTE.cognome"
+        },
+        {label: "middle name:",
+          name: "REFERENTE.middle_name"
+        },
+        {label: "data di nascita:",
+          name: "REFERENTE.data_nascita"
+        },
+        {label: "indirizzo:",
+          name: "REFERENTE.indirizzo"
+        },
+        {label: "numero di telefono:",
+          name: "REFERENTE.numero_telefono"
+        },
+        {label: "mail:",
+          name: "REFERENTE.mail"
+        },
+        {label: "sponsor:",
+          name: "REFERENTE.sponsor",
+          type:"select",
+          options:get_sponsor()
+        },
+        {label: "pecentuale sponsor:",
+          name: "REFERENTE.perc_sponsor"
+        },
+        {
+          label: "log utente:",
+          name: "REFERENTE.log_utente"
+        },
+        {
+          label: "log azione:",
+          name: "REFERENTE.log_azione"
+        },
+        {
+          label: "data inserimento:",
+          name: "REFERENTE.date_time_record_insert"
+        },
+        {
+          label: "data modifica:",
+          name: "REFERENTE.date_time_record_update"
+        },
+        {
+          label: "note:",
+          name: "REFERENTE.note"
+        }/*,
+        {
+          label: "obbligo gdpr:",
+          name: "obbligo_gdpr",
+          type:  "radio",
+          options: [
+            { label: "NO", value: false },
+            { label: "SI",  value: true }
+          ],
+        }*/
       ]
     } );
+    function get_sponsor(){
+      $.ajax ( {
+        url         : '../../../Editor-PHP/controllers/sponsor.php',
 
-    var table = $('#sponsor').DataTable( {
+        dataType    : 'json',
+        type        : 'post',
+        success     : function ( jsonData ) {
+
+
+          var tmp
+          var options = jsonData.data.map( item => {
+            console.log(item);
+            return { value: item.id,label: item.nome  };
+          } );
+          console.log(options);
+          editor.field('REFERENTE.sponsor').update(options);
+
+
+
+
+        }
+      });
+    } ;
+
+    var table = $('#referenti').DataTable( {
       language: {
 
         "infoFiltered": "(filtrati da _MAX_ elementi totali)",
@@ -236,13 +314,60 @@
       },
       "scrollX": true,
       lengthChange: false,
-      ajax: "../../../Editor-PHP/controllers/sponsor.php",
+      ajax: "../../../Editor-PHP/controllers/referenti.php",
       columns: [
 
-        { data: "id" },
+        { data: "REFERENTE.id",
+          "render": function ( data, type, row, meta ) {
+            return '<a href="/single_referente?id='+data+'">'+data+'</a>';}
+        },
         {
-          data: "nome"
-        }
+          data: "REFERENTE.nome"
+        },
+        {
+          data: "REFERENTE.cognome"
+        },
+        {
+          data: "REFERENTE.middle_name"
+        },
+        {
+          data: "REFERENTE.data_nascita"
+        },
+        {
+          data: "REFERENTE.indirizzo"
+        },
+        {
+          data: "REFERENTE.numero_telefono"
+        },
+        {
+          data: "REFERENTE.mail"
+        },
+        {
+          data: "s_nome"
+        },
+        {
+          data: "REFERENTE.perc_sponsor"
+        },
+        {
+          data: "REFERENTE.log_utente"
+        },
+        {
+          data: "REFERENTE.log_azione"
+        },
+        {
+          data: "REFERENTE.date_time_record_insert"
+        },
+        {
+          data: "REFERENTE.date_time_record_update"
+        },
+        {
+          data: "REFERENTE.note"
+        },
+        /*{
+          data: "obbligo_gdpr",
+          "render": function (val, type, row) {
+            return val == 0 ? "NO" : "SI";
+        }}*/
 
 
       ],
@@ -269,19 +394,43 @@
   <section>
 
     <div class="demo-html">
-      <table id="sponsor" class="table table-striped table-bordered table-responsive">
+      <table id="referenti" class="table table-striped table-bordered table-responsive">
         <thead>
         <tr>
           <th>Id</th>
           <th>Nome</th>
-
+          <th>Cognome</th>
+          <th>Middle name</th>
+          <th>Data di nascita</th>
+          <th>Indirizzo</th>
+          <th>Numero di telefono</th>
+          <th>Mail</th>
+          <th>Sponsor</th>
+          <th>Percentuale sponsor</th>
+          <th>Log utente</th>
+          <th>Log azione</th>
+          <th>Data inserimento</th>
+          <th>Data modifica</th>
+          <th>Note</th>
         </tr>
         </thead>
         <tfoot>
         <tr>
           <th>Id</th>
           <th>Nome</th>
-
+          <th>Cognome</th>
+          <th>Middle name</th>
+          <th>Data di nascita</th>
+          <th>Indirizzo</th>
+          <th>Numero di telefono</th>
+          <th>Mail</th>
+          <th>Sponsor</th>
+          <th>Percentuale sponsor</th>
+          <th>Log utente</th>
+          <th>Log azione</th>
+          <th>Data inserimento</th>
+          <th>Data modifica</th>
+          <th>Note</th>
         </tr>
         </tfoot>
       </table>

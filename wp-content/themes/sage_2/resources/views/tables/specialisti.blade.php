@@ -32,17 +32,50 @@
   var editor; // use a global for the submit and return data rendering in the examples
   jQuery(document).ready(function($){
     editor = new $.fn.dataTable.Editor( {
-      ajax: "../../../Editor-PHP/controllers/sponsor.php",
-      table: "#sponsor",
+      ajax: "../../../Editor-PHP/controllers/specialista.php",
+      table: "#specialisti",
       fields: [
         {
           label: "nome:",
           name: "nome"
-        }
+        },
+        {label: "cognome:",
+          name: "cognome"
+        },
+        {label: "middle name:",
+          name: "middle_name"
+        },
+        {label: "data di nascita:",
+          name: "data_nascita"
+        },
+        {
+          label:"codice fiscale:",
+          name:"codice_fiscale"
+        },
+        {label: "numero di telefono:",
+          name: "numero_telefono"
+        },
+        {label: "mail:",
+          name: "mail"
+        },
+        {
+          label: "note:",
+          name: "note"
+        }/*,
+        {
+          label: "obbligo gdpr:",
+          name: "obbligo_gdpr",
+          type:  "radio",
+          options: [
+            { label: "NO", value: false },
+            { label: "SI",  value: true }
+          ],
+        }*/
       ]
     } );
 
-    var table = $('#sponsor').DataTable( {
+
+    var table = $('#specialisti').DataTable( {
       language: {
 
         "infoFiltered": "(filtrati da _MAX_ elementi totali)",
@@ -236,13 +269,54 @@
       },
       "scrollX": true,
       lengthChange: false,
-      ajax: "../../../Editor-PHP/controllers/sponsor.php",
+      ajax: "../../../Editor-PHP/controllers/specialista.php",
       columns: [
 
-        { data: "id" },
+        { data: "id",
+          "render": function ( data, type, row, meta ) {
+            return '<a href="/single_specialista?id='+data+'">'+data+'</a>';}
+        },
         {
           data: "nome"
+        },
+        {
+          data: "cognome"
+        },
+        {
+          data: "middle_name"
+        },
+        {
+          data: "data_nascita"
+        },
+        {
+          data:"codice_fiscale"
+        },
+        {
+          data: "numero_telefono"
+        },
+        {
+          data: "mail"
+        },
+        {
+          data: "log_utente"
+        },
+        {
+          data: "log_azione"
+        },
+        {
+          data: "date_time_record_insert"
+        },
+        {
+          data: "date_time_record_update"
+        },
+        {
+          data: "note"
         }
+        /*{
+          data: "obbligo_gdpr",
+          "render": function (val, type, row) {
+            return val == 0 ? "NO" : "SI";
+        }}*/
 
 
       ],
@@ -269,19 +343,39 @@
   <section>
 
     <div class="demo-html">
-      <table id="sponsor" class="table table-striped table-bordered table-responsive">
+      <table id="specialisti" class="table table-striped table-bordered table-responsive">
         <thead>
         <tr>
           <th>Id</th>
           <th>Nome</th>
-
+          <th>Cognome</th>
+          <th>Middle name</th>
+          <th>Data di nascita</th>
+          <th>Codice Fiscale</th>
+          <th>Numero di telefono</th>
+          <th>Mail</th>
+          <th>Log utente</th>
+          <th>Log azione</th>
+          <th>Data inserimento</th>
+          <th>Data modifica</th>
+          <th>Note</th>
         </tr>
         </thead>
         <tfoot>
         <tr>
           <th>Id</th>
           <th>Nome</th>
-
+          <th>Cognome</th>
+          <th>Middle name</th>
+          <th>Data di nascita</th>
+          <th>Codice Fiscale</th>
+          <th>Numero di telefono</th>
+          <th>Mail</th>
+          <th>Log utente</th>
+          <th>Log azione</th>
+          <th>Data inserimento</th>
+          <th>Data modifica</th>
+          <th>Note</th>
         </tr>
         </tfoot>
       </table>
