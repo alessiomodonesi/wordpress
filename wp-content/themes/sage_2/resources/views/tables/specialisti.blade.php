@@ -326,8 +326,7 @@
     // Display the buttons
     new $.fn.dataTable.Buttons( table, [
       { extend: "create", editor: editor },
-      { extend: "edit",   editor: editor },
-      { extend: "remove", editor: editor }
+      { extend: "edit",   editor: editor }
     ] );
 
     table.buttons().container()

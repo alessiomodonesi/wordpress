@@ -6,8 +6,55 @@
   <component name="ChangeListManager">
     <list default="true" id="57688033-2e35-44ba-98c5-e35ef306f96b" name="Changes" comment="sage 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/checkbox.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/compoundKey.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/fascicoli.php" beforeDir="false" afterPath="$PROJECT_DIR$/Editor-PHP/controllers/fascicoli.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/join.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/joinArray.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/joinLinkTable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/joinNested.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/joinOptionsTable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/joinSelf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/jsonId.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/searchPanes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/sequence.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/sites.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/sitesNested.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/softDelete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/staff-description.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/staff-html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/staff-view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/standalone.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/tableOnlyData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/time.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor-PHP/controllers/todo.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Editor-PHP/lib/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Editor-PHP/lib/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-config.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/referenti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/referenti.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/specialisti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/specialisti.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/01a165c86a1f93eb40b88cbdf72193f8cad9ad3e.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/01a165c86a1f93eb40b88cbdf72193f8cad9ad3e.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/073a31339bb9a93edc1477f2bfd99a981cb16658.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/21c09ec558b63b796e7cecc52f2163016a2d999b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/288c37f6fc333ea4c3e859fafb92e495a98f99bd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/2be8f37b300c2bfe8f04981c97c1e574f67d335a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/3c3cfc84f0503f27e22fc26ec787e41987d40e49.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/3d74e23fa98a9ea39d9219a650eaf425b4b55d8f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/3db1138bcd0d64aca04bf1b4f3620a819790f7db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/4536c9303c7d61c45789524dab238cc2992ffb7d.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/4536c9303c7d61c45789524dab238cc2992ffb7d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/54f49e8c96e9d4269aaecb4fa76234e4f7b67df0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/5a175f2d4d637347592eabe981b4f44ece8311c9.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/6097959c8f3ffa50bd5ca49b4cdc408796f81f47.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/6097959c8f3ffa50bd5ca49b4cdc408796f81f47.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/628dc0a9bdca38f1831aedd586bf959c0beb30cf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/6d9ff727b3f773e9d461a74dc4007132adb5cf6f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/7df3cd14508eff865d3617920db2486ee031ae5f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/7e564cd0240f039b7ba8d9231c7db5133762cf71.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/8f6b585e94c43890125b51ecc114b1850b2558da.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/cache/8f6b585e94c43890125b51ecc114b1850b2558da.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/a513d74225247ce8f496cde47fc88718afeece73.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/c847f4a7a6ff5cd96add8468f7b36f39d5dcbcba.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/d8a5f0e166264b57709a01ef93e713b673c129d5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/e13bbdc9f8de2492f15e0363c3add7a234604edc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/cache/fa79c7cf3de69ddca375660baf45de6a1f637439.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,14 +76,20 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Editor-PHP/controllers/storico_specialisti.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-custom.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/single_fascicolo.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-single-fascicolo.blade.php" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-single-referente.blade.php" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../diocesi/httpdocs/wp-content/themes/sage/resources/views/template-edit-affitti.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/specialisti_fascicolo.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/allegati_fascicolo.blade.php" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" root2="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/referenti.blade.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false">
     <xdebug_debug_ports port="9003" />
   </component>
   <component name="PhpServers">
@@ -82,11 +135,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Editor-PHP/controllers" />
       <recent name="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views" />
       <recent name="$PROJECT_DIR$/Editor-PHP" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/sage_2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/sage_2/resources/views" />
       <recent name="$PROJECT_DIR$/Editor-PHP/controllers" />
       <recent name="$PROJECT_DIR$/file_gen" />
     </key>
@@ -120,6 +174,9 @@
       <workItem from="1657352730122" duration="40466000" />
       <workItem from="1657620461383" duration="8109000" />
       <workItem from="1657640288151" duration="1854000" />
+      <workItem from="1657705648338" duration="49364000" />
+      <workItem from="1658071432524" duration="6000" />
+      <workItem from="1658333624031" duration="21423000" />
     </task>
     <task id="LOCAL-00001" summary="sage 2">
       <created>1657229817113</created>
@@ -166,13 +223,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/referenti.blade.php</url>
-          <line>98</line>
+          <line>82</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Editor-PHP/controllers/specialista.php</url>
-          <line>24</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/single_referente.blade.php</url>
+          <line>34</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-single-referente.blade.php</url>
+          <line>17</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/tables/fascicoli_specialista.blade.php</url>
+          <line>38</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/sage_2/resources/views/template-single-fascicolo.blade.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Editor-PHP/controllers/pagamenti_fascicolo_edit.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Editor-PHP/controllers/gestiti_fascicolo.php</url>
+          <line>32</line>
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

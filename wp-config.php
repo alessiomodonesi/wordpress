@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'wp_evolve' );
 
 /** Nome utente del database */
-define( 'DB_USER', 'evolve' );
+define( 'DB_USER', 'root' );
 
 /** Password del database */
-define( 'DB_PASSWORD', 'e_volvetest!8!' );
+define( 'DB_PASSWORD', '123' );
 
 /** Hostname del database */
 define( 'DB_HOST', 'localhost' );

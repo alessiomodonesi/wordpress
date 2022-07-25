@@ -34,7 +34,7 @@
     editor = new $.fn.dataTable.Editor( {
       ajax: "../../../Editor-PHP/controllers/casi.php",
       table: "#casi",
-      fields: [ 
+      fields: [
         {
           label: "nome:",
           name: "nome"

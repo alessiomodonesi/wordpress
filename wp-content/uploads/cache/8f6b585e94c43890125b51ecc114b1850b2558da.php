@@ -66,22 +66,6 @@
           name: "REFERENTE.perc_sponsor"
         },
         {
-          label: "log utente:",
-          name: "REFERENTE.log_utente"
-        },
-        {
-          label: "log azione:",
-          name: "REFERENTE.log_azione"
-        },
-        {
-          label: "data inserimento:",
-          name: "REFERENTE.date_time_record_insert"
-        },
-        {
-          label: "data modifica:",
-          name: "REFERENTE.date_time_record_update"
-        },
-        {
           label: "note:",
           name: "REFERENTE.note"
         }/*,
@@ -319,7 +303,7 @@
 
         { data: "REFERENTE.id",
           "render": function ( data, type, row, meta ) {
-            return '<a href="/single_referente?id='+data+'">'+data+'</a>';}
+            return '<a href="/single_referente/?id='+data+'">'+data+'</a>';}
         },
         {
           data: "REFERENTE.nome"
@@ -377,8 +361,7 @@
     // Display the buttons
     new $.fn.dataTable.Buttons( table, [
       { extend: "create", editor: editor },
-      { extend: "edit",   editor: editor },
-      { extend: "remove", editor: editor }
+      { extend: "edit",   editor: editor }
     ] );
 
     table.buttons().container()

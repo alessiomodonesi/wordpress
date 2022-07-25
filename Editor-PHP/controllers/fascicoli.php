@@ -21,7 +21,12 @@ use DeliciousBrains\WPMDB\Container\Dotenv\Validator;
 use Illuminate\Support\Str;
 
 // Build our Editor instance and process the data coming from _POST
+if ($_POST["action"]=="create"){
+	$_POST["data"][0]["data_apertura"]=date('Y-m-d');
 
+	$_POST["data"][0]["referente"]=$_POST["id_referente"];
+}
+$_POST["data"][0]["data_chiusura"]=null;
 $db->sql( 'set names utf8' );
 Editor::inst( $db, 'FASCICOLO','id' )
       ->fields(
